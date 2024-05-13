@@ -177,6 +177,10 @@ The live project can be found here:
 
 # Credits 
 
+## Code
+
+- [Nav bar component](https://getbootstrap.com/docs/4.0/components/navbar/) by Bootstrap
+
 ## Tutorials 
 
 ## Media
