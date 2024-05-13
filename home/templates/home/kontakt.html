@@ -1,6 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h1>Kontakt</h1>
 
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Deine E-Mail Adresse</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@beispiel.de">
+</div>
+<div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Nachricht</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Deine Nachricht"></textarea>
+</div>
+<button type="button" class="btn btn-outline-success">Abschicken</button>
 
 {% endblock %}
