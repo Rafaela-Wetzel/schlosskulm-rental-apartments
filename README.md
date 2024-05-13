@@ -180,6 +180,8 @@ The live project can be found here:
 ## Code
 
 - [Nav bar component](https://getbootstrap.com/docs/4.0/components/navbar/) by Bootstrap
+- [Contact form](https://getbootstrap.com/docs/5.3/forms/form-control/) component by Bootstrap
+- [Gallery carousel](https://getbootstrap.com/docs/4.2/components/carousel/) by Bootstrap
 
 ## Tutorials 
 
