@@ -1,5 +1,6 @@
 body {
   padding-top: 65px;
+  padding-bottom: 65px;
   margin: 0 2rem;
 }
 
@@ -9,6 +10,13 @@ nav a {
 
 .nav-margin {
   margin: 0 1rem;
+}
+
+/* Über Uns section */
+
+.about-me-size {
+  height: 20rem;
+  width: 18rem;
 }
 
 /* CSS Image Gallery */
