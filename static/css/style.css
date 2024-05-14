@@ -1,5 +1,14 @@
 body {
   padding-top: 65px;
+  margin: 0 2rem;
+}
+
+nav a {
+  margin: 0 0.5rem;
+}
+
+.nav-margin {
+  margin: 0 1rem;
 }
 
 /* CSS Image Gallery */
