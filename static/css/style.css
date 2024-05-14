@@ -21,3 +21,11 @@ div.gallery {
     padding: 15px;
     text-align: center;
   }
+
+  /* Footer */
+
+  footer {
+    background-color: #e1e6eb;
+    color: black;
+    height: 2rem;
+  }
