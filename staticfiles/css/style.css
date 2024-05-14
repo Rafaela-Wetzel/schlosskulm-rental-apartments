@@ -1,0 +1,52 @@
+body {
+  padding-top: 65px;
+  padding-bottom: 65px;
+  margin: 0 2rem;
+}
+
+nav a {
+  margin: 0 0.5rem;
+}
+
+.nav-margin {
+  margin: 0 1rem;
+}
+
+/* Über Uns section */
+
+.about-me-size {
+  height: 20rem;
+  width: 18rem;
+}
+
+/* CSS Image Gallery */
+/* https://www.w3schools.com/css/css_image_gallery.asp */
+
+div.gallery {
+  margin: 5px;
+  border: 2px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Footer */
+
+footer {
+  background-color: #e1e6eb;
+  color: black;
+  height: 2rem;
+}
