@@ -63,6 +63,10 @@ div.desc {
 
 /* Contact Section */
 
-textarea {
+.form-width {
+  max-width: 50%;
+}
+
+.resize-none {
   resize: none;
 }
