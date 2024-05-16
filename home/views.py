@@ -21,8 +21,8 @@ def ferienwohnung_oben_page(request):
 def ferienwohnung_unten_page(request):
     return render(request, 'home/ferienwohnung-unten.html')
 
-def gallerie_page(request):
-    return render(request, 'home/gallerie.html')
+def galerie_page(request):
+    return render(request, 'home/galerie.html')
 
 def haus_page(request):
     return render(request, 'home/haus.html')
