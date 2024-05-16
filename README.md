@@ -186,6 +186,10 @@ https://getbootstrap.com/docs/5.3/forms/form-control/
 [2] How to center a checkbox vertically with other input components with bootstrap  
 https://stackoverflow.com/questions/52877442/centering-a-checkbox-vertically-with-other-input-components-with-bootstrap  
 
+[3] Bootstrap datepicker  
+https://stackoverflow.com/questions/68662850/datepicker-bootstrap-5  
+
+
 ## Tutorials 
 
 ## Media
