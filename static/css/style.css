@@ -1,3 +1,5 @@
+/* General Styles */
+
 body {
   padding-top: 65px;
   padding-bottom: 65px;
@@ -10,6 +12,22 @@ nav a {
 
 .nav-margin {
   margin: 0 1rem;
+}
+
+h1 {
+  margin: 0.5rem 0 2rem;
+}
+
+.margin-top-bottom {
+  margin: 1rem 0 2rem;
+}
+
+/* Footer */
+
+footer {
+  background-color: #e1e6eb;
+  color: black;
+  height: 2rem;
 }
 
 /* Über Uns section */
@@ -43,10 +61,12 @@ div.desc {
   text-align: center;
 }
 
-/* Footer */
+/* Contact Section */
 
-footer {
-  background-color: #e1e6eb;
-  color: black;
-  height: 2rem;
+.form-width {
+  max-width: 50%;
+}
+
+.resize-none {
+  resize: none;
 }
