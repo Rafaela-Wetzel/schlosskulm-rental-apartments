@@ -179,9 +179,12 @@ The live project can be found here:
 
 ## Code
 
-- [Nav bar component](https://getbootstrap.com/docs/4.0/components/navbar/) by Bootstrap
-- [Contact form](https://getbootstrap.com/docs/5.3/forms/form-control/) component by Bootstrap
-- [Gallery carousel](https://getbootstrap.com/docs/4.2/components/carousel/) by Bootstrap
+[1] Bootstrap  
+https://getbootstrap.com/docs/4.0/components/navbar/  
+https://getbootstrap.com/docs/5.3/forms/form-control/  
+
+[2] How to center a checkbox vertically with other input components with bootstrap  
+https://stackoverflow.com/questions/52877442/centering-a-checkbox-vertically-with-other-input-components-with-bootstrap  
 
 ## Tutorials 
 
