@@ -4,26 +4,38 @@
 <h1>Kontakt</h1>
 
 <div class="container">
-    <div class="row">
-      <div class="col-sm-2">
-      </div>
-      <div class="col-sm-8">
-        <form>
-            <div class="mb-3">
-                <label for="contactForm" class="form-label">Deine E-Mail Adresse</label>
-                <input type="email" class="form-control" id="contactForm" placeholder="name@beispiel.de" required>
-            </div>
-            <div class="mb-3">
-                <label for="contactFormTextarea" class="form-label">Nachricht</label>
-                <textarea class="form-control resize-none" id="contactFormTextarea" rows="3"
-                    placeholder="Deine Nachricht" required></textarea>
-            </div>
-            <button type="button" class="btn btn-outline-success">Abschicken</button>
-        </form>
-      </div>
-      <div class="col-sm-2">
-      </div>
+  <div class="row">
+    <div class="col-sm">
+      <p class="px-5">
+        Du hast Fragen zur Unterkunft, Gegend oder brauchst Informationen zu einem anderen Thema?<br>
+        Nimm gerne mit uns Kontakt auf!
+      </p>
     </div>
   </div>
+</div>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-8">
+      <form>
+        <div class="mb-3">
+          <label for="contactForm" class="form-label">Deine E-Mail Adresse</label>
+          <input type="email" class="form-control" id="contactForm" placeholder="name@beispiel.de" required>
+        </div>
+        <div class="mb-3">
+          <label for="contactFormTextarea" class="form-label">Nachricht</label>
+          <textarea class="form-control resize-none" id="contactFormTextarea" rows="5" placeholder="Deine Nachricht"
+            required></textarea>
+        </div>
+        <button type="button" class="btn btn-outline-success">Abschicken</button>
+      </form>
+    </div>
+    <div class="col-sm-2">
+    </div>
+  </div>
+</div>
 
 {% endblock %}
