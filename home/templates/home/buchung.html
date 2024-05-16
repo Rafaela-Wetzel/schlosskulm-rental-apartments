@@ -3,4 +3,108 @@
 
 <h1>Buchung</h1>
 
+<form>
+    <div class="row">
+        <div class="col-4">
+            <label for="inputFirstName">Vorname</label>
+            <input type="text" class="form-control" id="inputFirstName" required>
+        </div>
+        <div class="col-4">
+            <label for="inputLastName">Nachname</label>
+            <input type="text" class="form-control" id="inputLastName" required>
+        </div>
+        <div class="col-4">
+            <label for="inputBirthdate">Geburtsdatum</label>
+            <input type="password" class="form-control" id="inputBirthdate" required>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label for="inputEmail">E-Mail</label>
+            <input type="email" class="form-control" id="inputEmail" required>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputPhoneNumber">Telefonnummer</label>
+            <input type="text" class="form-control" id="inputPhoneNumber" required>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col">
+            <label for="inputAddress">Adresse und Hausnummer</label>
+            <input type="text" class="form-control" id="inputAddress" required>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-md-2">
+            <label for="inputZip">Postleitzahl</label>
+            <input type="text" class="form-control" id="inputZip" required>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="inputCity">Stadt</label>
+            <input type="text" class="form-control" id="inputCity" required>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="inputCountry">Land</label>
+            <input type="text" id="inputCountry" class="form-control" required>
+        </div>
+    </div>
+
+    <div class="d-flex align-items-center">
+        <div class="form-check mt-3 ml-3 px-5">
+            <input class="custom-control-input" type="checkbox" id="checkPet">
+            <label class="custom-control-label" for="checkPet">
+                Haustiere?
+            </label>
+        </div>
+
+        <div class="form-group px-5">
+            <label for="inputNumberGuests">Anzahl der Gäste</label>
+            <select class="form-select" id="inputNumberGuests" aria-label="Default select example" required>
+                <option selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+            </select>
+        </div>
+
+        <div class="form-group px-5">
+            <label for="inputNationality">Nationalität</label>
+            <select class="form-select" id="inputNationality" aria-label="Default select example" required>
+                <option selected>-</option>
+                <option value="Deutsch">Deutsch</option>
+                <option value="Andere">Andere</option>
+            </select>
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="form-group col">
+            <label for="inputTextarea" class="form-label">Deine Nachricht</label>
+            <textarea class="form-control" id="inputTextarea" rows="3" required></textarea>
+        </div>
+    </div>
+    <br>
+
+    <button type="submit" class="btn btn-success">Abschicken</button>
+
+</form>
+
 {% endblock %}
