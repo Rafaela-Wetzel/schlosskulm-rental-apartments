@@ -7,90 +7,94 @@
     <div class="row">
         <div class="col-4">
             <label for="inputFirstName">Vorname</label>
-            <input type="text" class="form-control" id="inputFirstName" required>
+            <input type="text" class="form-control" id="inputFirstName"  maxlength="200" required>
         </div>
         <div class="col-4">
             <label for="inputLastName">Nachname</label>
-            <input type="text" class="form-control" id="inputLastName" required>
+            <input type="text" class="form-control" id="inputLastName" maxlength="200" required>
         </div>
         <div class="col-4">
             <label for="inputBirthdate">Geburtsdatum</label>
-            <input type="password" class="form-control" id="inputBirthdate" required>
+            <input type="date" class="form-control" id="inputBirthdate" required>
         </div>
     </div>
 
     <div class="row">
         <div class="form-group col-md-6">
             <label for="inputEmail">E-Mail</label>
-            <input type="email" class="form-control" id="inputEmail" required>
+            <input type="email" class="form-control" id="inputEmail" maxlength="200" required>
         </div>
         <div class="form-group col-md-6">
             <label for="inputPhoneNumber">Telefonnummer</label>
-            <input type="text" class="form-control" id="inputPhoneNumber" required>
+            <input type="tel" class="form-control" id="inputPhoneNumber" maxlength="200" required>
         </div>
     </div>
 
     <div class="row">
         <div class="form-group col">
             <label for="inputAddress">Adresse und Hausnummer</label>
-            <input type="text" class="form-control" id="inputAddress" required>
+            <input type="text" class="form-control" id="inputAddress" maxlength="200" required>
         </div>
     </div>
 
     <div class="row">
         <div class="form-group col-md-2">
             <label for="inputZip">Postleitzahl</label>
-            <input type="text" class="form-control" id="inputZip" required>
+            <input type="text" class="form-control" id="inputZip" maxlength="200" required>
         </div>
 
         <div class="form-group col-md-6">
             <label for="inputCity">Stadt</label>
-            <input type="text" class="form-control" id="inputCity" required>
+            <input type="text" class="form-control" id="inputCity" maxlength="200" required>
         </div>
 
         <div class="form-group col-md-4">
             <label for="inputCountry">Land</label>
-            <input type="text" id="inputCountry" class="form-control" required>
+            <input type="text" id="inputCountry" class="form-control" maxlength="200" required>
         </div>
     </div>
 
-    <div class="d-flex align-items-center">
-        <div class="form-check mt-3 ml-3 px-5">
-            <input class="custom-control-input" type="checkbox" id="checkPet">
-            <label class="custom-control-label" for="checkPet">
-                Haustiere?
-            </label>
-        </div>
+    <div class="container">
+        <div class="d-flex align-items-center row">
 
-        <div class="form-group px-5">
-            <label for="inputNumberGuests">Anzahl der Gäste</label>
-            <select class="form-select" id="inputNumberGuests" aria-label="Default select example" required>
-                <option selected>0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-            </select>
-        </div>
+            <div class="form-check mt-3 ml-3 px-5 col">
+                <input class="custom-control-input" type="checkbox" id="checkPet">
+                <label class="custom-control-label" for="checkPet">
+                    Haustiere?
+                </label>
+            </div>
 
-        <div class="form-group px-5">
-            <label for="inputNationality">Nationalität</label>
-            <select class="form-select" id="inputNationality" aria-label="Default select example" required>
-                <option selected>-</option>
-                <option value="Deutsch">Deutsch</option>
-                <option value="Andere">Andere</option>
-            </select>
+            <div class="form-group px-5 col">
+                <label for="inputNumberGuests">Anzahl der Gäste</label>
+                <select class="form-select" id="inputNumberGuests" aria-label="Default select example" required>
+                    <option selected>0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                </select>
+            </div>
+
+            <div class="form-group px-5 col">
+                <label for="inputNationality">Nationalität</label>
+                <select class="form-select" id="inputNationality" aria-label="Default select example" required>
+                    <option selected>-</option>
+                    <option value="Deutsch">Deutsch</option>
+                    <option value="Andere">Andere</option>
+                </select>
+            </div>
+
         </div>
     </div>
 
@@ -113,7 +117,7 @@
     <div class="row">
         <div class="form-group col">
             <label for="inputTextarea" class="form-label">Deine Nachricht</label>
-            <textarea class="form-control" id="inputTextarea" rows="3" required></textarea>
+            <textarea class="form-control" id="inputTextarea" rows="3" maxlength="4000" required></textarea>
         </div>
     </div>
     <br>

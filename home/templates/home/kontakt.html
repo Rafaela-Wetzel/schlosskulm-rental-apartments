@@ -23,11 +23,11 @@
       <form>
         <div class="mb-3">
           <label for="contactForm" class="form-label">Deine E-Mail Adresse</label>
-          <input type="email" class="form-control" id="contactForm" placeholder="name@beispiel.de" required>
+          <input type="email" class="form-control" id="contactForm" placeholder="name@beispiel.de" maxlength="200" required>
         </div>
         <div class="mb-3">
           <label for="contactFormTextarea" class="form-label">Nachricht</label>
-          <textarea class="form-control resize-none" id="contactFormTextarea" rows="5" placeholder="Deine Nachricht"
+          <textarea class="form-control resize-none" id="contactFormTextarea" rows="5" maxlength="4000" placeholder="Deine Nachricht"
             required></textarea>
         </div>
         <button type="button" class="btn btn-outline-success">Abschicken</button>
