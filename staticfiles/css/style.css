@@ -1,9 +1,14 @@
 /* General Styles */
 
 body {
+  background-color: #F1E69E;
   padding-top: 65px;
   padding-bottom: 65px;
   margin: 0 2rem;
+}
+
+nav {
+  background-color: #9aba97;
 }
 
 nav a {
@@ -25,7 +30,7 @@ h1 {
 /* Footer */
 
 footer {
-  background-color: #e1e6eb;
+  background-color: #9aba97;
   color: black;
   height: 2rem;
 }

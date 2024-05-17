@@ -1,5 +1,9 @@
 /* General Styles */
 
+* {
+  background-color: #6E9B69;
+}
+
 body {
   padding-top: 65px;
   padding-bottom: 65px;
