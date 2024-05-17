@@ -1,14 +1,14 @@
 /* General Styles */
 
 body {
-  background-color: #F1E69E;
   padding-top: 65px;
   padding-bottom: 65px;
   margin: 0 2rem;
+  background-color: #ececeb;
 }
 
 nav {
-  background-color: #9aba97;
+  background-color: #cbc0d3;
 }
 
 nav a {
@@ -30,9 +30,16 @@ h1 {
 /* Footer */
 
 footer {
-  background-color: #9aba97;
+  background-color: #cbc0d3;
   color: black;
   height: 2rem;
+}
+
+/* Obere and Untere Ferienwohnung Section */
+
+.accordion {
+  --bs-accordion-active-bg: #cbc0d3;
+  --bs-accordion-border-color: #000;
 }
 
 /* Über Uns section */
