@@ -40,6 +40,12 @@ nav a {
   margin: 0 1rem;
 }
 
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #cbc0d3;
+  font-weight: bold;
+}
+
 .header-width {
   width: 100%;
   height: auto;
@@ -50,7 +56,7 @@ nav a {
 footer {
   background-color: #cbc0d3;
   color: black;
-  height: 2rem;
+  height: 2.2rem;
 }
 
 /* Obere und untere Ferienwohnung Section */
