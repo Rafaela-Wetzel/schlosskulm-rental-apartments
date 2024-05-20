@@ -33,9 +33,11 @@ nav a {
   font-weight: 400;
 }
 
+/*
 nav div a {
   font-style: italic;
 }
+*/
 
 .nav-margin {
   margin: 0 1rem;
@@ -47,10 +49,9 @@ footer {
   background-color: #cbc0d3;
   color: black;
   height: 2rem;
-  font-style: italic;
 }
 
-/* Obere and Untere Ferienwohnung Section */
+/* Obere und untere Ferienwohnung Section */
 
 .accordion {
   --bs-accordion-active-bg: #cbc0d3;
