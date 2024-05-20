@@ -8,10 +8,13 @@
 }
 
 body {
-  padding-top: 65px;
-  padding-bottom: 65px;
-  margin: 0 2rem;
   background-color: #ececeb;
+}
+
+main {
+  padding-top: 1.3rem;
+  padding-bottom: 3rem;
+  margin: 0 2rem;
 }
 
 h1 {
@@ -22,7 +25,7 @@ h1 {
   margin: 1rem 0 2rem;
 }
 
-/* Nav Bar */
+/* Nav Bar and Header */
 
 nav {
   background-color: #cbc0d3;
@@ -33,14 +36,13 @@ nav a {
   font-weight: 400;
 }
 
-/*
-nav div a {
-  font-style: italic;
-}
-*/
-
 .nav-margin {
   margin: 0 1rem;
+}
+
+.header-width {
+  width: 100%;
+  height: auto;
 }
 
 /* Footer */
