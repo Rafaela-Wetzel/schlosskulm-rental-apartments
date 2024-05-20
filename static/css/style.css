@@ -1,22 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap');
+
 /* General Styles */
+
+* {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 300;
+}
 
 body {
   padding-top: 65px;
   padding-bottom: 65px;
   margin: 0 2rem;
   background-color: #ececeb;
-}
-
-nav {
-  background-color: #cbc0d3;
-}
-
-nav a {
-  margin: 0 0.5rem;
-}
-
-.nav-margin {
-  margin: 0 1rem;
 }
 
 h1 {
@@ -27,12 +22,32 @@ h1 {
   margin: 1rem 0 2rem;
 }
 
+/* Nav Bar */
+
+nav {
+  background-color: #cbc0d3;
+}
+
+nav a {
+  margin: 0 0.5rem;
+  font-weight: 400;
+}
+
+nav div a {
+  font-style: italic;
+}
+
+.nav-margin {
+  margin: 0 1rem;
+}
+
 /* Footer */
 
 footer {
   background-color: #cbc0d3;
   color: black;
   height: 2rem;
+  font-style: italic;
 }
 
 /* Obere and Untere Ferienwohnung Section */
