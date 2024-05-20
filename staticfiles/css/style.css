@@ -1,22 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap');
+
 /* General Styles */
 
+* {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 300;
+}
+
 body {
-  padding-top: 65px;
-  padding-bottom: 65px;
-  margin: 0 2rem;
   background-color: #ececeb;
 }
 
-nav {
-  background-color: #cbc0d3;
-}
-
-nav a {
-  margin: 0 0.5rem;
-}
-
-.nav-margin {
-  margin: 0 1rem;
+main {
+  padding-top: 1.3rem;
+  padding-bottom: 3rem;
+  margin: 0 2rem;
 }
 
 h1 {
@@ -27,22 +25,78 @@ h1 {
   margin: 1rem 0 2rem;
 }
 
+.btn-purple {
+  background-color: #cbc0d3;
+}
+
+.btn-purple:hover,
+.btn-purple:focus {
+  background-color: grey;
+  color: white;
+  font-weight: bold;
+}
+
+/* Hover CSS */
+/* Bounce In */
+.hvr-bounce-in {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.hvr-bounce-in:hover, .hvr-bounce-in:focus, .hvr-bounce-in:active {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+/* Nav Bar and Header */
+
+nav {
+  background-color: #cbc0d3;
+}
+
+nav a {
+  margin: 0 0.5rem;
+  font-weight: 400;
+}
+
+.nav-margin {
+  margin: 0 1rem;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #cbc0d3;
+  font-weight: bold;
+}
+
+.header-width {
+  width: 100%;
+  height: auto;
+}
+
 /* Footer */
 
 footer {
   background-color: #cbc0d3;
   color: black;
-  height: 2rem;
+  height: 2.2rem;
 }
 
-/* Obere and Untere Ferienwohnung Section */
+/* Obere und untere Ferienwohnung Section */
 
 .accordion {
   --bs-accordion-active-bg: #cbc0d3;
   --bs-accordion-border-color: #000;
 }
 
-/* Über Uns section */
+/* Über Uns Section */
 
 .about-me-size {
   height: 20rem;

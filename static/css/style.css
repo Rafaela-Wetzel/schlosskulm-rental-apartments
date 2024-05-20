@@ -81,6 +81,10 @@ nav a {
   height: auto;
 }
 
+.rounded-corners {
+  border-radius: 1.3rem!important;
+}
+
 /* Footer */
 
 footer {
@@ -93,7 +97,7 @@ footer {
 
 .accordion {
   --bs-accordion-active-bg: #cbc0d3;
-  --bs-accordion-border-color: #000;
+  --bs-accordion-border-color: grey;
 }
 
 /* Über Uns Section */
