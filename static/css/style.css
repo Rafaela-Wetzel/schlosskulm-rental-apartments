@@ -79,6 +79,7 @@ h1 {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
+
 .hvr-radial-out:before {
   content: "";
   position: absolute;
@@ -125,6 +126,10 @@ nav a {
 
 .nav-margin {
   margin: 0 1rem;
+}
+
+nav > button {
+  right: 1rem;
 }
 
 .dropdown-item:hover,
