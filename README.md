@@ -195,6 +195,10 @@ https://stackoverflow.com/questions/68662850/datepicker-bootstrap-5
 - How to make YouTube videos responsive
 https://yoast.com/how-to-make-youtube-videos-responsive/  
 
+- Remove Bootstrap Nav Bar Toggler Border  
+https://stackoverflow.com/questions/50668594/remove-border-color-for-navbar-toggler-hamburger-icon-in-bootstrap-using-css 
+
+
 ## Media
 
 - Background image  
