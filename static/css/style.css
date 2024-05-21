@@ -41,6 +41,10 @@ h1 {
   font-weight: bold;
 }
 
+.rounded-corners {
+  border-radius: 1.3rem!important;
+}
+
 /* Hover CSS */
 /* Bounce In */
 .hvr-bounce-in {
@@ -79,14 +83,6 @@ nav a {
   margin: 0 1rem;
 }
 
-/*.navbar-brand {
-  --bs-navbar-brand-color: #fff;
-}
-
-.navbar {
-  --bs-navbar-color: #fff;
-}*/
-
 .dropdown-item:hover,
 .dropdown-item:focus {
   background-color: #cbc0d3;
@@ -96,10 +92,6 @@ nav a {
 .header-width {
   width: 100%;
   height: auto;
-}
-
-.rounded-corners {
-  border-radius: 1.3rem!important;
 }
 
 /* Footer */

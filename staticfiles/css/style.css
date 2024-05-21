@@ -4,15 +4,20 @@
 
 * {
   font-family: "Titillium Web", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 body {
   background-color: #ececeb;
+  background-image: url("../images/hintergrundbilder/lila.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 main {
-  padding-top: 1.3rem;
+  padding-top: 5rem;
   padding-bottom: 3rem;
   margin: 0 2rem;
 }
@@ -34,6 +39,10 @@ h1 {
   background-color: grey;
   color: white;
   font-weight: bold;
+}
+
+.rounded-corners {
+  border-radius: 1.3rem!important;
 }
 
 /* Hover CSS */
@@ -58,12 +67,16 @@ h1 {
 /* Nav Bar and Header */
 
 nav {
-  background-color: #cbc0d3;
+  /*background-color: #cbc0d3;*/
+  background-color: #E5E4E2;
+  border-bottom: 1px solid #000;
+
 }
 
 nav a {
   margin: 0 0.5rem;
   font-weight: 400;
+  color: #fff;
 }
 
 .nav-margin {
@@ -81,14 +94,12 @@ nav a {
   height: auto;
 }
 
-.rounded-corners {
-  border-radius: 1.3rem!important;
-}
-
 /* Footer */
 
 footer {
-  background-color: #cbc0d3;
+  /*background-color: #cbc0d3;*/
+  background-color: #E5E4E2;
+  border-top: 1px solid #000;
   color: black;
   height: 2.2rem;
 }
