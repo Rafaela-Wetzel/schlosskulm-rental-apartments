@@ -4,15 +4,20 @@
 
 * {
   font-family: "Titillium Web", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 body {
   background-color: #ececeb;
+  background-image: url("../images/hintergrundbilder/lila.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 main {
-  padding-top: 1.3rem;
+  padding-top: 4rem;
   padding-bottom: 3rem;
   margin: 0 2rem;
 }
@@ -58,17 +63,27 @@ h1 {
 /* Nav Bar and Header */
 
 nav {
-  background-color: #cbc0d3;
+  /*background-color: #cbc0d3;*/
+  background-color: #E5E4E2;
 }
 
 nav a {
   margin: 0 0.5rem;
   font-weight: 400;
+  color: #fff;
 }
 
 .nav-margin {
   margin: 0 1rem;
 }
+
+/*.navbar-brand {
+  --bs-navbar-brand-color: #fff;
+}
+
+.navbar {
+  --bs-navbar-color: #fff;
+}*/
 
 .dropdown-item:hover,
 .dropdown-item:focus {
@@ -88,7 +103,8 @@ nav a {
 /* Footer */
 
 footer {
-  background-color: #cbc0d3;
+  /*background-color: #cbc0d3;*/
+  background-color: #E5E4E2;
   color: black;
   height: 2.2rem;
 }
