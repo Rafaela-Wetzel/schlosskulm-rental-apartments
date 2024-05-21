@@ -65,7 +65,8 @@ h1 {
 nav {
   /*background-color: #cbc0d3;*/
   background-color: #E5E4E2;
-  
+  border-bottom: 1px solid #000;
+
 }
 
 nav a {
@@ -106,6 +107,7 @@ nav a {
 footer {
   /*background-color: #cbc0d3;*/
   background-color: #E5E4E2;
+  border-top: 1px solid #000;
   color: black;
   height: 2.2rem;
 }
