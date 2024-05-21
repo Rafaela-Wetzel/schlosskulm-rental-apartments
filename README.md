@@ -192,7 +192,13 @@ https://stackoverflow.com/questions/68662850/datepicker-bootstrap-5
 
 ## Tutorials 
 
+- How to make YouTube videos responsive
+https://yoast.com/how-to-make-youtube-videos-responsive/  
+
 ## Media
+
+- Background image  
+https://unsplash.com/de/fotos/low-angle-fotografie-des-violetten-himmels-NvesrDbsrL4  
 
 ## Acknowledgements
 

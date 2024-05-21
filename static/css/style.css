@@ -104,6 +104,13 @@ footer {
   height: 2.2rem;
 }
 
+/* Main Page */
+
+.youtube-responsive {
+  aspect-ratio: 16 / 9;
+  width: 75%;
+}
+
 /* Obere und untere Ferienwohnung Section */
 
 .accordion {
