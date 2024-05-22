@@ -119,9 +119,12 @@ nav {
 }
 
 nav a {
-  margin: 0 0.5rem;
   font-weight: 400;
   color: #fff;
+}
+
+.margin-left-right {
+  margin: 0 0.5rem;
 }
 
 .nav-margin {
@@ -136,6 +139,7 @@ nav > button {
 .dropdown-item:focus {
   background-color: #cbc0d3;
   font-weight: bold;
+  box-sizing: border-box; 
 }
 
 .navbar-toggler:focus,
