@@ -1,15 +1,15 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description"
-    content="Miete deine Ferienwohnung in Schloßkulm, Thüringen und genieße eine Auszeit inmitten der Stille der Natur.">
+    content="Rent your holiday apartment in Schloßkulm, Thuringia and enjoy the quietness of the German countryside.">
   <meta name="author" content="Rafaela Wetzel">
-  <title>Schloßkulm Ferienwohnungen</title>
+  <title>Schloßkulm Rental Apartments</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -22,7 +22,7 @@
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-lg">
-      <a class="navbar-brand nav-margin" href="{% url 'startseite' %}">Schloßkulm Ferienwohnungen</a>
+      <a class="navbar-brand nav-margin" href="{% url 'startseite' %}">Schloßkulm Rental Apartments</a>
       <button class="navbar-toggler border-0 hvr-radial-out" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa-solid fa-ellipsis"></i>
@@ -32,14 +32,14 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle hvr-bounce-in margin-left-right" href="#" id="navbarDropdownMenuLink1"
               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Haus
+              House
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
-              <a class="dropdown-item" href="{% url 'ferienwohnung-oben' %}">Obere Ferienwohnung</a>
-              <a class="dropdown-item" href="{% url 'ferienwohnung-unten' %}">Untere Ferienwohnung</a>
-              <a class="dropdown-item" href="{% url 'haus' %}">Gesamtes Haus</a>
-              <a class="dropdown-item" href="{% url 'hausregeln' %}">Hausregeln</a>
-              <a class="dropdown-item" href="{% url 'anfahrt' %}">Anfahrt</a>
+              <a class="dropdown-item" href="{% url 'ferienwohnung-oben' %}">Upper Apartment</a>
+              <a class="dropdown-item" href="{% url 'ferienwohnung-unten' %}">Lower Apartment</a>
+              <a class="dropdown-item" href="{% url 'haus' %}">Rent House</a>
+              <a class="dropdown-item" href="{% url 'hausregeln' %}">House Rules</a>
+              <a class="dropdown-item" href="{% url 'anfahrt' %}">Directions</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -48,42 +48,25 @@
               Schloßkulm
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
-              <a class="dropdown-item" href="{% url 'tagesausflug' %}">Tagesausflug</a>
-              <a class="dropdown-item" href="{% url 'initiativen' %}">Initiativen</a>
-              <a class="dropdown-item" href="{% url 'galerie' %}">Galerie</a>
+              <a class="dropdown-item" href="{% url 'tagesausflug' %}">Day Activities</a>
+              <a class="dropdown-item" href="{% url 'galerie' %}">Gallery</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'preise' %}">Preise</a>
+            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'preise' %}">Prices</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'buchung' %}">Buchung</a>
+            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'buchung' %}">Booking</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'ueber-uns' %}">Über uns</a>
+            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'ueber-uns' %}">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'kontakt' %}">Kontakt</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'projektarchiv' %}">Projektarchiv</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle hvr-bounce-in margin-left-right" href="#" id="navbarDropdownMenuLink3"
-              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Rechtliches
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
-              <a class="dropdown-item" href="{% url 'datenschutz' %}">Datenschutz</a>
-              <a class="dropdown-item" href="{% url 'impressum' %}">Impressum</a>
-              <a class="dropdown-item" href="{% url 'agb' %}">AGB</a>
-            </div>
+            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'kontakt' %}">Contact</a>
           </li>
         </ul>
       </div>
     </nav>
-    <!--<img src="../../static/images/schlosskulm-bilder/schlosskulm-haus/schlosskulm-header.jpg" class="header-width"
-      alt="Fassade mit altem schwarz-weißen Fachwerk im Sonnenschein.">-->
   </header>
 
   <main>
