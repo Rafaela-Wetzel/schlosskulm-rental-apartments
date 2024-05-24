@@ -408,18 +408,36 @@
             data-bs-parent="#accordionExample">
             <div class="accordion-body container">
                 <div class="row d-flex justify-content-center">
-                    <div class="col-sm-6">
+
+                    <div class="col-sm-5">
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Upper Apartment</h5>
                                 <p class="card-text">
-                                    1-2 persons: 72€ per night<br>
-                                    3-more persons: 14€ per night and person<br>
-                                    Additional 50€ for cleaning
+                                    1-2 persons: <strong>72€ per night</strong><br>
+                                    3 or more persons: <strong>14€ per night</strong> and person<br>
+                                    Additional 50€ for cleaning<br><br>
+                                    <a href="{% url 'buchung' %}" class="btn btn-purple">Booking</a>
                                 </p>
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-sm-7">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Additional Information</h5>
+                                <p class="card-text">
+                                    Rates for children 3 years old or older are <strong>14€ per night</strong> (same pricing as for
+                                    adults).<br>
+                                    For New Years Eve we are renting out the house in its entirety only (lower and upper
+                                    apartment)
+                                    for max. 15 persons, max. 5 days, at a fixed rate of 1000€.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>

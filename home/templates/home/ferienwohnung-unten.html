@@ -12,14 +12,15 @@
                 Welcome
             </button>
         </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
                 <p>Dear guests,<br><br>
 
                     welcome to Schloßkulm! Located just at the edge of the forest
                     you can expect a beautiful location full of wild flowers, singing birds, the sound of wind in the
-                    trees and nice, welcoming hosts. In the cold months you will have to operate the oven (it is not possible
+                    trees and nice, welcoming hosts. In the cold months you will have to operate the oven (it is not
+                    possible
                     without!) and in summer you can count the stars in the sky.<br><br>
 
                     Even though only the foundation of this extended barn tells the story of Schloßkulm it is those old
@@ -103,13 +104,13 @@
     </div>
 
     <div class="accordion-item">
-        <h2 class="accordion-header" id="headingSix">
+        <h2 class="accordion-header" id="headingFour">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
                 Check-In / Check-Out
             </button>
         </h2>
-        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
                 <p>
@@ -121,18 +122,19 @@
     </div>
 
     <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFour">
+        <h2 class="accordion-header" id="headingFive">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                 Facilities
             </button>
         </h2>
-        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Usually a stable internet connection</li>
-                    <li class="list-group-item">Kitchen with ceramic hob, fridge, water kettle, tableware for 4 people (plus guests)</li>
+                    <li class="list-group-item">Kitchen with ceramic hob, fridge, water kettle, tableware for 4 people
+                        (plus guests)</li>
                     <li class="list-group-item">Old cooking and baking stove ("Küchenhexe")</li>
                     <li class="list-group-item">Washing machine and dryer</li>
                     <li class="list-group-item">Shower (with storage water heater)</li>
@@ -142,13 +144,13 @@
     </div>
 
     <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFive">
+        <h2 class="accordion-header" id="headingSix">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                 Gallery
             </button>
         </h2>
-        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
                 <div class="container">
@@ -174,7 +176,8 @@
                                     <img src="../../static/images/ferienwohnungen/fewo-unten/gesamtes-zimmer-1.jpg"
                                         alt="Two separate rooms with a double bed each and adjacent open kitchen and oven.">
                                 </a>
-                                <div class="desc" aria-hidden="true">Two separate sleeping opportunities with adjacent open kitchen and oven</div>
+                                <div class="desc" aria-hidden="true">Two separate sleeping opportunities with adjacent
+                                    open kitchen and oven</div>
                             </div>
                         </div>
 
@@ -197,7 +200,8 @@
                                     <img src="../../static/images/ferienwohnungen/fewo-unten/gesamtes-zimmer-2.jpg"
                                         alt="Double bed with adjacent open kitchen and dinner table.">
                                 </a>
-                                <div class="desc" aria-hidden="true">Double bed with adjacent open kitchen and dinner table</div>
+                                <div class="desc" aria-hidden="true">Double bed with adjacent open kitchen and dinner
+                                    table</div>
                             </div>
                         </div>
 
@@ -228,6 +232,52 @@
             </div>
         </div>
     </div>
+
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSeven">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                Prices
+            </button>
+        </h2>
+        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Lower Apartment</h5>
+                                <p class="card-text">
+                                    1-2 persons: <strong>58€ per night</strong><br>
+                                    3 or more persons: <strong>14€ per night</strong> and person<br>
+                                    Additional 50€ for cleaning<br><br>
+                                    <a href="{% url 'buchung' %}" class="btn btn-purple">Booking</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Additional Information</h5>
+                                <p class="card-text">
+                                    Rates for <strong>children</strong> 3 years old or older are <strong>14€ per night</strong> (same pricing as for
+                                    adults).<br>
+                                    For New Years Eve we are renting out the house in its entirety only (lower and upper
+                                    apartment)
+                                    for max. 15 persons, max. 5 days, at a fixed rate of 1000€.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 <br>
 
