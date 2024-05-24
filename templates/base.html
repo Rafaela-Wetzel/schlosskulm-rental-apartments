@@ -22,7 +22,7 @@
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-lg">
-      <a class="navbar-brand nav-margin" href="{% url 'startseite' %}">Schloßkulm Rental Apartments</a>
+      <a class="navbar-brand nav-margin" href="{% url 'main-page' %}">Schloßkulm Rental Apartments</a>
       <button class="navbar-toggler border-0 hvr-radial-out" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa-solid fa-ellipsis"></i>
@@ -35,10 +35,10 @@
               House
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
-              <a class="dropdown-item" href="{% url 'ferienwohnung-oben' %}">Upper Apartment</a>
-              <a class="dropdown-item" href="{% url 'ferienwohnung-unten' %}">Lower Apartment</a>
-              <a class="dropdown-item" href="{% url 'haus' %}">Rent House</a>
-              <a class="dropdown-item" href="{% url 'hausregeln' %}">House Rules</a>
+              <a class="dropdown-item" href="{% url 'upper-apartment' %}">Upper Apartment</a>
+              <a class="dropdown-item" href="{% url 'lower-apartment' %}">Lower Apartment</a>
+              <a class="dropdown-item" href="{% url 'house' %}">Rent House</a>
+              <a class="dropdown-item" href="{% url 'house-rules' %}">House Rules</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -47,19 +47,19 @@
               Schloßkulm
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
-              <a class="dropdown-item" href="{% url 'tagesausflug' %}">Day Activities</a>
-              <a class="dropdown-item" href="{% url 'galerie' %}">Gallery</a>
-              <a class="dropdown-item" href="{% url 'anfahrt' %}">Location</a>
+              <a class="dropdown-item" href="{% url 'day-trips' %}">Day Trips</a>
+              <a class="dropdown-item" href="{% url 'gallery' %}">Gallery</a>
+              <a class="dropdown-item" href="{% url 'directions' %}">Location</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'buchung' %}">Booking</a>
+            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'booking' %}">Booking</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'ueber-uns' %}">About Us</a>
+            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'about-us' %}">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'kontakt' %}">Contact</a>
+            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'contact' %}">Contact</a>
           </li>
         </ul>
       </div>

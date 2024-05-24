@@ -3,53 +3,35 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-def agb_page(request):
-    return render(request, 'home/agb.html')
+def directions_page(request):
+    return render(request, 'home/directions.html')
 
-def anfahrt_page(request):
-    return render(request, 'home/anfahrt.html')
+def booking_page(request):
+    return render(request, 'home/booking.html')
 
-def buchung_page(request):
-    return render(request, 'home/buchung.html')
+def upper_apartment_page(request):
+    return render(request, 'home/upper-apartment.html')
 
-def datenschutz_page(request):
-    return render(request, 'home/datenschutz.html')
+def lower_apartment_page(request):
+    return render(request, 'home/lower-apartment.html')
 
-def ferienwohnung_oben_page(request):
-    return render(request, 'home/ferienwohnung-oben.html')
+def gallery_page(request):
+    return render(request, 'home/gallery.html')
 
-def ferienwohnung_unten_page(request):
-    return render(request, 'home/ferienwohnung-unten.html')
+def house_page(request):
+    return render(request, 'home/house.html')
 
-def galerie_page(request):
-    return render(request, 'home/galerie.html')
+def house_rules_page(request):
+    return render(request, 'home/house-rules.html')
 
-def haus_page(request):
-    return render(request, 'home/haus.html')
+def contact_page(request):
+    return render(request, 'home/contact.html')
 
-def hausregeln_page(request):
-    return render(request, 'home/hausregeln.html')
-
-def impressum_page(request):
-    return render(request, 'home/impressum.html')
-
-def initiativen_page(request):
-    return render(request, 'home/initiativen.html')
-
-def kontakt_page(request):
-    return render(request, 'home/kontakt.html')
-
-def preise_page(request):
-    return render(request, 'home/preise.html')
-
-def projektarchiv_page(request):
-    return render(request, 'home/projektarchiv.html')
-
-def start_page(request):
+def main_page(request):
     return render(request, 'home/index.html')
 
-def tagesausflug_page(request):
-    return render(request, 'home/tagesausflug.html')
+def day_trips_page(request):
+    return render(request, 'home/day-trips.html')
 
-def ueber_uns_page(request):
-    return render(request, 'home/ueber-uns.html')
+def about_us_page(request):
+    return render(request, 'home/about-us.html')
