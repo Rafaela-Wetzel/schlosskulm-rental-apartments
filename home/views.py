@@ -2,7 +2,7 @@ from django.contrib import messages
 from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render, get_object_or_404, redirect
 
-from home.forms import BookingForm
+from .forms import BookingForm
 
 # Template views
 
@@ -46,7 +46,9 @@ def book_apartment(request):
         form = BookingForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, "Thank you your booking with us. We will be in touch with you soon.")
+            messages.add_message(request, messages.SUCCESS, "Thank you for booking with us. We will be in touch with you soon.")
             return redirect(main_page)
-    #else:
-        #messages.
+        else:
+            messages.add_message(request, messages.ERROR, "Please fill out all form fields.")
+
+form = BookingForm()
