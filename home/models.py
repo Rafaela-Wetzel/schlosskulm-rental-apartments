@@ -15,12 +15,13 @@ class Booking(models.Model):
     zip_code = models.CharField(max_length=100)
     city = models.CharField(max_length=100)
     country = models.CharField(max_length=100)
-    animals = models.BooleanField()
-    amount_guests = models.IntegerField()
-    nationality = models.CharField(max_length=100)
-    passport_number = models.CharField(max_length=100, blank=True, null=True)
+    booking_item = models.CharField()
     arrival_date = models.DateField()
     departure_date = models.DateField()
+    amount_guests = models.IntegerField()
+    nationality = models.CharField()
+    passport_number = models.CharField(max_length=100, blank=True, null=True)
+    animals = models.BooleanField(blank=True, null=True)
     message = models.TextField(max_length=1000)
 
     class Meta:

@@ -3,7 +3,7 @@
 
 <h1>Booking</h1>
 
-<form>
+<form method="POST">
     <div class="row">
         <div class="col-4">
             <label for="inputFirstName">First Name</label>
@@ -111,11 +111,13 @@
                 </select>
             </div>
 
+           <!-- {% if form.nationality == "Other" %} -->
             <div class="form-group px-5 col">
                 <label for="inputPassportNumber">Passport Number</label>
                 <input type="text" class="form-control" id="inputPassportNumber" maxlength="200" required>
                 </select>
             </div>
+           <!-- {% endif %} -->
 
             <div class="form-check mt-3 ml-3 px-5 col">
                 <input class="custom-control-input" type="checkbox" id="checkPet">
