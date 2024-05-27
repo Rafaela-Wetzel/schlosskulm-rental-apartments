@@ -25,3 +25,6 @@ class Booking(models.Model):
 
     class Meta:
         ordering=['last_name','first_name']
+
+    def __str__(self):
+        return f'Booking: {self.last_name}, {self.first_name}'
