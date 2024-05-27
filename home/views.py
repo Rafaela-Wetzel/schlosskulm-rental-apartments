@@ -1,7 +1,10 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.contrib import messages
+from django.http import HttpResponse, HttpRequest
+from django.shortcuts import render, get_object_or_404, redirect
 
-# Create your views here.
+from home.forms import BookingForm
+
+# Template views
 
 def directions_page(request):
     return render(request, 'home/directions.html')
@@ -35,3 +38,15 @@ def day_trips_page(request):
 
 def about_us_page(request):
     return render(request, 'home/about-us.html')
+
+# Booking Form Views
+
+def book_apartment(request):
+    if request.method == "POST":
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Thank you your booking with us. We will be in touch with you soon.")
+            return redirect(main_page)
+    #else:
+        #messages.
