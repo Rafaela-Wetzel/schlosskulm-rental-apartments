@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Booking(models.Model):
-    user = models.ForeignKey(User, on_delete=models.SET_NULL)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     booking_date = models.DateField(auto_now=True)
     first_name = models.CharField(max_length=100, unique=True)
     last_name = models.CharField(max_length=100, unique=True)
