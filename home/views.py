@@ -52,3 +52,7 @@ def book_apartment(request):
             messages.add_message(request, messages.ERROR, "Please fill out all form fields.")
 
 form = BookingForm()
+return render(
+    request,
+    "home/index.html",
+    )

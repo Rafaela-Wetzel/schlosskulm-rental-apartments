@@ -1,9 +1,13 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
+
 {% block content %}
 
 <h1>Booking</h1>
 
 <form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
     <div class="row">
         <div class="col-4">
             <label for="inputFirstName">First Name</label>
