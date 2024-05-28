@@ -23,13 +23,17 @@
     <div class="col-sm-8">
       <form>
         <div class="mb-3">
-          <label for="contactForm" class="form-label">Your e-mail address</label>
-          <input type="email" class="form-control" id="contactForm" placeholder="name@example.com" maxlength="200"
+          <label for="inputYourName">Your Name</label>
+          <input type="text" placeholder="Your Name" class="form-control" id="inputYourName"  maxlength="200" required>
+      </div>
+        <div class="mb-3">
+          <label for="contactForm" class="form-label">Your E-Mail Address</label>
+          <input type="email" placeholder="E-Mail Address" class="form-control" id="contactForm" maxlength="200"
             required>
         </div>
         <div class="mb-3">
           <label for="contactFormTextarea" class="form-label">Message</label>
-          <textarea class="form-control resize-none" id="contactFormTextarea" rows="5" maxlength="4000"
+          <textarea class="form-control resize-none" placeholder="Your Message" id="contactFormTextarea" rows="5" maxlength="4000"
             placeholder="Your message" required></textarea>
         </div>
         <button type="button" class="btn btn-purple border-dark">Send</button>

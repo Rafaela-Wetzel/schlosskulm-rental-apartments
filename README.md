@@ -198,6 +198,9 @@ https://yoast.com/how-to-make-youtube-videos-responsive/
 - Remove Bootstrap Nav Bar Toggler Border  
 https://stackoverflow.com/questions/50668594/remove-border-color-for-navbar-toggler-hamburger-icon-in-bootstrap-using-css 
 
+- How to add custom CSS classes to form fields in Django Allauth
+https://stackoverflow.com/a/21387794/22894967  
+
 
 ## Media
 
