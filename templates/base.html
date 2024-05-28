@@ -1,5 +1,9 @@
 {% load static %}
 
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,43 +27,59 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-lg">
       <a class="navbar-brand nav-margin" href="{% url 'main-page' %}">Schloßkulm Rental Apartments</a>
-      <button class="navbar-toggler border-0 hvr-radial-out" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler border-0 hvr-radial-out" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+        aria-label="Toggle navigation">
         <i class="fa-solid fa-ellipsis"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle hvr-bounce-in margin-left-right" href="#" id="navbarDropdownMenuLink1"
-              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-current="page">
               House
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
-              <a class="dropdown-item" href="{% url 'upper-apartment' %}">Upper Apartment</a>
-              <a class="dropdown-item" href="{% url 'lower-apartment' %}">Lower Apartment</a>
-              <a class="dropdown-item" href="{% url 'house' %}">Rent House</a>
-              <a class="dropdown-item" href="{% url 'house-rules' %}">House Rules</a>
+              <a class="dropdown-item" href="{% url 'upper-apartment' %}" aria-current="page">Upper Apartment</a>
+              <a class="dropdown-item" href="{% url 'lower-apartment' %}" aria-current="page">Lower Apartment</a>
+              <a class="dropdown-item" href="{% url 'house' %}" aria-current="page">Rent House</a>
+              <a class="dropdown-item" href="{% url 'house-rules' %}" aria-current="page">House Rules</a>
             </div>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle hvr-bounce-in margin-left-right" href="#" id="navbarDropdownMenuLink2"
-              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-current="page">
               Schloßkulm
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
-              <a class="dropdown-item" href="{% url 'day-trips' %}">Day Trips</a>
-              <a class="dropdown-item" href="{% url 'gallery' %}">Gallery</a>
-              <a class="dropdown-item" href="{% url 'directions' %}">Location</a>
+              <a class="dropdown-item" href="{% url 'day-trips' %}" aria-current="page">Day Trips</a>
+              <a class="dropdown-item" href="{% url 'gallery' %}" aria-current="page">Gallery</a>
+              <a class="dropdown-item" href="{% url 'directions' %}" aria-current="page">Location</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'booking' %}">Booking</a>
+            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'booking' %}" aria-current="page">Booking</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'about-us' %}">About Us</a>
+            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'about-us' %}" aria-current="page">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'contact' %}">Contact</a>
+            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'contact' %}" aria-current="page">Contact</a>
+          </li>
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link hvr-bounce-in margin-left-right {% if request.path == logout.url %}active{% endif %}" aria-current="page"
+              href="{% url 'account_logout' %}">Logout</a>
+            {% else %}
+          <li class="nav-item">
+            <a class="nav-link hvr-bounce-in margin-left-right {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+              href="{% url 'account_signup' %}">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hvr-bounce-in margin-left-right {% if request.path == login_url %}active{% endif %}" aria-current="page"
+              href="{% url 'account_login' %}">Login</a>
+          </li>
+          {% endif %}
           </li>
         </ul>
       </div>
