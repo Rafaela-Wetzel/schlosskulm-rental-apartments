@@ -43,7 +43,7 @@ def about_us_page(request):
 
 def book_apartment(request):
     if request.method == "POST":
-        form = BookingForm(data=request.POST)
+        form = BookingForm(request.POST)
         if form.is_valid():
             form.save()
             messages.add_message(request, messages.SUCCESS, "Thank you for booking with us. We will be in touch with you soon.")
@@ -51,8 +51,8 @@ def book_apartment(request):
         else:
             messages.add_message(request, messages.ERROR, "Please fill out all form fields.")
 
-    #form = BookingForm()
-    #return render(
-    #    request,
-    #    "home/index.html",
-    #    )
+    form = BookingForm()
+    return render(
+        request,
+        "home/index.html",
+        )

@@ -189,6 +189,8 @@ https://stackoverflow.com/questions/52877442/centering-a-checkbox-vertically-wit
 [3] Bootstrap datepicker  
 https://stackoverflow.com/questions/68662850/datepicker-bootstrap-5  
 
+[4] Login / logout / sign in - code for nav bar adopted from Django Blog walkthrough
+
 
 ## Tutorials 
 
