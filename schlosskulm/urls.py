@@ -5,6 +5,7 @@ from home import views
 urlpatterns = [
     path('', views.main_page, name='main-page'),
     path('about-us/', views.about_us_page, name='about-us'),
+    path('accounts', include('allauth.urls')),
     path('admin/', admin.site.urls),
     path('booking/', views.booking_page, name='booking'),
     path('contact/', views.contact_page, name='contact'),
