@@ -189,7 +189,10 @@ https://stackoverflow.com/questions/52877442/centering-a-checkbox-vertically-wit
 [3] Bootstrap datepicker  
 https://stackoverflow.com/questions/68662850/datepicker-bootstrap-5  
 
-[4] Login / logout / sign in - code for nav bar adopted from Django Blog walkthrough
+[4] Login / logout / sign in - code for nav bar adopted from Django Blog walkthrough  
+
+[5] How to add a choice field to a model  
+https://www.youtube.com/watch?v=iddMtHAV_N0  
 
 
 ## Tutorials 
