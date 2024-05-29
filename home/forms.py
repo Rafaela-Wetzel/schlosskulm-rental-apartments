@@ -4,5 +4,5 @@ from .models import Booking
 class BookingForm(ModelForm):
     class Meta:
         model = Booking
-        fields = ('first_name', 'last_name', 'birth_date', 'email', 'phone_number', 'address', 'zip_code', 'city', 'country', 'booking_item', 'arrival_date', 'departure_date', 'amount_guests', 'nationality', 'passport_number', 'animals', 'message')
-        
+        fields = ['first_name', 'last_name', 'birth_date', 'email', 'phone_number', 'address', 'zip_code', 'city', 'country', 'booking_item', 'arrival_date', 'departure_date', 'amount_guests', 'nationality', 'passport_number', 'animals', 'message']
+        exclude = ['user', 'booking_date', 'booking_status']

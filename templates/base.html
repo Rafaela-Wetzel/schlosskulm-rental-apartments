@@ -97,6 +97,11 @@
   <footer class="fixed-bottom shadow-lg">
     <div class="container">
       <div class="row">
+        {% if user.is_authenticated %}
+        <div class="col-sm pt-1">
+          Logged in as: {{ user.username }}
+        </div>
+        {% endif %}
         <div class="col-sm d-flex justify-content-end pt-1">
           © 2024 Rafaela Wetzel
         </div>

@@ -163,11 +163,10 @@ nav>button {
 /* Footer */
 
 footer {
-  /*background-color: #cbc0d3;*/
-  background-color: #E5E4E2;
+  background-color: #cbc0d3;
   border-top: 1px solid #000;
   color: black;
-  height: 2.2rem;
+  height: 2.5rem;
 }
 
 /* Main Page */

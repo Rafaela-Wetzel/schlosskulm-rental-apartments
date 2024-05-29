@@ -20,8 +20,11 @@ def book_apartment(request):
     form = BookingForm()
     return render(
         request,
-        "{% url 'main-page' %}",
-        )
+        "home/booking.html",
+        {
+            "form": form
+        },
+    )
 
 
 # Template views
