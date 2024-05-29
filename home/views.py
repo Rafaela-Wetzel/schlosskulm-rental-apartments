@@ -2,7 +2,7 @@ from django.contrib import messages
 from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render, get_object_or_404, redirect
 
-from .forms import BookingForm
+from .models import Booking
 
 # Template views
 
@@ -39,7 +39,7 @@ def day_trips_page(request):
 def about_us_page(request):
     return render(request, 'home/about-us.html')
 
-# Booking Form Views
+# Booking Form
 
 def book_apartment(request):
     if request.method == "POST":

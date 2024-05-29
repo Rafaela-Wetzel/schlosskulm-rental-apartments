@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load crispy_forms_tags %}
+<!--{% load crispy_forms_tags %}-->
 
 {% block content %}
 
@@ -8,8 +8,7 @@
 <h1>Booking</h1>
 
 <form method="post" action="{{ DATABASE_URL }}" id="makeBooking">
-    {% csrf_token %}
-    {{ form|crispy }}
+<!--{{ form|crispy }}-->
     <div class="row">
         <div class="col-4">
             <label for="inputFirstName">First Name</label>
@@ -120,14 +119,14 @@
                 </select>
             </div>
 
-            <!-- {% if form.nationality == "Other" %} -->
+            <!-- include if-statement so the below code is only shown to users who have another nationality than German -->
             <div class="form-group px-5 col">
                 <label for="inputPassportNumber">Passport Number</label>
                 <input type="text" placeholder="Passport Number" class="form-control" id="inputPassportNumber" name="inputPassportNumber"
                     maxlength="200" required>
                 </select>
             </div>
-            <!-- {% endif %} -->
+            <!---->
 
             <div class="form-check mt-3 ml-3 px-5 col">
                 <input type="checkbox" id="checkPet" name="checkPet" class="custom-control-input">
