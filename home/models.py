@@ -6,6 +6,12 @@ from django.contrib.auth.models import User
 class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.RESTRICT, related_name="user_name")
     booking_date = models.DateField(auto_now=True)
+    status = (
+        ('Requested', 'Requested'),
+        ('Confirmed', 'Confirmed'),
+        ('Cancelled', 'Cancelled'),
+    )
+    booking_status = models.CharField(choices=status, blank=True, null=True, default='Requested')
     first_name = models.CharField(max_length=100, unique=True)
     last_name = models.CharField(max_length=100, unique=True)
     birth_date = models.DateField()
