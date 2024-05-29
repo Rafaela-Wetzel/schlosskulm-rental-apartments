@@ -7,34 +7,34 @@
 
 <h1>Booking</h1>
 
-<form method="post">
+<form method="post" action="{{ DATABASE_URL }}" id="makeBooking">
     {% csrf_token %}
     {{ form|crispy }}
     <div class="row">
         <div class="col-4">
             <label for="inputFirstName">First Name</label>
-            <input type="text" placeholder="First Name" class="form-control" id="inputFirstName" maxlength="200"
+            <input type="text" placeholder="First Name" class="form-control" id="inputFirstName" name="inputFirstName" maxlength="200"
                 required>
         </div>
         <div class="col-4">
             <label for="inputLastName">Last Name</label>
-            <input type="text" placeholder="Last Name" class="form-control" id="inputLastName" maxlength="200" required>
+            <input type="text" placeholder="Last Name" class="form-control" id="inputLastName" name="inputLastName" maxlength="200" required>
         </div>
         <div class="col-4">
             <label for="inputBirthdate">Birth Date</label>
-            <input type="date" class="form-control" id="inputBirthdate" required>
+            <input type="date" class="form-control" id="inputBirthdate" name="inputBirthdate" required>
         </div>
     </div>
 
     <div class="row">
         <div class="form-group col-md-6">
             <label for="inputEmail">E-Mail</label>
-            <input type="email" placeholder="E-Mail Address" class="form-control" id="inputEmail" maxlength="200"
+            <input type="email" placeholder="E-Mail Address" class="form-control" id="inputEmail" name="inputEmail" maxlength="200"
                 required>
         </div>
         <div class="form-group col-md-6">
             <label for="inputPhoneNumber">Telephone Number</label>
-            <input type="tel" placeholder="Telephone Number" class="form-control" id="inputPhoneNumber" maxlength="200"
+            <input type="tel" placeholder="Telephone Number" class="form-control" id="inputPhoneNumber" name="inputPhoneNumber" maxlength="200"
                 required>
         </div>
     </div>
@@ -42,24 +42,24 @@
     <div class="row">
         <div class="form-group col">
             <label for="inputAddress">Address</label>
-            <input type="text" placeholder="Address" class="form-control" id="inputAddress" maxlength="200" required>
+            <input type="text" placeholder="Address" class="form-control" id="inputAddress" name="inputAddress" maxlength="200" required>
         </div>
     </div>
 
     <div class="row">
         <div class="form-group col-md-2">
             <label for="inputZip">ZIP Code</label>
-            <input type="text" placeholder="ZIP Code" class="form-control" id="inputZip" maxlength="200" required>
+            <input type="text" placeholder="ZIP Code" class="form-control" id="inputZip" name="inputZip" maxlength="200" required>
         </div>
 
         <div class="form-group col-md-6">
             <label for="inputCity">City</label>
-            <input type="text" placeholder="City" class="form-control" id="inputCity" maxlength="200" required>
+            <input type="text" placeholder="City" class="form-control" id="inputCity" name="inputCity" maxlength="200" required>
         </div>
 
         <div class="form-group col-md-4">
             <label for="inputCountry">Country</label>
-            <input type="text" placeholder="Country" id="inputCountry" class="form-control" maxlength="200" required>
+            <input type="text" placeholder="Country" id="inputCountry" name="inputCountry" class="form-control" maxlength="200" required>
         </div>
     </div>
 
@@ -68,7 +68,7 @@
 
         <div class="form-group col-8">
             <label for="inputBookingItem">You would like to book...</label>
-            <select class="form-select" id="inputBookingItem" aria-label="Default select example" required>
+            <select class="form-select" id="inputBookingItem" name="inputBookingItem" aria-label="Default select example" required>
                 <option value="Deutsch" selected>Upper Apartment</option>
                 <option value="Andere">Lower Apartment</option>
                 <option value="Andere">Whole House</option>
@@ -77,13 +77,13 @@
 
         <div class="col-sm-2">
             <label for="startDate">Arrival Date</label>
-            <input id="startDate" class="form-control" type="date">
+            <input id="startDate" name="startDate" class="form-control" type="date">
             <span id="startDateSelected"></span>
         </div>
 
         <div class="col-sm-2">
             <label for="endDate">Departure Date</label>
-            <input id="endDate" class="form-control" type="date">
+            <input id="endDate" name="endDate" class="form-control" type="date">
             <span id="endDateSelected"></span>
         </div>
     </div>
@@ -93,7 +93,7 @@
 
             <div class="form-group px-5 col">
                 <label for="inputNumberGuests">Amount of Guests</label>
-                <select class="form-select" id="inputNumberGuests" aria-label="Default select example" required>
+                <select class="form-select" id="inputNumberGuests" name="inputNumberGuests" aria-label="Default select example" required>
                     <option value="1" selected>1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -114,7 +114,7 @@
 
             <div class="form-group px-5 col">
                 <label for="inputNationality">Your Nationality</label>
-                <select class="form-select" id="inputNationality" aria-label="Default select example" required>
+                <select class="form-select" id="inputNationality" name="inputNationality" aria-label="Default select example" required>
                     <option value="Deutsch" selected>German</option>
                     <option value="Andere">Other</option>
                 </select>
@@ -123,15 +123,15 @@
             <!-- {% if form.nationality == "Other" %} -->
             <div class="form-group px-5 col">
                 <label for="inputPassportNumber">Passport Number</label>
-                <input type="text" placeholder="Passport Number" class="form-control" id="inputPassportNumber"
+                <input type="text" placeholder="Passport Number" class="form-control" id="inputPassportNumber" name="inputPassportNumber"
                     maxlength="200" required>
                 </select>
             </div>
             <!-- {% endif %} -->
 
             <div class="form-check mt-3 ml-3 px-5 col">
-                <input class="custom-control-input" type="checkbox" id="checkPet">
-                <label class="custom-control-label" for="checkPet">
+                <input type="checkbox" id="checkPet" name="checkPet" class="custom-control-input">
+                <label for="checkPet" class="custom-control-label">
                     Pets?
                 </label>
             </div>
@@ -143,13 +143,13 @@
     <div class="row">
         <div class="form-group col">
             <label for="inputTextarea" class="form-label">Your Message</label>
-            <textarea class="form-control resize-none" placeholder="Your Message" id="inputTextarea" rows="5"
+            <textarea class="form-control resize-none" placeholder="Your Message" id="inputTextarea" name="inputTextarea" rows="5"
                 maxlength="4000" required></textarea>
         </div>
     </div>
     <br>
 
-    <button type="submit" class="btn btn-purple border-dark">Send</button>
+    <button type="submit" value="submit" formaction="{{ DATABASE_URL }}" formmethod="post" form="makeBooking" class="btn btn-purple border-dark">Send</button>
 </form>
 
 {% else %}
