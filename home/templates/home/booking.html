@@ -1,14 +1,25 @@
 {% extends "base.html" %}
-<!--{% load crispy_forms_tags %}-->
+{% load static %}
+{% load crispy_forms_tags %}
 
 {% block content %}
+<h1>Booking</h1>
 
+<form id="bookingForm" method="post">
+    {{ form | crispy }}
+    {% csrf_token %}
+    <button id="submitButton" type="submit">Submit</button>
+</form>
+
+{% endblock %}
+
+<!--
 {% if user.is_authenticated %}
 
 <h1>Booking</h1>
 
 <form method="post" action="{{ DATABASE_URL }}" id="makeBooking">
-<!--{{ form|crispy }}-->
+    {% csrf_token %}
     <div class="row">
         <div class="col-4">
             <label for="inputFirstName">First Name</label>
@@ -62,7 +73,7 @@
         </div>
     </div>
 
-    <!-- Bootstrap 5 Datepicker -->
+    -- Bootstrap 5 Datepicker --
     <div class="row justify-content-center">
 
         <div class="form-group col-8">
@@ -119,14 +130,14 @@
                 </select>
             </div>
 
-            <!-- include if-statement so the below code is only shown to users who have another nationality than German -->
+            <-- include if-statement so the below code is only shown to users who have another nationality than German --
             <div class="form-group px-5 col">
                 <label for="inputPassportNumber">Passport Number</label>
                 <input type="text" placeholder="Passport Number" class="form-control" id="inputPassportNumber" name="inputPassportNumber"
-                    maxlength="200" required>
+                    maxlength="200">
                 </select>
             </div>
-            <!---->
+            
 
             <div class="form-check mt-3 ml-3 px-5 col">
                 <input type="checkbox" id="checkPet" name="checkPet" class="custom-control-input">
@@ -158,4 +169,4 @@
 </p>
 
 {% endif %}
-{% endblock %}
+-->

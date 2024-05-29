@@ -1,8 +1,28 @@
 from django.contrib import messages
-from django.http import HttpResponse, HttpRequest
-from django.shortcuts import render, get_object_or_404, redirect
+from django.http import HttpResponse, HttpRequest, HttpResponseRedirect
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 
 from .models import Booking
+from .forms import BookingForm
+
+# Booking Form
+
+def book_apartment(request):
+    if request.method == "POST":
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.add_message(request, messages.SUCCESS, "Thank you for booking with us. We will be in touch with you soon.")
+            return redirect(main_page)
+        else:
+            messages.add_message(request, messages.ERROR, "Please fill out all form fields.")
+
+    form = BookingForm()
+    return render(
+        request,
+        "{% url 'main-page' %}",
+        )
+
 
 # Template views
 
@@ -38,21 +58,3 @@ def day_trips_page(request):
 
 def about_us_page(request):
     return render(request, 'home/about-us.html')
-
-# Booking Form
-
-def book_apartment(request):
-    if request.method == "POST":
-        form = BookingForm(request.POST)
-        if form.is_valid():
-            form.save()
-            messages.add_message(request, messages.SUCCESS, "Thank you for booking with us. We will be in touch with you soon.")
-            return redirect(main_page)
-        else:
-            messages.add_message(request, messages.ERROR, "Please fill out all form fields.")
-
-    form = BookingForm()
-    return render(
-        request,
-        "home/index.html",
-        )
