@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Booking(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user_name")
+    #user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user_name")
     booking_date = models.DateField(auto_now=True)
     status = (
         ('Requested', 'Requested'),
@@ -12,10 +12,10 @@ class Booking(models.Model):
         ('Cancelled', 'Cancelled'),
     )
     booking_status = models.CharField(choices=status, blank=True, null=True, default='Requested')
-    first_name = models.CharField(max_length=100, unique=True)
-    last_name = models.CharField(max_length=100, unique=True)
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
     birth_date = models.DateField()
-    email = models.EmailField(max_length=100, unique=True)
+    email = models.EmailField(max_length=100)
     phone_number = models.BigIntegerField()
     address = models.CharField(max_length=200)
     zip_code = models.CharField(max_length=100)

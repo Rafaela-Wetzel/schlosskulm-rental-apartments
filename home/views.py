@@ -7,17 +7,18 @@ from .forms import BookingForm
 
 # Booking Form
 
-def book_apartment(request):
+def booking_page(request):
     if request.method == "POST":
-        form = BookingForm(request.POST)
+        form = BookingForm(data=request.POST)
         if form.is_valid():
             form.save()
             messages.add_message(request, messages.SUCCESS, "Thank you for booking with us. We will be in touch with you soon.")
-            return redirect(main_page)
+            return redirect("home/index.html")
         else:
             messages.add_message(request, messages.ERROR, "Please fill out all form fields.")
+    else: 
+        form = BookingForm()
 
-    form = BookingForm()
     return render(
         request,
         "home/booking.html",
@@ -32,8 +33,8 @@ def book_apartment(request):
 def directions_page(request):
     return render(request, 'home/directions.html')
 
-def booking_page(request):
-    return render(request, 'home/booking.html')
+#def booking_page(request):
+#    return render(request, 'home/booking.html')
 
 def upper_apartment_page(request):
     return render(request, 'home/upper-apartment.html')
