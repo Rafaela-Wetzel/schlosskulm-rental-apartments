@@ -1,11 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils.timezone import now
 
 # Create your models here.
 
 class Booking(models.Model):
-    #user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user_name")
-    booking_date = models.DateField(auto_now=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user_name", default='1')
+    booking_date = models.DateField(default=now)
     status = (
         ('Requested', 'Requested'),
         ('Confirmed', 'Confirmed'),
@@ -60,4 +61,4 @@ class Booking(models.Model):
         ordering=['last_name','first_name']
 
     def __str__(self):
-        return f'Booking: {self.last_name}, {self.first_name}'
+        return f'Booking on {self.booking_date}: {self.last_name}, {self.first_name}'

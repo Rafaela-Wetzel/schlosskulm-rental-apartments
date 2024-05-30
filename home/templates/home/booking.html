@@ -5,7 +5,7 @@
 {% block content %}
 <h1>Booking</h1>
 
-<form id="bookingForm" method="post" action="{% url 'booking' %}">
+<form id="bookingForm" method="post" action="{% url 'booking' %}" autocomplete="on">
     {{ form | crispy }}
     {% csrf_token %}
     <button id="submitButton" type="submit">Submit</button>

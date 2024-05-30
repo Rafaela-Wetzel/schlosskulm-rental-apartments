@@ -13,7 +13,7 @@ def booking_page(request):
         if form.is_valid():
             form.save()
             messages.add_message(request, messages.SUCCESS, "Thank you for booking with us. We will be in touch with you soon.")
-            return redirect("home/index.html")
+            return redirect("https://8000-rafaelawetz-schlosskulm-la2h035ybbw.ws-eu114.gitpod.io/")
         else:
             messages.add_message(request, messages.ERROR, "Please fill out all form fields.")
     else: 
@@ -32,9 +32,6 @@ def booking_page(request):
 
 def directions_page(request):
     return render(request, 'home/directions.html')
-
-#def booking_page(request):
-#    return render(request, 'home/booking.html')
 
 def upper_apartment_page(request):
     return render(request, 'home/upper-apartment.html')

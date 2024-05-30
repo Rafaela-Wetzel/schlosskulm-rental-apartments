@@ -194,6 +194,9 @@ https://stackoverflow.com/questions/68662850/datepicker-bootstrap-5
 [5] How to add a choice field to a model  
 https://www.youtube.com/watch?v=iddMtHAV_N0  
 
+[6] How to make the booking date visible in the admin panel  
+https://stackoverflow.com/a/27679566/22894967
+
 
 ## Tutorials 
 
