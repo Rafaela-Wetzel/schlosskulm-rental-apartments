@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.timezone import now
+from django.utils import timezone, dateformat
 
 # Create your models here.
 
@@ -15,7 +16,7 @@ class Booking(models.Model):
     booking_status = models.CharField(choices=status, blank=True, null=True, default='Requested')
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
-    birth_date = models.DateField()
+    birth_date = models.DateField(help_text = "Please enter data in the format '2006-10-25'")
     email = models.EmailField(max_length=100)
     phone_number = models.BigIntegerField()
     address = models.CharField(max_length=200)
@@ -28,8 +29,8 @@ class Booking(models.Model):
         ('Whole House', 'Whole House'),
     )
     booking_item = models.CharField(choices=booking_object)
-    arrival_date = models.DateField()
-    departure_date = models.DateField()
+    arrival_date = models.DateField(help_text = "Please enter data in the format '2006-10-25'")
+    departure_date = models.DateField(help_text = "Please enter data in the format '2006-10-25'")
     guest_number = (
         ('1', '1'),
         ('2', '2'), 
