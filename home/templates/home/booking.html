@@ -3,6 +3,8 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+{% if user.is_authenticated %}
+
 <h1>Booking</h1>
 
 <div class="container">
@@ -20,6 +22,12 @@
       </div>
     </div>
   </div>
+
+  {% else %}
+
+  <p>You need to be <a href="{% url 'account_login' %}">logged in</a> to make a booking.</p>
+  
+  {% endif %}
 
 {% endblock %}
 
