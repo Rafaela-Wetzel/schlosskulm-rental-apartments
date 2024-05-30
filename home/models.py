@@ -7,7 +7,7 @@ from django.utils import timezone, dateformat
 
 class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user_name", default='1')
-    booking_date = models.DateField(default=now)
+    booking_date = models.DateTimeField(default=now)
     status = (
         ('Requested', 'Requested'),
         ('Confirmed', 'Confirmed'),
@@ -60,6 +60,7 @@ class Booking(models.Model):
 
     class Meta:
         ordering=['last_name','first_name']
+        
 
     def __str__(self):
         return f'{self.last_name}, {self.first_name} (booked {self.booking_date})'
