@@ -194,23 +194,25 @@ https://stackoverflow.com/questions/68662850/datepicker-bootstrap-5
 [5] How to add a choice field to a model  
 https://www.youtube.com/watch?v=iddMtHAV_N0  
 
-[6] How to make the booking date visible in the admin panel  
-https://stackoverflow.com/a/27679566/22894967
-
+[7] Code to display success alert message
+https://stackoverflow.com/a/64242550/22894967  
 
 ## Tutorials 
 
-- How to make YouTube videos responsive
+[1] How to make YouTube videos responsive
 https://yoast.com/how-to-make-youtube-videos-responsive/  
 
-- How to remove Bootstrap nav bar toggler border  
+[2] How to remove Bootstrap nav bar toggler border  
 https://stackoverflow.com/questions/50668594/remove-border-color-for-navbar-toggler-hamburger-icon-in-bootstrap-using-css 
 
-- How to add custom CSS classes to form fields in Django Allauth
+[3] How to add custom CSS classes to form fields in Django Allauth
 https://stackoverflow.com/a/21387794/22894967  
 
-- How to redirect to previous page after login
+[4] How to redirect to previous page after login
 https://stackoverflow.com/questions/63886066/redirect-back-to-previous-page-after-login-in-django-allauth  
+
+[5] How to make the booking date visible in the admin panel  
+https://stackoverflow.com/a/27679566/22894967 
 
 
 ## Media

@@ -62,4 +62,4 @@ class Booking(models.Model):
         ordering=['last_name','first_name']
 
     def __str__(self):
-        return f'Booking on {self.booking_date}: {self.last_name}, {self.first_name}'
+        return f'{self.last_name}, {self.first_name} (booked {self.booking_date})'

@@ -14,8 +14,6 @@ def booking_page(request):
             form.save()
             messages.add_message(request, messages.SUCCESS, "Thank you for booking with us. We will be in touch with you soon.")
             return redirect("https://8000-rafaelawetz-schlosskulm-la2h035ybbw.ws-eu114.gitpod.io/")
-        else:
-            messages.add_message(request, messages.ERROR, "Please fill out all form fields.")
     else: 
         form = BookingForm()
 
