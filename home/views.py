@@ -58,3 +58,6 @@ def day_trips_page(request):
 
 def about_us_page(request):
     return render(request, 'home/about-us.html')
+
+def your_bookings_page(request):
+    return render(request, 'home/your-bookings.html')
