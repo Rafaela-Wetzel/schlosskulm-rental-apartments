@@ -183,19 +183,17 @@ The live project can be found here:
 https://getbootstrap.com/docs/4.0/components/navbar/  
 https://getbootstrap.com/docs/5.3/forms/form-control/  
 
-[2] How to center a checkbox vertically with other input components with bootstrap  
-https://stackoverflow.com/questions/52877442/centering-a-checkbox-vertically-with-other-input-components-with-bootstrap  
+[2] Login / logout / sign in - code for nav bar adopted from Django Blog walkthrough  
 
-[3] Bootstrap datepicker  
-https://stackoverflow.com/questions/68662850/datepicker-bootstrap-5  
-
-[4] Login / logout / sign in - code for nav bar adopted from Django Blog walkthrough  
-
-[5] How to add a choice field to a model  
+[3] Add choice field to a model  
 https://www.youtube.com/watch?v=iddMtHAV_N0  
 
-[7] Code to display success alert message
+[4] Display success alert message
 https://stackoverflow.com/a/64242550/22894967  
+
+[5] Add date validators to model DateField
+https://stackoverflow.com/a/49240469/22894967  
+
 
 ## Tutorials 
 

@@ -2,6 +2,7 @@ from django.contrib import messages
 from django.http import HttpResponse, HttpRequest, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 
+
 from .models import Booking
 from .forms import BookingForm
 
@@ -12,7 +13,7 @@ def booking_page(request):
         form = BookingForm(data=request.POST)
         if form.is_valid():
             form.save()
-            messages.add_message(request, messages.SUCCESS, "Thank you for booking with us. We will be in touch with you soon.")
+            messages.add_message(request, messages.SUCCESS, "Thank you for your booking request. We will be in touch with you soon.")
             return redirect("https://8000-rafaelawetz-schlosskulm-la2h035ybbw.ws-eu114.gitpod.io/")
     else: 
         form = BookingForm()
@@ -24,7 +25,7 @@ def booking_page(request):
             "form": form
         },
     )
-
+    
 
 # Template views
 
