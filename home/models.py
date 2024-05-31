@@ -68,8 +68,8 @@ class Booking(models.Model):
     def __str__(self):
         return f'{self.last_name}, {self.first_name} (booked {self.booking_date})'
 
-    # Date Validators
-    
+    # Date Validation
+
     def clean(self):
         arrival_date = self.arrival_date
         departure_date = self.departure_date

@@ -57,27 +57,42 @@
               <a class="dropdown-item" href="{% url 'directions' %}" aria-current="page">Location</a>
             </div>
           </li>
+          {% if user.is_authenticated %}
+          <a class="nav-link dropdown-toggle hvr-bounce-in margin-left-right" href="#" id="navbarDropdownMenuLink3"
+            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-current="page">
+            Booking
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+            <a class="dropdown-item" href="{% url 'booking' %}" aria-current="page">Booking Form</a>
+            <a class="dropdown-item" href="{% url 'your-bookings' %}" aria-current="page">Your Bookings</a>
+          </div>
+          {% else %}
           <li class="nav-item">
-            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'account_login' %}?next={{ 'https://8000-rafaelawetz-schlosskulm-la2h035ybbw.ws-eu114.gitpod.io/booking/' }}" aria-current="page">Booking</a>
+            <a class="nav-link hvr-bounce-in margin-left-right"
+              href="{% url 'account_login' %}?next={{ 'https://8000-rafaelawetz-schlosskulm-la2h035ybbw.ws-eu114.gitpod.io/booking/' }}"
+              aria-current="page">Booking</a>
+          </li>
+          {% endif %}
+          <li class="nav-item">
+            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'about-us' %}" aria-current="page">About
+              Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'about-us' %}" aria-current="page">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'contact' %}" aria-current="page">Contact</a>
+            <a class="nav-link hvr-bounce-in margin-left-right" href="{% url 'contact' %}"
+              aria-current="page">Contact</a>
           </li>
           {% if user.is_authenticated %}
           <li class="nav-item">
-            <a class="nav-link hvr-bounce-in margin-left-right {% if request.path == logout.url %}active{% endif %}" aria-current="page"
-              href="{% url 'account_logout' %}">Logout</a>
+            <a class="nav-link hvr-bounce-in margin-left-right {% if request.path == logout.url %}active{% endif %}"
+              aria-current="page" href="{% url 'account_logout' %}">Logout</a>
             {% else %}
           <li class="nav-item">
-            <a class="nav-link hvr-bounce-in margin-left-right {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-              href="{% url 'account_signup' %}">Register</a>
+            <a class="nav-link hvr-bounce-in margin-left-right {% if request.path == signup_url %}active{% endif %}"
+              aria-current="page" href="{% url 'account_signup' %}">Register</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link hvr-bounce-in margin-left-right {% if request.path == login_url %}active{% endif %}" aria-current="page"
-              href="{% url 'account_login' %}">Login</a>
+            <a class="nav-link hvr-bounce-in margin-left-right {% if request.path == login_url %}active{% endif %}"
+              aria-current="page" href="{% url 'account_login' %}">Login</a>
           </li>
           {% endif %}
           </li>
