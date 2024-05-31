@@ -45,6 +45,11 @@ h1 {
   border-radius: 1.3rem !important;
 }
 
+.styling-messages {
+  border: 0.3rem dashed white;
+  font-weight: bold;
+}
+
 /* Hover CSS */
 /* Bounce In */
 .hvr-bounce-in {

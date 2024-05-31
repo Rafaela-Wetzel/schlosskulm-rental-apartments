@@ -8,25 +8,38 @@
 <h1>Booking</h1>
 
 <div class="container">
-    <div class="row">
-      <div class="col-sm-2">
-      </div>
-      <div class="col-sm-8">
-        <form id="bookingForm" method="post" action="{% url 'booking' %}" autocomplete="on">
-            {{ form | crispy }}
-            {% csrf_token %}
-            <button id="submitButton" type="submit" class="btn btn-purple border-dark">Submit</button>
-        </form>
-      </div>
-      <div class="col-sm-2">
-      </div>
+  <div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-8">
+      <form id="bookingForm" method="post" action="{% url 'booking' %}" autocomplete="on">
+        {{ form | crispy }}
+        {% csrf_token %}
+        <button id="submitButton" type="submit" class="btn btn-purple border-dark">Submit</button>
+      </form>
+    </div>
+    <div class="col-sm-2">
     </div>
   </div>
+</div>
 
-  {% else %}
+{% else %}
 
-  <p>You need to be <a href="{% url 'account_login' %}">logged in</a> to make a booking.</p>
-  
-  {% endif %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+      <ul class="list-group list-group-flush rounded-corners">
+        <li class="list-group-item">You need to be <a href="{% url 'account_login' %}">logged in</a> to make a booking.
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm">
+    </div>
+  </div>
+</div>
+
+{% endif %}
 
 {% endblock %}
