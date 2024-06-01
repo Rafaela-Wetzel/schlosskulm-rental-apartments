@@ -63,7 +63,7 @@ class Booking(models.Model):
     message = models.TextField(max_length=1000, default="Hi!")
 
     class Meta:
-        ordering=['last_name','first_name']
+        ordering = ['-id']
 
     def __str__(self):
         return f'{self.last_name}, {self.first_name} (booked {self.booking_date})'
