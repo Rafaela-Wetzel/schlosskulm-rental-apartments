@@ -3,12 +3,30 @@
 
 <h1>Your Bookings</h1>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <h2 class="">Guest: {{ booking.last_name }}, {{ booking.first_name }}</h2>
-            <p class="">Booking created on {{ booking.created_on }}</p>
-        </div>
+<div class="row">
+    <div class="col-md">
+        {% if user.is_authenticated %}
+        {% for booking in object_list %}
+        <h3>Booking number: {{booking.id}}</h3><br>
+        <p>
+            Booking date: {{booking.booking_date}}<br>
+            Status: {{booking.booking_status}}<br><br>
+            Name: {{booking.last_name}}, {{booking.first_name}}<br>
+            Address:<br>
+            {{booking.address}}, {{booking.zip_code}} {{booking.city}}<br>
+            {{booking.country}}<br>
+            E-Mail: {{booking.email}}<br>
+            Phone: {{booking.phone_number}}<br>
+            Nationality: {{booking.nationality}}<br>
+            Passport number: {{booking.passport_number}}<br><br>
+            Arrival: {{booking.arrival_date}} | Departure: {{booking.departure_date}}<br>
+            {{booking.booking_status}}: {{booking.booking_item}}<br>
+            Guests: {{booking.amount_guests}}<br>
+            Animals: {{booking.animals}}<br><br>
+            Your message: {{booking.message}}<br>
+        </p>
+        {% endfor %}
+        {% endif %}
     </div>
 </div>
 

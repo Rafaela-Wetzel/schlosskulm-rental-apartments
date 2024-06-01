@@ -14,7 +14,7 @@ def booking_page(request):
         if form.is_valid():
             form.save()
             messages.add_message(request, messages.SUCCESS, "Thank you for your booking request. We will be in touch with you soon.")
-            return redirect("https://schlosskulm-762627e86384.herokuapp.com/")
+            return redirect("https://8000-rafaelawetz-schlosskulm-la2h035ybbw.ws-eu114.gitpod.io/")
     else: 
         form = BookingForm()
 
@@ -29,6 +29,7 @@ def booking_page(request):
 # Booking View
 
 class BookingList(generic.ListView):
+    model = Booking
     queryset = Booking.objects.all()
     template_name = "home/your-bookings.html"
 
