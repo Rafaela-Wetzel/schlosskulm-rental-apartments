@@ -9,6 +9,9 @@ from .forms import BookingForm
 # Booking Form
 
 def booking_page(request):
+    ''' Posts entered form data to database 
+    and displays confirmation message'''
+
     if request.method == "POST":
         form = BookingForm(data=request.POST)
         if form.is_valid():
@@ -26,22 +29,17 @@ def booking_page(request):
         },
     )
 
-# Booking View
-
-#class BookingList(generic.ListView):
-#    model = Booking
-#    queryset = Booking.objects.filter(user=get_queryset)
-#    template_name = "home/your-bookings.html"
-    
-#    def get_queryset(self):
-#        return self.model.objects.filter(user=self.request.user)
+# Your Bookings View
 
 class BookingList(generic.ListView):
+    '''Displays booking details on 
+    your-bookings page'''
+
     model = Booking
     queryset = Booking.objects.all()
     template_name = "home/your-bookings.html"
     
-#   def get_queryset(self):
+#    def get_queryset(self):
 #        return self.model.objects.filter(user=self.request.user)
 
 
