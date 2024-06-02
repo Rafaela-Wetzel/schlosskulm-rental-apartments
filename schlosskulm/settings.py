@@ -83,6 +83,14 @@ TEMPLATES = [
 WSGI_APPLICATION = 'schlosskulm.wsgi.application'
 
 
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by email
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
 # Database
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
