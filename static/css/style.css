@@ -181,14 +181,38 @@ footer {
   width: 75%;
 }
 
-/* Obere und untere Ferienwohnung Section */
+/* Upper and Lower Apartment Pages */
 
 .accordion {
   --bs-accordion-active-bg: #cbc0d3;
   --bs-accordion-border-color: grey;
 }
 
-/* Über Uns Section */
+/* Your Bookings Page */
+
+.btn-card-edit {
+  background-color: #cbc0d3;
+}
+
+.btn-card-edit:hover,
+.btn-card-edit:focus {
+  background-color: green;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-card-cancel {
+  background-color: #cbc0d3;
+}
+
+.btn-card-cancel:hover,
+.btn-card-cancel:focus {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+
+/* About Us Section */
 
 .about-me-size {
   height: 20rem;
