@@ -9,15 +9,17 @@ from .forms import BookingForm
 # Booking Form
 
 def booking_page(request):
-    ''' Posts entered form data to database 
-    and displays confirmation message'''
+    """
+    Posts entered form data to database 
+    and displays confirmation message
+    """
 
     if request.method == "POST":
         form = BookingForm(data=request.POST)
         if form.is_valid():
             form.save()
             messages.add_message(request, messages.SUCCESS, "Thank you for your booking request. We will be in touch with you soon.")
-            return redirect("https://8000-rafaelawetz-schlosskulm-la2h035ybbw.ws-eu114.gitpod.io/")
+            return redirect('main-page')
     else: 
         form = BookingForm()
 
@@ -32,8 +34,10 @@ def booking_page(request):
 # Your Bookings View
 
 class BookingList(generic.ListView):
-    '''Displays booking details of current 
-    logged in user on your-bookings page'''
+    """
+    Displays booking details of current 
+    logged in user on your-bookings page
+    """
 
     model = Booking
     template_name = "home/your-bookings.html"

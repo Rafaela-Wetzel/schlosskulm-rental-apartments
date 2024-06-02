@@ -50,6 +50,10 @@ h1 {
   font-weight: bold;
 }
 
+.helptext {
+  visibility: hidden;
+}
+
 /* Hover CSS */
 /* Bounce In */
 .hvr-bounce-in {
