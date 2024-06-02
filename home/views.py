@@ -32,24 +32,14 @@ def booking_page(request):
 # Your Bookings View
 
 class BookingList(generic.ListView):
-    '''Displays booking details on 
-    your-bookings page'''
+    '''Displays booking details of current 
+    logged in user on your-bookings page'''
 
     model = Booking
-    queryset = Booking.objects.filter()
     template_name = "home/your-bookings.html"
     
     def get_queryset(self):
-        return self.model.objects.filter(user=self.request.user)
-
-
-#def get_user_bookings(request):
-#    user = self.request.user
-#    return render(request, 'home/your-bookings.html',
-#            {
-#            "user": user
-#        },
-#    )
+        return Booking.objects.filter(user=self.request.user)
 
 
 # Template Views
