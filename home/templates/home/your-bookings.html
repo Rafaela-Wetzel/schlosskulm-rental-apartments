@@ -3,31 +3,73 @@
 
 <h1>Your Bookings</h1>
 
-<div class="row">
-    <div class="col-md">
-        {% if user.is_authenticated %}
-        {% for booking in object_list %}
-        <h3>Booking number: {{booking.id}}</h3><br>
-        <p>
-            Booking date: {{booking.booking_date}}<br>
-            Status: {{booking.booking_status}}<br><br>
-            Name: {{booking.last_name}}, {{booking.first_name}}<br>
-            Address:<br>
-            {{booking.address}}, {{booking.zip_code}} {{booking.city}}<br>
-            {{booking.country}}<br>
-            E-Mail: {{booking.email}}<br>
-            Phone: {{booking.phone_number}}<br>
-            Nationality: {{booking.nationality}}<br>
-            Passport number: {{booking.passport_number}}<br><br>
-            Arrival: {{booking.arrival_date}} | Departure: {{booking.departure_date}}<br>
-            {{booking.booking_status}}: {{booking.booking_item}}<br>
-            Guests: {{booking.amount_guests}}<br>
-            Animals: {{booking.animals}}<br><br>
-            Your message: {{booking.message}}<br>
-        </p>
-        {% endfor %}
-        {% endif %}
+{% if user.is_authenticated %}
+{% for booking in object_list %}
+
+            <div class="card mx-auto card-style">
+                <div class="card-body">
+                    <h5 class="card-title">Booking number: {{booking.id}}</h5><br>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">
+                        Booking date:<br>{{booking.booking_date}}<br><br>
+                        Status: {{booking.booking_status}}<br><br>
+                    </h6>
+                    <p class="card-text">
+                        Name: {{booking.first_name}} {{booking.last_name}}<br>
+                        Address:<br>
+                        {{booking.address}}<br>
+                        {{booking.zip_code}} {{booking.city}}<br>
+                        {{booking.country}}<br><br>
+                        Phone: {{booking.phone_number}}<br>
+                        E-Mail: {{booking.email}}<br>
+                        Nationality: {{booking.nationality}}<br>
+                        Passport number: {{booking.passport_number}}<br><br>
+                        Arrival: {{booking.arrival_date}}<br>
+                        Departure: {{booking.departure_date}}<br>
+                        {{booking.booking_status}}: {{booking.booking_item}}<br>
+                        Guests: {{booking.amount_guests}}<br>
+                        Animals: {{booking.animals}}<br><br>
+                        Your message: {{booking.message}}<br>
+                    </p>
+                    <a href="#" class="btn btn-primary">Button</a>
+                    <a href="#" class="btn btn-primary">Button</a>
+                </div>
+            </div>
+
+{% endfor %}
+{% endif %}
+
+<!--<div class="container">
+    <div class="row">
+
+        <div class="col-sm">
+            <div class="col-md">
+                {% if user.is_authenticated %}
+                {% for booking in object_list %}
+
+                <h3>Booking number: {{booking.id}}</h3><br>
+                <p>
+                    Booking date: {{booking.booking_date}}<br>
+                    Status: {{booking.booking_status}}<br><br>
+                    Name: {{booking.last_name}}, {{booking.first_name}}<br>
+                    Address:<br>
+                    {{booking.address}}, {{booking.zip_code}} {{booking.city}}<br>
+                    {{booking.country}}<br>
+                    E-Mail: {{booking.email}}<br>
+                    Phone: {{booking.phone_number}}<br>
+                    Nationality: {{booking.nationality}}<br>
+                    Passport number: {{booking.passport_number}}<br><br>
+                    Arrival: {{booking.arrival_date}} | Departure: {{booking.departure_date}}<br>
+                    {{booking.booking_status}}: {{booking.booking_item}}<br>
+                    Guests: {{booking.amount_guests}}<br>
+                    Animals: {{booking.animals}}<br><br>
+                    Your message: {{booking.message}}<br>
+                </p>
+                {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+
     </div>
-</div>
+</div>-->
 
 {% endblock %}
