@@ -17,10 +17,9 @@
     <div class="col-sm-8">
 
       <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-        {% csrf_token %}
         <input type="hidden" name="csrfmiddlewaretoken"
           value="BBUZLivMNq2I06MJ2XsnyXIZgLEDbxeS5eKaQRD1vq7nNnORYKSFTnUD0OBKSKig">
-
+          {% csrf_token %}
         <p>
           <label for="id_username">Username:</label>
           <input type="text" name="username" placeholder="Username" autocomplete="username" minlength="1"
@@ -48,7 +47,7 @@
             id="id_password2" class="form-control">
         </p>
 
-        <button type="submit" class="btn btn-purple border-dark">{% trans "Sign Up" %} &raquo;</button>
+        <button type="submit" form="signup_form" class="btn btn-purple border-dark">{% trans "Sign Up" %} &raquo;</button>
 
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" class="form-control" value="{{ redirect_field_value }}" />

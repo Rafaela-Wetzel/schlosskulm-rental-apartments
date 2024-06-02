@@ -36,11 +36,11 @@ class BookingList(generic.ListView):
     your-bookings page'''
 
     model = Booking
-    queryset = Booking.objects.all()
+    queryset = Booking.objects.filter()
     template_name = "home/your-bookings.html"
     
-#    def get_queryset(self):
-#        return self.model.objects.filter(user=self.request.user)
+    def get_queryset(self):
+        return self.model.objects.filter(user=self.request.user)
 
 
 #def get_user_bookings(request):
