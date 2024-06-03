@@ -47,11 +47,11 @@ class BookingList(generic.ListView):
 
 
 # Edit Bookings View
-
+"""
 def edit_booking(request, slug, booking_id):
-    """
+
     View for hosts to confirm or cancel booking
-    """
+
     if request.method == "POST":
 
         queryset = Booking.objects.filter()
@@ -68,7 +68,7 @@ def edit_booking(request, slug, booking_id):
             messages.add_message(request, messages.ERROR, 'There was an error updating the booking!')
 
     return HttpResponseRedirect(reverse('booking'), args=[slug])
-
+"""
 
 # Template Views
 
