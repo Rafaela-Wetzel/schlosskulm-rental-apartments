@@ -11,6 +11,7 @@ from django.forms import forms
 
 class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.RESTRICT, related_name="user_name", default='1')
+    slug = models.SlugField(max_length=200, unique=True)
     booking_date = models.DateTimeField(default=now)
     status = (
         ('Requested', 'Requested'),
