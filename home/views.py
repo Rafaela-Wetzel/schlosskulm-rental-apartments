@@ -46,7 +46,21 @@ class BookingList(generic.ListView):
         return Booking.objects.filter(user=self.request.user)
 
 
+# All Bookings View 
+
+class AllBookingsList(generic.ListView):
+    """
+    View for hosts to display all bookings
+    and confirm, cancel or delete them
+    """
+
+    model = Booking
+    queryset = Booking.objects.all()
+    template_name = "home/all-bookings.html"
+
+
 # Edit Bookings View
+
 """
 def edit_booking(request, slug, booking_id):
 
@@ -71,6 +85,9 @@ def edit_booking(request, slug, booking_id):
 """
 
 # Template Views
+
+def all_bookings_page(request):
+    return render(request, 'home/all-bookings.html')
 
 def directions_page(request):
     return render(request, 'home/directions.html')
