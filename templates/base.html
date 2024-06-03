@@ -57,17 +57,27 @@
               <a class="dropdown-item" href="{% url 'directions' %}" aria-current="page">Location</a>
             </div>
           </li>
-          {% if user.is_authenticated %}
+          {% if user.is_authenticated and not user.is_superuser %}
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle hvr-bounce-in margin-left-right" href="#" id="navbarDropdownMenuLink3"
-            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-current="page">
-            Booking
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
-            <a class="dropdown-item" href="{% url 'booking' %}" aria-current="page">Booking Form</a>
-            <a class="dropdown-item" href="{% url 'your-bookings' %}" aria-current="page">Your Bookings</a>
-          </div>
-          {% else %}
+            <a class="nav-link dropdown-toggle hvr-bounce-in margin-left-right" href="#" id="navbarDropdownMenuLink3"
+              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-current="page">
+              Booking
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+              <a class="dropdown-item" href="{% url 'booking' %}" aria-current="page">Booking Form</a>
+              <a class="dropdown-item" href="{% url 'your-bookings' %}" aria-current="page">Your Bookings</a>
+            </div>
+            {% elif user.is_authenticated and user.is_superuser %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle hvr-bounce-in margin-left-right" href="#" id="navbarDropdownMenuLink3"
+              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-current="page">
+              Booking
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+              <a class="dropdown-item" href="{% url 'booking' %}" aria-current="page">Booking Form</a>
+              <a class="dropdown-item" href="{% url 'all-bookings' %}" aria-current="page">All Bookings</a>
+            </div>
+            {% else %}
           <li class="nav-item">
             <a class="nav-link hvr-bounce-in margin-left-right"
               href="{% url 'account_login' %}?next={{ 'https://8000-rafaelawetz-schlosskulm-la2h035ybbw.ws-eu114.gitpod.io/booking/' }}"
