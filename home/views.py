@@ -46,6 +46,30 @@ class BookingList(generic.ListView):
         return Booking.objects.filter(user=self.request.user)
 
 
+# Edit Bookings View
+
+def edit_booking(request, slug, booking_id):
+    """
+    View for hosts to confirm or cancel booking
+    """
+    if request.method == "POST":
+
+        queryset = Booking.objects.filter()
+        #post = get_object_or_404(queryset, slug=slug)
+        booking = get_object_or_404(Booking, pk=booking_id)
+        booking_form = BookingForm(data=request.POST, instance=booking)
+
+        if booking_form.is_valid() and user.is_authenticated:
+            booking = booking_form.save(commit=False)
+            booking.booking_status = booking_status
+            booking.save()
+            messages.add_message(request, messages.SUCCESS, 'The booking has been updated!')
+        else:
+            messages.add_message(request, messages.ERROR, 'There was an error updating the booking!')
+
+    return HttpResponseRedirect(reverse('booking'), args=[slug])
+
+
 # Template Views
 
 def directions_page(request):
