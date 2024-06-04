@@ -162,6 +162,11 @@ I used the following libraries:
 
 ## Bugs & Problems
 
+- On the allauth signup page I had a "Forbidden (403). CSRF verification failed. Request aborted. Reason given for failure: CSRF token from POST incorrect." error when trying to register a new user. This error did not appear during login or logout. It took me a while to figure out that the error occured due to the order within the signup.html. First the {% csrf_token %} was placed before "input type="hidden" name="csrfmiddlewaretoken" value="BBUZLiv[...]"
+and after I placed it before the input field everything worked fine again.
+      
+    
+
 ## Unfixed Bugs
 
 # Deployment
