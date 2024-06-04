@@ -194,7 +194,9 @@ footer {
 
 /* Your Bookings Page */
 
-.btn-card-edit {
+.btn-card-edit,
+.btn-card-cancel,
+.btn-card-delete {
   background-color: #cbc0d3;
 }
 
@@ -205,12 +207,15 @@ footer {
   font-weight: bold;
 }
 
-.btn-card-cancel {
-  background-color: #cbc0d3;
-}
-
 .btn-card-cancel:hover,
 .btn-card-cancel:focus {
+  background-color: #ff8800;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-card-delete:hover,
+.btn-card-delete:focus {
   background-color: red;
   color: white;
   font-weight: bold;
