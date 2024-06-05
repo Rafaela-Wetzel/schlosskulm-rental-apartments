@@ -61,13 +61,13 @@ class AllBookingsList(generic.ListView):
     template_name = "home/all-bookings.html"
 
 
-# Cancel Bookings View
+# Cancel Bookings Functionality
 
-def cancel_booking(request, booking_status):
+def cancel_booking(request, booking_id):
     """
     Functionality to cancel a booking
     """
-    booking = get_object_or_404(Booking, pk=booking_status)
+    booking = get_object_or_404(Booking, pk=booking_id)
     booking_form = BookingForm(data=request.POST, instance=booking)
         
     if booking.user == request.user or user.is_superuser:
@@ -78,7 +78,7 @@ def cancel_booking(request, booking_status):
     else:
         messages.add_message(request, messages.ERROR, 'There was an error cancelling the booking.')
 
-return HttpResponseRedirect(reverse('your-bookings'))
+    return HttpResponseRedirect(reverse('your-bookings'))
 
 
 # Template Views

@@ -194,14 +194,14 @@ footer {
 
 /* Your Bookings Page */
 
-.btn-card-edit,
+.btn-card-confirm,
 .btn-card-cancel,
 .btn-card-delete {
   background-color: #cbc0d3;
 }
 
-.btn-card-edit:hover,
-.btn-card-edit:focus {
+.btn-card-confirm:hover,
+.btn-card-confirm:focus {
   background-color: green;
   color: white;
   font-weight: bold;

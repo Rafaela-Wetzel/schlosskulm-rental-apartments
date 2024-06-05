@@ -32,9 +32,9 @@
                         <b>Your message:</b><br>
                         {{bookings.message}}<br>
                     </p>
-                    <a href="#" class="btn btn-card-edit border-dark">Confirm Booking</a><br><br>
-                    <a href="#" class="btn btn-card-cancel border-dark">Cancel Booking</a><br><br>
-                    <a href="#" class="btn btn-card-delete border-dark">Delete Booking</a>
+                    <button data-booking_id="{{ booking.id }}" class="btn btn-card-confirm border-dark">Confirm Booking</button><br><br>
+                    <button data-booking_id="{{ booking.id }}" class="btn btn-card-cancel border-dark">Cancel Booking</button><br><br>
+                    <button data-booking_id="{{ booking.id }}" class="btn btn-card-delete border-dark">Delete Booking</button>
                 </div>
             </div>
             <br>
