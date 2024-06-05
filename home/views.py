@@ -61,30 +61,25 @@ class AllBookingsList(generic.ListView):
     template_name = "home/all-bookings.html"
 
 
-# Edit Bookings View
+# Cancel Bookings View
 
-"""
-def edit_booking(request, slug, booking_id):
+def cancel_booking(request, booking_status):
+    """
+    Functionality to cancel a booking
+    """
+    booking = get_object_or_404(Booking, pk=booking_status)
+    booking_form = BookingForm(data=request.POST, instance=booking)
+        
+    if booking.user == request.user or user.is_superuser:
+        booking = booking_form.save(commit=False)
+        booking.booking_status = "Cancelled"
+        booking.save()
+        messages.add_message(request, messages.SUCCESS, 'The booking has been cancelled!')
+    else:
+        messages.add_message(request, messages.ERROR, 'There was an error cancelling the booking.')
 
-    View for hosts to confirm or cancel booking
+return HttpResponseRedirect(reverse('your-bookings'))
 
-    if request.method == "POST":
-
-        queryset = Booking.objects.filter()
-        #post = get_object_or_404(queryset, slug=slug)
-        booking = get_object_or_404(Booking, pk=booking_id)
-        booking_form = BookingForm(data=request.POST, instance=booking)
-
-        if booking_form.is_valid() and user.is_authenticated:
-            booking = booking_form.save(commit=False)
-            booking.booking_status = booking_status
-            booking.save()
-            messages.add_message(request, messages.SUCCESS, 'The booking has been updated!')
-        else:
-            messages.add_message(request, messages.ERROR, 'There was an error updating the booking!')
-
-    return HttpResponseRedirect(reverse('booking'), args=[slug])
-"""
 
 # Template Views
 
