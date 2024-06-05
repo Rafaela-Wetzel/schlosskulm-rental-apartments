@@ -6,38 +6,41 @@
 {% if user.is_superuser %}
 {% for bookings in object_list %}
 
-            <div class="card mx-auto" style="width:25rem;background-color:#e4dee8;">
-                <div class="card-body">
-                    <h3 class="card-title">Booking number {{bookings.id}}</h3><br>
-                    <h6 class="card-subtitle mb-2 text-body-secondary">
-                        <b>Booking date:</b><br>{{bookings.booking_date}}<br><br>
-                        <b>Status:</b> {{bookings.booking_status}}<br><br>
-                    </h6>
-                    <p class="card-text">
-                        <b>Name:</b><br>
-                        {{bookings.first_name}} {{bookings.last_name}}<br>
-                        <b>Address:</b><br>
-                        {{bookings.address}}<br>
-                        {{bookings.zip_code}} {{bookings.city}}<br>
-                        {{bookings.country}}<br><br>
-                        <b>Phone:</b> {{bookings.phone_number}}<br>
-                        <b>E-Mail:</b> {{bookings.email}}<br>
-                        <b>Nationality:</b> {{bookings.nationality}}<br>
-                        <b>Passport number:</b> {{bookings.passport_number}}<br><br>
-                        <b>Arrival:</b> {{bookings.arrival_date}}<br>
-                        <b>Departure:</b> {{bookings.departure_date}}<br>
-                        {{bookings.booking_status}}: {{bookings.booking_item}}<br>
-                        <b>Guests:</b> {{bookings.amount_guests}}<br>
-                        <b>Animals:</b> {{bookings.animals}}<br><br>
-                        <b>Your message:</b><br>
-                        {{bookings.message}}<br>
-                    </p>
-                    <button data-booking_id="{{ booking.id }}" class="btn btn-card-confirm border-dark">Confirm Booking</button><br><br>
-                    <button data-booking_id="{{ booking.id }}" class="btn btn-card-cancel border-dark">Cancel Booking</button><br><br>
-                    <button data-booking_id="{{ booking.id }}" class="btn btn-card-delete border-dark">Delete Booking</button>
-                </div>
-            </div>
-            <br>
+<div class="card mx-auto" style="width:25rem;background-color:#e4dee8;">
+    <div class="card-body">
+        <h3 class="card-title">Booking number {{bookings.id}}</h3><br>
+        <h6 class="card-subtitle mb-2 text-body-secondary">
+            <b>Booking date:</b><br>{{bookings.booking_date}}<br><br>
+            <b>Status:</b> {{bookings.booking_status}}<br><br>
+        </h6>
+        <p class="card-text">
+            <b>Name:</b><br>
+            {{bookings.first_name}} {{bookings.last_name}}<br>
+            <b>Address:</b><br>
+            {{bookings.address}}<br>
+            {{bookings.zip_code}} {{bookings.city}}<br>
+            {{bookings.country}}<br><br>
+            <b>Phone:</b> {{bookings.phone_number}}<br>
+            <b>E-Mail:</b> {{bookings.email}}<br>
+            <b>Nationality:</b> {{bookings.nationality}}<br>
+            <b>Passport number:</b> {{bookings.passport_number}}<br><br>
+            <b>Arrival:</b> {{bookings.arrival_date}}<br>
+            <b>Departure:</b> {{bookings.departure_date}}<br>
+            {{bookings.booking_status}}: {{bookings.booking_item}}<br>
+            <b>Guests:</b> {{bookings.amount_guests}}<br>
+            <b>Animals:</b> {{bookings.animals}}<br><br>
+            <b>Your message:</b><br>
+            {{bookings.message}}<br>
+        </p>
+        <button data-booking_id="{{ booking.id }}" class="btn btn-card-confirm border-dark">Confirm
+            Booking</button><br><br>
+        <button data-booking_id="{{ booking.id }}" class="btn btn-card-cancel border-dark">Cancel
+            Booking</button><br><br>
+        <button data-booking_id="{{ booking.id }}" class="btn btn-card-delete border-dark">Delete 
+            Booking</button>
+    </div>
+</div>
+<br>
 
 {% endfor %}
 {% endif %}

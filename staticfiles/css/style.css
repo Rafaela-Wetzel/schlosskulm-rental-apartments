@@ -194,23 +194,28 @@ footer {
 
 /* Your Bookings Page */
 
-.btn-card-edit {
+.btn-card-confirm,
+.btn-card-cancel,
+.btn-card-delete {
   background-color: #cbc0d3;
 }
 
-.btn-card-edit:hover,
-.btn-card-edit:focus {
+.btn-card-confirm:hover,
+.btn-card-confirm:focus {
   background-color: green;
   color: white;
   font-weight: bold;
 }
 
-.btn-card-cancel {
-  background-color: #cbc0d3;
-}
-
 .btn-card-cancel:hover,
 .btn-card-cancel:focus {
+  background-color: #ff8800;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-card-delete:hover,
+.btn-card-delete:focus {
   background-color: red;
   color: white;
   font-weight: bold;
