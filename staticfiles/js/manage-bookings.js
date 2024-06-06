@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function(){
       // remove unused part of URL
       let newUrl = currentUrl.replace('/your-bookings/', '');
       // redirect to cancel booking URL with booking number as argument
-      window.location.href = `${newUrl}/cancel-booking/${bookingId}`;
+      window.location.href = `${newUrl}/cancel_booking/${bookingId}`;
 
     });
   }});
