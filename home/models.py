@@ -85,3 +85,15 @@ class Booking(models.Model):
             raise forms.ValidationError("Your booking dates cannot be in the past!")
         elif birth_date > datetime.date.today():
             raise forms.ValidationError("Your birth date cannot be in the future!")
+
+
+class Contact(models.Model):
+    """
+    Contact form model
+    """
+    name = models.CharField(max_length=100)
+    mail = models.EmailField(max_length=100)
+    inquiry = models.TextField(max_length=1000)
+
+    def __str__(self):
+        return f'No. {self.id}: New message from {self.name}'

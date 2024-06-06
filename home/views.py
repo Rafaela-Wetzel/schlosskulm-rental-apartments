@@ -3,8 +3,8 @@ from django.http import HttpResponse, HttpRequest, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic
 
-from .models import Booking
-from .forms import BookingForm
+from .models import Booking, Contact
+from .forms import BookingForm, ContactForm
 
 # Booking Form
 
@@ -81,6 +81,33 @@ def cancel_booking(request, booking_id):
     return HttpResponseRedirect(reverse('your-bookings'))
 
 
+# Contact View
+
+def contact_page(request):
+    """
+    Posts guest messages to the database
+    """
+    if request.method == "POST":
+        contact_form = ContactForm(data=request.POST)
+        if contact_form.is_valid():
+            #contact_form.instance.user = request.user
+            contact_form.save()
+            messages.add_message(request, messages.SUCCESS, "Thank you for your message. We will be in touch with you soon.")
+            return redirect('main-page')
+        else:
+            messages.add_message(request, messages.ERROR, 'There was an error sending your message.')
+    else: 
+        contact_form = ContactForm()
+
+    return render(
+        request,
+        "home/contact.html",
+                {
+            "contact_form": contact_form
+        },
+    )
+
+
 # Template Views
 
 def all_bookings_page(request):
@@ -103,9 +130,6 @@ def house_page(request):
 
 def house_rules_page(request):
     return render(request, 'home/house-rules.html')
-
-def contact_page(request):
-    return render(request, 'home/contact.html')
 
 def main_page(request):
     return render(request, 'home/index.html')
