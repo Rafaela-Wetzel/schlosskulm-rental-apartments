@@ -61,25 +61,40 @@ class AllBookingsList(generic.ListView):
     template_name = "home/all-bookings.html"
 
 
-# Cancel Bookings Functionality
+# Cancel Booking View
 
 def cancel_booking(request, booking_id):
     """
     Functionality to cancel a booking
     """
     booking = get_object_or_404(Booking, pk=booking_id)
-    #booking_form = BookingForm(data=request.POST, instance=booking)
         
     if booking.user == request.user or user.is_superuser:
-        #booking = booking_form.save(commit=False)
         booking.booking_status = "Cancelled"
         booking.save()
-        print("Success!")
         messages.add_message(request, messages.SUCCESS, 'The booking has been cancelled!')
     else:
         messages.add_message(request, messages.ERROR, 'There was an error cancelling the booking.')
-
+    
     return HttpResponseRedirect(reverse('your-bookings'))
+
+
+# Confirm Booking View
+
+def confirm_booking(request, booking_id):
+    """
+    Functionality to confirm a booking
+    """
+    booking = get_object_or_404(Booking, pk=booking_id)
+        
+    if user.is_superuser:
+        booking.booking_status = "Confirmed"
+        booking.save()
+        messages.add_message(request, messages.SUCCESS, 'The booking has been confirmed!')
+    else:
+        messages.add_message(request, messages.ERROR, 'There was an error confirming the booking.')
+
+    return HttpResponseRedirect(reverse('all-bookings'))
 
 
 # Contact View
