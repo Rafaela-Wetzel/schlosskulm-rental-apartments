@@ -185,6 +185,18 @@ footer {
   width: 75%;
 }
 
+/* Day Trips Page */
+
+.link-style {
+  text-decoration: none;
+  color: #702963;
+}
+
+.list-background:hover,
+.list-background:focus {
+  background-color: #E8E2E9;
+}
+
 /* Upper and Lower Apartment Pages */
 
 .accordion {
