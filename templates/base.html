@@ -126,11 +126,14 @@
     <div class="container">
       <div class="row">
         {% if user.is_authenticated %}
-        <div class="col-sm pt-1">
+        <div class="col-sm-3 pt-1">
           Logged in as: {{ user.username }}
         </div>
         {% endif %}
-        <div class="col-sm d-flex justify-content-end pt-1">
+        <div class="col-sm-6 pt-1 text-center">
+          This project is for purposes of education only.
+        </div>
+        <div class="col-sm-3 d-flex justify-content-end pt-1">
           © 2024 Rafaela Wetzel
         </div>
       </div>
