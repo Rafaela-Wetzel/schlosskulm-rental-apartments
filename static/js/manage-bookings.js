@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function(){  
   
-  const confirmButton = document.getElementById('btn-card-confirm');
-  const cancelButtons = document.getElementsByClassName('btn-card-cancel');
-  const deleteButton = document.getElementById('btn-card-delete');
+  const confirmButtons = document.getElementsByClassName('confirm');
+  const cancelButtons = document.getElementsByClassName('cancel');
+  const deleteButtons = document.getElementsByClassName('delete');
   const bookingForm = document.getElementById('bookingForm'); 
 
   for (let button of cancelButtons) {
