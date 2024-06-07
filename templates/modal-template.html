@@ -1,7 +1,7 @@
 <!-- Button trigger modal -->
 
-<button type="button" class="btn btn-card-{{ css-1 }} border-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
+<button type="button" class="btn btn-card-{{ css_one }} border-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  {{ trigger_modal }} booking
 </button>
 
 
@@ -11,16 +11,16 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Booking {{ modal-title }}</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Booking {{ modal_title }}</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Are you sure you want to {{ modal-body }} your booking?<br>
+        Are you sure you want to {{ modal_body }} your booking?<br>
         This action cannot be undone.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-card-confirm border-dark" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-card-{{ css-2 }} border-dark">{{ button-text }}</button>
+        <button data-booking_id="{{ booking.id }}" class="btn btn-card-{{ css_two }} border-dark">{{ button_text }} booking</button>
       </div>
     </div>
   </div>

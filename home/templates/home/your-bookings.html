@@ -33,30 +33,8 @@
             {{booking.message}}<br>
         </p>
         {% if booking.booking_status == "Requested" or booking.booking_status == "Confirmed"%}
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-card-cancel border-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Cancel Booking
-        </button>
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Booking Cancellation</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        Are you sure you want to cancel your booking?<br>
-                        This action cannot be undone.
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-card-confirm border-dark" data-bs-dismiss="modal">Close</button>
-                        <button class="btn btn-card-cancel cancel border-dark" data-booking_id="{{ booking.id }}">Cancel Booking</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- Cancel Button -->
+        {% include "modal-template.html" with css_one="cancel" trigger_modal="Cancel" modal_title="cancellation" modal_body="cancel" css_two="cancel cancel" button_text="Cancel" %}
         {% endif %}
     </div>
 </div>
