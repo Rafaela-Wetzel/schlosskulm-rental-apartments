@@ -38,17 +38,17 @@
             Booking</button><br><br>
         <button data-booking_id="{{ booking.id }}" class="btn btn-card-cancel cancel border-dark">Cancel
             Booking</button><br><br>
-        <button data-booking_id="{{ booking.id }}" class="btn btn-card-delete delete border-dark">Delete 
+        <button data-booking_id="{{ booking.id }}" class="btn btn-card-delete delete border-dark">Delete
             Booking</button>
-    
+
         {% elif bookings.booking_status == "Confirmed" %}
         <button data-booking_id="{{ booking.id }}" class="btn btn-card-cancel cancel border-dark">Cancel
             Booking</button><br><br>
-        <button data-booking_id="{{ booking.id }}" class="btn btn-card-delete delete border-dark">Delete 
+        <button data-booking_id="{{ booking.id }}" class="btn btn-card-delete delete border-dark">Delete
             Booking</button>
 
         {% elif bookings.booking_status == "Cancelled" %}
-        <button data-booking_id="{{ booking.id }}" class="btn btn-card-delete delete border-dark">Delete 
+        <button data-booking_id="{{ booking.id }}" class="btn btn-card-delete delete border-dark">Delete
             Booking</button>
         {% endif %}
     </div>
