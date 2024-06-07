@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function(){
     // read current URL
     let currentUrl = window.location.href;
     // remove unused part of URL
-    let newUrl = currentUrl.replace('/all-bookings/', '');
+    let newUrl = currentUrl.replace('/your-bookings/', '');
     // redirect to cancel booking URL with booking number as argument
     window.location.href = `${newUrl}/confirm_booking/${bookingId}`;
 

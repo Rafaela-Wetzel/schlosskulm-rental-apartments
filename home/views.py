@@ -57,7 +57,6 @@ class AllBookingsList(generic.ListView):
 
     model = Booking
     queryset = Booking.objects.all()
-    print("queryset in all bookings = ", queryset)
     template_name = "home/all-bookings.html"
 
 

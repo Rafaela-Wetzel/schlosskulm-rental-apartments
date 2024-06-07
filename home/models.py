@@ -66,7 +66,7 @@ class Booking(models.Model):
         ordering = ['-id']
 
     def __str__(self):
-        return f'{self.last_name}, {self.first_name} (booked {self.booking_date})'
+        return f'Booking no. {self.id}: {self.last_name}, {self.first_name} (booked {self.booking_date})'
 
     # Date Validation
 

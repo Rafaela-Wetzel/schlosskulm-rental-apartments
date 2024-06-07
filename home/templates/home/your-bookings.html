@@ -32,7 +32,9 @@
             <b>Your message:</b><br>
             {{booking.message}}<br>
         </p>
+        {% if booking.booking_status == "Requested" %}
         <button class="btn btn-card-cancel border-dark" data-booking_id="{{ booking.id }}">Cancel Booking</button>
+        {% endif %}
     </div>
 </div>
 <br>
