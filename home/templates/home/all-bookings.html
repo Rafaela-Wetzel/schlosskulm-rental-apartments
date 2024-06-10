@@ -34,11 +34,11 @@
         </p>
 
         {% if booking.booking_status == "Requested" %}
-        <button data-booking_id="{{ booking.id }}" class="btn btn-card-confirm confirm border-dark">Confirm
-            Booking</button><br><br>
-        <!--Cancel Button-->
+        <!--Confirm Button-->
+        {% include "modal-template.html" with css_one="confirm" trigger_modal="Confirm" modal_title="confirmation" modal_body="confirm" css_two="confirm confirm" button_text="Confirm" %}
+        <!--Cancel Button--><br><br>
         {% include "modal-template.html" with css_one="cancel" trigger_modal="Cancel" modal_title="cancellation" modal_body="cancel" css_two="cancel cancel" button_text="Cancel" %}
-        
+        <!--Delete Button--><br><br>
         <button data-booking_id="{{ booking.id }}" class="btn btn-card-delete delete border-dark">Delete
             Booking</button>
 

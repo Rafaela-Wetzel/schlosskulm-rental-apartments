@@ -3,6 +3,7 @@ from django.http import HttpResponse, HttpRequest, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic
 
+
 from .models import Booking, Contact
 from .forms import BookingForm, ContactForm
 
@@ -67,15 +68,15 @@ def cancel_booking(request, booking_id):
     Functionality to cancel a booking
     """
     booking = get_object_or_404(Booking, pk=booking_id)
-        
-    if user.is_authenticated:
+
+    if not request.user.is_anonymous:
         booking.booking_status = "Cancelled"
         booking.save()
         messages.add_message(request, messages.SUCCESS, 'The booking has been cancelled!')
     else:
         messages.add_message(request, messages.ERROR, 'There was an error cancelling the booking.')
     
-    if request.user.is_not_superuser:
+    if not request.user.is_superuser:
         return HttpResponseRedirect(reverse('your-bookings'))
     elif request.user.is_superuser:
         return HttpResponseRedirect(reverse('all-bookings'))
@@ -88,14 +89,14 @@ def confirm_booking(request, booking_id):
     Functionality to confirm a booking
     """
     booking = get_object_or_404(Booking, pk=booking_id)
-        
-    if user.is_superuser:
+
+    if not request.user.is_anonymous:
         booking.booking_status = "Confirmed"
         booking.save()
         messages.add_message(request, messages.SUCCESS, 'The booking has been confirmed!')
     else:
         messages.add_message(request, messages.ERROR, 'There was an error confirming the booking.')
-
+    
     return HttpResponseRedirect(reverse('all-bookings'))
 
 
