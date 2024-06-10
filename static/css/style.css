@@ -172,7 +172,7 @@ nav>button {
 /* Footer */
 
 footer {
-  background-color: #cbc0d3;
+  background-color: #E5E4E2;
   border-top: 1px solid #000;
   color: black;
   height: 2.5rem;
@@ -249,6 +249,7 @@ div.gallery {
   border: 2px solid #ccc;
   float: left;
   width: 180px;
+  background-color: #E5E4E2;
 }
 
 div.gallery:hover {

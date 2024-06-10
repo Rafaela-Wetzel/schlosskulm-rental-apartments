@@ -3,7 +3,6 @@ from django.http import HttpResponse, HttpRequest, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic
 
-
 from .models import Booking, Contact
 from .forms import BookingForm, ContactForm
 
@@ -33,6 +32,39 @@ def booking_page(request):
         },
     )
 
+
+# Checks if user has made a booking
+"""
+def check_if_booking_exists(request):
+    user = request.user
+    if Booking.objects.filter(user).exists():
+        booking_exists = True 
+        print("User has made a booking!")
+    else: 
+        booking_exists = False 
+        print("User hasn't made a booking.")
+    
+    return render(
+        request, 
+        'template/base.html', 
+                {
+            'booking_exists': booking_exists
+        }
+    )
+"""
+
+"""
+User.objects.filter(username=username).exists()  # .exists() returns boolean if records are found.
+"""
+
+"""
+current_user = request.user
+user = Booking.objects.filter(current_user).exists()
+if queryset.contains(user):
+    print('This user has made a booking!')
+"""
+
+
 # Your Bookings View
 
 class BookingList(generic.ListView):
@@ -59,6 +91,24 @@ class AllBookingsList(generic.ListView):
     model = Booking
     queryset = Booking.objects.all()
     template_name = "home/all-bookings.html"
+
+
+# Confirm Booking View
+
+def confirm_booking(request, booking_id):
+    """
+    Functionality to confirm a booking
+    """
+    booking = get_object_or_404(Booking, pk=booking_id)
+
+    if not request.user.is_anonymous:
+        booking.booking_status = "Confirmed"
+        booking.save()
+        messages.add_message(request, messages.SUCCESS, 'The booking has been confirmed!')
+    else:
+        messages.add_message(request, messages.ERROR, 'There was an error confirming the booking.')
+    
+    return HttpResponseRedirect(reverse('all-bookings'))
 
 
 # Delete Booking View
@@ -98,24 +148,6 @@ def cancel_booking(request, booking_id):
         return HttpResponseRedirect(reverse('your-bookings'))
     elif request.user.is_superuser:
         return HttpResponseRedirect(reverse('all-bookings'))
-
-
-# Confirm Booking View
-
-def confirm_booking(request, booking_id):
-    """
-    Functionality to confirm a booking
-    """
-    booking = get_object_or_404(Booking, pk=booking_id)
-
-    if not request.user.is_anonymous:
-        booking.booking_status = "Confirmed"
-        booking.save()
-        messages.add_message(request, messages.SUCCESS, 'The booking has been confirmed!')
-    else:
-        messages.add_message(request, messages.ERROR, 'There was an error confirming the booking.')
-    
-    return HttpResponseRedirect(reverse('all-bookings'))
 
 
 # Contact View
