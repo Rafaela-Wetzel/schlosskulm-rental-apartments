@@ -39,18 +39,17 @@
         <!--Cancel Button--><br><br>
         {% include "modal-template.html" with css_one="cancel" trigger_modal="Cancel" modal_title="cancellation" modal_body="cancel" css_two="cancel cancel" button_text="Cancel" %}
         <!--Delete Button--><br><br>
-        <button data-booking_id="{{ booking.id }}" class="btn btn-card-delete delete border-dark">Delete
-            Booking</button>
+        {% include "modal-template.html" with css_one="delete" trigger_modal="Delete" modal_title="deletion" modal_body="delete" css_two="delete delete" button_text="Delete" %}
 
         {% elif booking.booking_status == "Confirmed" %}
-        <button data-booking_id="{{ booking.id }}" class="btn btn-card-cancel cancel border-dark">Cancel
-            Booking</button><br><br>
-        <button data-booking_id="{{ booking.id }}" class="btn btn-card-delete delete border-dark">Delete
-            Booking</button>
+        <!--Cancel Button--><br><br>
+        {% include "modal-template.html" with css_one="cancel" trigger_modal="Cancel" modal_title="cancellation" modal_body="cancel" css_two="cancel cancel" button_text="Cancel" %}
+        <!--Delete Button-->
+        {% include "modal-template.html" with css_one="delete" trigger_modal="Delete" modal_title="deletion" modal_body="delete" css_two="delete delete" button_text="Delete" %}
 
         {% elif booking.booking_status == "Cancelled" %}
-        <button data-booking_id="{{ booking.id }}" class="btn btn-card-delete delete border-dark">Delete
-            Booking</button>
+        <!--Delete Button-->
+        {% include "modal-template.html" with css_one="delete" trigger_modal="Delete" modal_title="deletion" modal_body="delete" css_two="delete delete" button_text="Delete" %}
         {% endif %}
     </div>
 </div>

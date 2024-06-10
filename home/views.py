@@ -61,6 +61,24 @@ class AllBookingsList(generic.ListView):
     template_name = "home/all-bookings.html"
 
 
+# Delete Booking View
+
+def delete_booking(request, booking_id):
+    """
+    Functionality to cancel a booking
+    """
+    booking = get_object_or_404(Booking, pk=booking_id)
+
+    if not request.user.is_anonymous:
+        booking.delete()
+        booking.save()
+        messages.add_message(request, messages.SUCCESS, 'The booking has been deleted!')
+    else:
+        messages.add_message(request, messages.ERROR, 'There was an error deleting the booking.')
+    
+    return HttpResponseRedirect(reverse('all-bookings'))
+
+
 # Cancel Booking View
 
 def cancel_booking(request, booking_id):
