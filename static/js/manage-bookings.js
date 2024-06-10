@@ -14,8 +14,13 @@ document.addEventListener("DOMContentLoaded", function(){
       button.innerText = "Cancelled!";
       // read current URL
       let currentUrl = window.location.href;
+      var newUrl = ''
       // remove unused part of URL
-      let newUrl = currentUrl.replace('/your-bookings/', '');
+      if (currentUrl.includes('your-bookings')) {
+          newUrl = currentUrl.replace('/your-bookings/', '');
+      } else { 
+          newUrl = currentUrl.replace('/all-bookings/', '');
+      }
       // redirect to cancel booking URL with booking number as argument
       window.location.href = `${newUrl}/cancel_booking/${bookingId}`;
 
@@ -37,9 +42,5 @@ document.addEventListener("DOMContentLoaded", function(){
     window.location.href = `${newUrl}/confirm_booking/${bookingId}`;
 
   });
-
-
-
-
 
 });

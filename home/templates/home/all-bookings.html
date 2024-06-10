@@ -4,50 +4,51 @@
 <h1>All Bookings</h1>
 
 {% if user.is_superuser %}
-{% for bookings in object_list %}
+{% for booking in object_list %}
 
 <div class="card mx-auto" style="width:25rem;background-color:#e4dee8;">
     <div class="card-body">
-        <h3 class="card-title">Booking number {{bookings.id}}</h3><br>
+        <h3 class="card-title">Booking number {{booking.id}}</h3><br>
         <h6 class="card-subtitle mb-2 text-body-secondary">
-            <b>Booking date:</b><br>{{bookings.booking_date}}<br><br>
-            <b>Status:</b> {{bookings.booking_status}}<br><br>
+            <b>Booking date:</b><br>{{booking.booking_date}}<br><br>
+            <b>Status:</b> {{booking.booking_status}}<br><br>
         </h6>
         <p class="card-text">
             <b>Name:</b><br>
-            {{bookings.first_name}} {{bookings.last_name}}<br>
+            {{booking.first_name}} {{booking.last_name}}<br>
             <b>Address:</b><br>
-            {{bookings.address}}<br>
-            {{bookings.zip_code}} {{bookings.city}}<br>
-            {{bookings.country}}<br><br>
-            <b>Phone:</b> {{bookings.phone_number}}<br>
-            <b>E-Mail:</b> {{bookings.email}}<br>
-            <b>Nationality:</b> {{bookings.nationality}}<br>
-            <b>Passport number:</b> {{bookings.passport_number}}<br><br>
-            <b>Arrival:</b> {{bookings.arrival_date}}<br>
-            <b>Departure:</b> {{bookings.departure_date}}<br>
-            {{bookings.booking_status}}: {{bookings.booking_item}}<br>
-            <b>Guests:</b> {{bookings.amount_guests}}<br>
-            <b>Animals:</b> {{bookings.animals}}<br><br>
+            {{booking.address}}<br>
+            {{booking.zip_code}} {{booking.city}}<br>
+            {{booking.country}}<br><br>
+            <b>Phone:</b> {{booking.phone_number}}<br>
+            <b>E-Mail:</b> {{booking.email}}<br>
+            <b>Nationality:</b> {{booking.nationality}}<br>
+            <b>Passport number:</b> {{booking.passport_number}}<br><br>
+            <b>Arrival:</b> {{booking.arrival_date}}<br>
+            <b>Departure:</b> {{booking.departure_date}}<br>
+            {{booking.booking_status}}: {{booking.booking_item}}<br>
+            <b>Guests:</b> {{booking.amount_guests}}<br>
+            <b>Animals:</b> {{booking.animals}}<br><br>
             <b>Your message:</b><br>
-            {{bookings.message}}<br>
+            {{booking.message}}<br>
         </p>
 
-        {% if bookings.booking_status == "Requested" %}
+        {% if booking.booking_status == "Requested" %}
         <button data-booking_id="{{ booking.id }}" class="btn btn-card-confirm confirm border-dark">Confirm
             Booking</button><br><br>
+        <!--Cancel Button-->
+        {% include "modal-template.html" with css_one="cancel" trigger_modal="Cancel" modal_title="cancellation" modal_body="cancel" css_two="cancel cancel" button_text="Cancel" %}
+        
+        <button data-booking_id="{{ booking.id }}" class="btn btn-card-delete delete border-dark">Delete
+            Booking</button>
+
+        {% elif booking.booking_status == "Confirmed" %}
         <button data-booking_id="{{ booking.id }}" class="btn btn-card-cancel cancel border-dark">Cancel
             Booking</button><br><br>
         <button data-booking_id="{{ booking.id }}" class="btn btn-card-delete delete border-dark">Delete
             Booking</button>
 
-        {% elif bookings.booking_status == "Confirmed" %}
-        <button data-booking_id="{{ booking.id }}" class="btn btn-card-cancel cancel border-dark">Cancel
-            Booking</button><br><br>
-        <button data-booking_id="{{ booking.id }}" class="btn btn-card-delete delete border-dark">Delete
-            Booking</button>
-
-        {% elif bookings.booking_status == "Cancelled" %}
+        {% elif booking.booking_status == "Cancelled" %}
         <button data-booking_id="{{ booking.id }}" class="btn btn-card-delete delete border-dark">Delete
             Booking</button>
         {% endif %}

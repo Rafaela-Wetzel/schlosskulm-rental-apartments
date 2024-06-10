@@ -68,14 +68,17 @@ def cancel_booking(request, booking_id):
     """
     booking = get_object_or_404(Booking, pk=booking_id)
         
-    if booking.user == request.user or user.is_superuser:
+    if user.is_authenticated:
         booking.booking_status = "Cancelled"
         booking.save()
         messages.add_message(request, messages.SUCCESS, 'The booking has been cancelled!')
     else:
         messages.add_message(request, messages.ERROR, 'There was an error cancelling the booking.')
     
-    return HttpResponseRedirect(reverse('your-bookings'))
+    if request.user.is_not_superuser:
+        return HttpResponseRedirect(reverse('your-bookings'))
+    elif request.user.is_superuser:
+        return HttpResponseRedirect(reverse('all-bookings'))
 
 
 # Confirm Booking View
