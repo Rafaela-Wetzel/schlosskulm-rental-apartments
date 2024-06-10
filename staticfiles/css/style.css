@@ -210,6 +210,7 @@ footer {
 .btn-card-cancel,
 .btn-card-delete {
   background-color: #cbc0d3;
+  margin: 0.5rem;
 }
 
 .btn-card-confirm:hover,
