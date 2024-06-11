@@ -48,7 +48,7 @@ I chose to create this application because I know the apartment hosts personally
 
 <img src="" style="height:35rem;width:45rem;" alt="">  
   
-**You can see a deployed version of my app [here]()**
+**You can see a deployed version of my app [here](https://schlosskulm-762627e86384.herokuapp.com/)**
 
 # Project Goals
 
@@ -179,26 +179,25 @@ and after I placed it before the input field everything worked fine again.
 5. Search for project repository and connect to Heroku
 6. Deploy branch via manual deploy
 
-The live project can be found here: 
+The live project can be found here: https://schlosskulm-762627e86384.herokuapp.com/  
 
 # Credits 
 
 ## Code
 
-[1] Bootstrap  
-https://getbootstrap.com/docs/4.0/components/navbar/  
-https://getbootstrap.com/docs/5.3/forms/form-control/  
+[1] Login / logout / sign in - code for nav bar adapted from Django Blog walkthrough  
 
-[2] Login / logout / sign in - code for nav bar adopted from Django Blog walkthrough  
-
-[3] Add choice field to a model  
+[2] Adding choice field to a model  
 https://www.youtube.com/watch?v=iddMtHAV_N0  
 
-[4] Display success alert message
+[3] Displaying success alert message
 https://stackoverflow.com/a/64242550/22894967  
 
-[5] Add date validators to model DateField
+[4] Adding date validators to model DateField
 https://stackoverflow.com/a/49240469/22894967  
+
+[5] Slack support for creating confirm / cancel / delete button functionality  
+https://app.slack.com/client/T0L30B202/C026PTF46F5  
 
 
 ## Tutorials 
@@ -221,8 +220,9 @@ https://stackoverflow.com/a/27679566/22894967
 
 ## Media
 
-- Background image  
-https://unsplash.com/de/fotos/low-angle-fotografie-des-violetten-himmels-NvesrDbsrL4  
+- Background image taken from [Unsplash](https://unsplash.com/de/fotos/low-angle-fotografie-des-violetten-himmels-NvesrDbsrL4)
+- All photos provided by apartment hosts Anna & Friedel Barth
+- German homepage text provided by apartment hosts Anna & Friedel Barth, English translation by me
 
 ## Acknowledgements
 
