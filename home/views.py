@@ -181,8 +181,8 @@ def contact_page(request):
 def all_bookings_page(request):
     return render(request, 'home/all-bookings.html')
 
-def directions_page(request):
-    return render(request, 'home/directions.html')
+def location_page(request):
+    return render(request, 'home/location.html')
 
 def upper_apartment_page(request):
     return render(request, 'home/upper-apartment.html')

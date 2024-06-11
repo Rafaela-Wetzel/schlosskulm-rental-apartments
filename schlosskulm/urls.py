@@ -14,7 +14,7 @@ urlpatterns = [
     path('house/lower-apartment/', views.lower_apartment_page, name='lower-apartment' ),
     path('house/upper-apartment/', views.upper_apartment_page, name='upper-apartment'),
     path('schlosskulm/day-trips/', views.day_trips_page, name='day-trips'),
-    path('schlosskulm/directions/', views.directions_page, name='directions'),
+    path('schlosskulm/location/', views.location_page, name='location'),
     path('schlosskulm/gallery/', views.gallery_page, name='gallery'),
     path('summernote', include('django_summernote.urls')), 
     path('bookings/', include("home.urls"), name="home-urls"), 
