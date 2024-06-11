@@ -7,9 +7,12 @@ from django.utils.timezone import now
 from django.utils import timezone, dateformat
 from django.forms import forms
 
-# Create your models here.
+# Booking model
 
 class Booking(models.Model):
+    """
+    Saves guests' booking information made via the form to database
+    """
     user = models.ForeignKey(User, on_delete=models.RESTRICT, related_name="user_name", default='1')
     booking_date = models.DateTimeField(default=now)
     status = (
@@ -68,9 +71,10 @@ class Booking(models.Model):
     def __str__(self):
         return f'Booking no. {self.id}: {self.last_name}, {self.first_name} (booked {self.booking_date})'
 
-    # Date Validation
-
     def clean(self):
+        """
+        Date Validation
+        """
         arrival_date = self.arrival_date
         departure_date = self.departure_date
         birth_date = self.birth_date

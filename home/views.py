@@ -10,7 +10,7 @@ from .forms import BookingForm, ContactForm
 
 def booking_page(request):
     """
-    Posts entered form data to database 
+    Posts entered booking form data to database 
     and displays confirmation message
     """
 
@@ -54,10 +54,6 @@ def check_if_booking_exists(request):
 """
 
 """
-User.objects.filter(username=username).exists()  # .exists() returns boolean if records are found.
-"""
-
-"""
 current_user = request.user
 user = Booking.objects.filter(current_user).exists()
 if queryset.contains(user):
@@ -84,8 +80,7 @@ class BookingList(generic.ListView):
 
 class AllBookingsList(generic.ListView):
     """
-    View for hosts to display all bookings
-    and confirm, cancel or delete them
+    View for hosts that displays all bookings guests have made
     """
 
     model = Booking
@@ -97,7 +92,7 @@ class AllBookingsList(generic.ListView):
 
 def confirm_booking(request, booking_id):
     """
-    Functionality to confirm a booking
+    Functionality for hosts to confirm a booking
     """
     booking = get_object_or_404(Booking, pk=booking_id)
 
@@ -111,29 +106,11 @@ def confirm_booking(request, booking_id):
     return HttpResponseRedirect(reverse('all-bookings'))
 
 
-# Delete Booking View
-
-def delete_booking(request, booking_id):
-    """
-    Functionality to cancel a booking
-    """
-    booking = get_object_or_404(Booking, pk=booking_id)
-
-    if not request.user.is_anonymous:
-        booking.delete()
-        booking.save()
-        messages.add_message(request, messages.SUCCESS, 'The booking has been deleted!')
-    else:
-        messages.add_message(request, messages.ERROR, 'There was an error deleting the booking.')
-    
-    return HttpResponseRedirect(reverse('all-bookings'))
-
-
 # Cancel Booking View
 
 def cancel_booking(request, booking_id):
     """
-    Functionality to cancel a booking
+    Functionality for guests and hosts to cancel a booking
     """
     booking = get_object_or_404(Booking, pk=booking_id)
 
@@ -150,16 +127,33 @@ def cancel_booking(request, booking_id):
         return HttpResponseRedirect(reverse('all-bookings'))
 
 
+# Delete Booking View
+
+def delete_booking(request, booking_id):
+    """
+    Functionality for hosts to delete a booking
+    """
+    booking = get_object_or_404(Booking, pk=booking_id)
+
+    if not request.user.is_anonymous:
+        booking.delete()
+        booking.save()
+        messages.add_message(request, messages.SUCCESS, 'The booking has been deleted!')
+    else:
+        messages.add_message(request, messages.ERROR, 'There was an error deleting the booking.')
+    
+    return HttpResponseRedirect(reverse('all-bookings'))
+
+
 # Contact View
 
 def contact_page(request):
     """
-    Posts guest messages to the database
+    Posts guest messages made via contact form to database
     """
     if request.method == "POST":
         contact_form = ContactForm(data=request.POST)
         if contact_form.is_valid():
-            #contact_form.instance.user = request.user
             contact_form.save()
             messages.add_message(request, messages.SUCCESS, "Thank you for your message. We will be in touch with you soon.")
             return redirect('main-page')
@@ -177,7 +171,7 @@ def contact_page(request):
     )
 
 
-# Template Views
+# Template Views - Render HTML pages
 
 def all_bookings_page(request):
     return render(request, 'home/all-bookings.html')
