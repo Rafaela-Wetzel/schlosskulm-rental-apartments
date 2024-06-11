@@ -252,7 +252,11 @@
                                     1-2 persons: <strong>58€ per night</strong><br>
                                     3 or more persons: <strong>14€ per night</strong> and person<br>
                                     Additional 50€ for cleaning<br><br>
+                                    {% if user.is_authenticated %}
                                     <a href="{% url 'booking' %}" class="btn btn-purple border-dark">Booking</a>
+                                    {% else %}
+                                    <a href="{% url 'account_login' %}" class="btn btn-purple border-dark">Booking</a>
+                                    {% endif %}
                                 </p>
                             </div>
                         </div>

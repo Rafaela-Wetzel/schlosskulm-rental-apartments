@@ -53,12 +53,18 @@ def check_if_booking_exists(request):
     )
 """
 
-"""
-current_user = request.user
-user = Booking.objects.filter(current_user).exists()
-if queryset.contains(user):
-    print('This user has made a booking!')
-"""
+def check_if_booking_exists(request):
+    current_user = request.user
+    booking_exists = Booking.objects.filter(current_user).exists()
+    if current_user.is_authenticated and not current_user.is_superuser and booking_exists:
+        return render(
+        request, 
+        'template/base.html', 
+                {
+            'current_user': current_user,
+            'booking_exists': booking_exists
+        }
+    )
 
 
 # Your Bookings View
