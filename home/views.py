@@ -33,38 +33,20 @@ def booking_page(request):
     )
 
 
-# Checks if user has made a booking
-"""
 def check_if_booking_exists(request):
-    user = request.user
-    if Booking.objects.filter(user).exists():
-        booking_exists = True 
-        print("User has made a booking!")
-    else: 
-        booking_exists = False 
-        print("User hasn't made a booking.")
-    
-    return render(
-        request, 
-        'template/base.html', 
-                {
-            'booking_exists': booking_exists
-        }
-    )
-"""
-
-def check_if_booking_exists(request):
+    """
+    Checks if a logged in guest has made a booking
+    """
     current_user = request.user
-    booking_exists = Booking.objects.filter(current_user).exists()
-    if current_user.is_authenticated and not current_user.is_superuser and booking_exists:
-        return render(
-        request, 
-        'template/base.html', 
-                {
-            'current_user': current_user,
-            'booking_exists': booking_exists
-        }
-    )
+    if current_user.is_authenticated and not current_user.is_superuser:
+        booking_exists = Booking.objects.filter(user=current_user).exists()
+    else:
+        booking_exists = False
+
+    return {
+        'current_user': current_user,
+        'booking_exists': booking_exists
+    }
 
 
 # Your Bookings View
