@@ -19,7 +19,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-rafaelawetz-schlosskulm-la2h035ybbw.ws-eu114.gitpod.io',
+    '8000-rafaelawetz-schlosskulm-zntakbokh2k.ws.codeinstitute-ide.net',
     '.herokuapp.com'
 ]
 
@@ -98,7 +98,7 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.gitpod.io",
+    "https://rafaelawetz-schlosskulm-zntakbokh2k.ws.codeinstitute-ide.net/",
     "https://*herokuapp.com",
 ]
 
