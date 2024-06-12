@@ -98,8 +98,12 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://rafaelawetz-schlosskulm-zntakbokh2k.ws.codeinstitute-ide.net/",
+    "https://*8000-rafaelawetz-schlosskulm-zntakbokh2k.ws.codeinstitute-ide.net/",
     "https://*herokuapp.com",
+]
+
+CSRF_ALLOWED_HOSTS = [
+    "https://*8000-rafaelawetz-schlosskulm-zntakbokh2k.ws.codeinstitute-ide.net/",
 ]
 
 # Password validation
