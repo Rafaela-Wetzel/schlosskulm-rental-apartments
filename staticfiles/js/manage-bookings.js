@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  const confirmButtons = document.getElementsByClassName('confirm');
-  const cancelButtons = document.getElementsByClassName('cancel');
-  const deleteButtons = document.getElementsByClassName('delete');
+  const confirmButtons = document.getElementById('confirmButton');
+  const cancelButtons = document.getElementById('cancelButton');
+  const deleteButtons = document.getElementById('deleteButton');
   const bookingForm = document.getElementById('bookingForm');
-
 
 /**
  * Functionality to confirm a booking by clicking confirm button
