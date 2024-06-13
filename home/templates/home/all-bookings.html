@@ -61,21 +61,21 @@
 
         {% if booking.booking_status == "Requested" %}
         <!--Confirm Button-->
-        {% include "handle-bookings-modal.html" with css_one="confirm" trigger_modal="Confirm" modal_title="confirmation" modal_body="confirm" css_two="confirm confirm" button_text="Confirm" %}
+        {% include "confirm-modal.html" %}
         <!--Cancel Button-->
-        {% include "handle-bookings-modal.html" with css_one="cancel" trigger_modal="Cancel" modal_title="cancellation" modal_body="cancel" css_two="cancel cancel" button_text="Cancel" %}
+        {% include "cancel-modal.html" %}
         <!--Delete Button-->
-        {% include "handle-bookings-modal.html" with css_one="delete" trigger_modal="Delete" modal_title="deletion" modal_body="delete" css_two="delete delete" button_text="Delete" %}
+        {% include "delete-modal.html" %}
 
         {% elif booking.booking_status == "Confirmed" %}
         <!--Cancel Button-->
-        {% include "handle-bookings-modal.html" with css_one="cancel" trigger_modal="Cancel" modal_title="cancellation" modal_body="cancel" css_two="cancel cancel" button_text="Cancel" %}
+        {% include "cancel-modal.html" %}
         <!--Delete Button-->
-        {% include "handle-bookings-modal.html" with css_one="delete" trigger_modal="Delete" modal_title="deletion" modal_body="delete" css_two="delete delete" button_text="Delete" %}
+        {% include "delete-modal.html" %}
 
         {% elif booking.booking_status == "Cancelled" %}
         <!--Delete Button-->
-        {% include "handle-bookings-modal.html" with css_one="delete" trigger_modal="Delete" modal_title="deletion" modal_body="delete" css_two="delete delete" button_text="Delete" %}
+        {% include "delete-modal.html" %}
         {% endif %}
     </div>
 </div>
