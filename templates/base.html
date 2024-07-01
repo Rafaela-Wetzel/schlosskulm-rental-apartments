@@ -46,7 +46,6 @@
               <a class="dropdown-item" href="{% url 'lower-apartment' %}" aria-current="page">Lower Apartment</a>
               <a class="dropdown-item" href="{% url 'house' %}" aria-current="page">Rent House</a>
               <a class="dropdown-item" href="{% url 'house-rules' %}" aria-current="page">House Rules</a>
-              
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -70,6 +69,7 @@
               <a class="dropdown-item" href="{% url 'booking' %}" aria-current="page">Booking Form</a>
               <a class="dropdown-item" href="{% url 'your-bookings' %}" aria-current="page">Your Bookings</a>
             </div>
+          </li>
           {% elif user.is_authenticated and user.is_superuser %}
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle hvr-bounce-in margin-left-right" href="#" id="navbarDropdownMenuLink3"
@@ -80,6 +80,7 @@
               <a class="dropdown-item" href="{% url 'booking' %}" aria-current="page">Booking Form</a>
               <a class="dropdown-item" href="{% url 'all-bookings' %}" aria-current="page">All Bookings</a>    
             </div>
+          </li>
           {% else %}
           <li class="nav-item">
             <a class="nav-link hvr-bounce-in margin-left-right"
@@ -99,6 +100,7 @@
           <li class="nav-item">
             <a class="nav-link hvr-bounce-in margin-left-right {% if request.path == logout.url %}active{% endif %}"
               aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+          </li>
             {% else %}
           <li class="nav-item">
             <a class="nav-link hvr-bounce-in margin-left-right {% if request.path == signup_url %}active{% endif %}"
@@ -109,7 +111,6 @@
               aria-current="page" href="{% url 'account_login' %}">Login</a>
           </li>
           {% endif %}
-          </li>
         </ul>
       </div>
     </nav>

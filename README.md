@@ -221,8 +221,10 @@ https://stackoverflow.com/a/27679566/22894967
 ## Media
 
 - Background image taken from [Unsplash](https://unsplash.com/de/fotos/low-angle-fotografie-des-violetten-himmels-NvesrDbsrL4)
-- All photos provided by apartment hosts Anna & Friedel Barth
+- Favicon: Schlosskulm coat of arms from [municipality homepage](https://www.uhlstaedt-kirchhasel.de/ortsteile/ ) 
+- All house and surrounding area photos provided by apartment hosts Anna & Friedel Barth
 - German homepage text provided by apartment hosts Anna & Friedel Barth, English translation by me
+
 
 ## Acknowledgements
 
