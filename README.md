@@ -58,13 +58,9 @@ I chose to create this application because I know the apartment hosts personally
 
 - As a site owner I can present my accomodation facilities in a nice and appealing way.
 - As a site owner I can log in to see an overview of all bookings on the homepage interface as well as in the admin panel.
-- As a site owner I can see each bookings' specific details.
-- As a site owner I can confirm, cancel or delete the individual bookings.
+- As a site owner I can see each bookings' specific details on the homepage interface as well as in the admin panel.
+- As a site owner I can confirm, cancel or delete the individual bookings on the homepage interface as well as in the admin panel.
 - As a site owner I can receive guest messages if specific questions come up that are not answered on the homepage. 
-
-- As a site owner I can...
-- As a site owner I can...
-- As a site owner I can...
 
 # User Experience
 
@@ -83,13 +79,18 @@ The target audience is...
 
 ## User Stories
 
-- As a user I can easily find a form to book the apartment(s) / house.
 - As a user I can easily find the most important information about the apartments so I can decide if it fits my needs.
 - As a user I can see what the house can be used for in general (apart from renting it for vacation) so I can possibly rent it for other activities / contexts.
 - As a user I can read about the house rules so I know what to be considerate of.
 - As a user I want to know more about the locations surrounding area so I can plan activities for my vacation.
 - As a user I want to have practical information so I do not specifically have to ask the hosts or research on my own.
+- As a user I can see photo galleries on the homepage that give me a visual impression of the house and its surroundings.
 - As a user I can easily find a contact form so I can get answers to my specific questions.
+- As a user I am informed that I need to create an account to make a booking.
+- As a user I am getting feedback if I have left any field in the booking form blank.
+- As a user I can easily find a form to book the apartment(s) / house once I have created an account.
+- As a user I can see my booking(s), details I entered and the current booking status.
+- As a user I can easily cancel my booking.
 
 # Technologies
 
