@@ -61,7 +61,7 @@
         
         {% if booking.booking_status == "Requested" or booking.booking_status == "Confirmed"%}
         <!-- Cancel Button -->
-        {% include "handle-bookings-modal.html" with css_one="cancel" trigger_modal="Cancel" modal_title="cancellation" modal_body="cancel" css_two="cancel cancel" button_text="Cancel" %}
+        {% include "cancel-modal.html" with css_one="cancel" trigger_modal="Cancel" modal_title="cancellation" modal_body="cancel" css_two="cancel cancel" button_text="Cancel" %}
         {% endif %}
 
     </div>
