@@ -4,7 +4,7 @@ The fourth milestone project is about creating a full-stack application and show
 
 # Schlosskulm Rental Apartments
 
-I chose to create this application because I know the apartment hosts personally and have visited their charming location in Schlosskulm, Germany. Next to their apartment offer on AirBnB they also needed a proper homepage so I offered my services. I am extra motivated because I know that the project will actually be of real-life use once completed. It is a great way of doing first steps in client work to visualize an idea together and work on the desired features. As the hosts live in rural Germany and the expected guests will mostly be German-speaking the homepage is created in German.
+I chose to create this application because I know the apartment hosts personally and have visited their charming location in Schlosskulm, Germany. Next to their apartment offer on AirBnB they were also looking for a proper homepage, so I offered my services. I am extra motivated because I know that the project will actually be of real-life use once completed. It is a great way of doing first steps in client work to visualize an idea together and work on the desired features.
 
 # Table of Contents
 
@@ -56,13 +56,23 @@ I chose to create this application because I know the apartment hosts personally
 
 ## Site Owner Goals
 
+- As a site owner I can present my accomodation facilities in a nice and appealing way.
+- As a site owner I can log in to see an overview of all bookings on the homepage interface as well as in the admin panel.
+- As a site owner I can see each bookings' specific details.
+- As a site owner I can confirm, cancel or delete the individual bookings.
+- As a site owner I can receive guest messages if specific questions come up that are not answered on the homepage. 
+
+- As a site owner I can...
+- As a site owner I can...
+- As a site owner I can...
+
 # User Experience
 
 ## Target Audience
 
 The target audience is...
 
-- people who like to travel / are planning a vacation
+- visitors from Germany who like to travel / are planning a vacation
 - people who want to take some time off in a quiet area and enjoy nature
 - families who want a big space that offers enough room for everyone and for their children to play
 - couples who want to enjoy a romantic weekend in intimate togetherness
@@ -73,14 +83,12 @@ The target audience is...
 
 ## User Stories
 
-- As a user I can see a booking calendar so I can check if the apartment is available for my travel dates.
 - As a user I can easily find a form to book the apartment(s) / house.
 - As a user I can easily find the most important information about the apartments so I can decide if it fits my needs.
 - As a user I can see what the house can be used for in general (apart from renting it for vacation) so I can possibly rent it for other activities / contexts.
 - As a user I can read about the house rules so I know what to be considerate of.
 - As a user I want to know more about the locations surrounding area so I can plan activities for my vacation.
 - As a user I want to have practical information so I do not specifically have to ask the hosts or research on my own.
-- As a user I would like to have information on how to reach the house in the most convenient way(s) so the journey goes smoothly and I do not have to do all the research on my own.
 - As a user I can easily find a contact form so I can get answers to my specific questions.
 
 # Technologies
@@ -220,7 +228,7 @@ https://stackoverflow.com/a/27679566/22894967
 
 ## Media
 
-- Background image taken from [Unsplash](https://unsplash.com/de/fotos/low-angle-fotografie-des-violetten-himmels-NvesrDbsrL4)
+- Background image taken from [Unsplash](https://unsplash.com/de/fotos/luftaufnahme-des-ozeans-qztBRIrU1FM)
 - Favicon: Schlosskulm coat of arms from [municipality homepage](https://www.uhlstaedt-kirchhasel.de/ortsteile/ ) 
 - All house and surrounding area photos provided by apartment hosts Anna & Friedel Barth
 - German homepage text provided by apartment hosts Anna & Friedel Barth, English translation by me
