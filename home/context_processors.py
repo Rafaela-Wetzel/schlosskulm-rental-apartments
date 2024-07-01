@@ -1,5 +1,6 @@
 from .models import Booking
 
+
 def booking_exists(request):
     """
     Checks if a logged in guest has made a booking

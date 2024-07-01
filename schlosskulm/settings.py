@@ -98,12 +98,12 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://*8000-rafaelawetz-schlosskulm-zntakbokh2k.ws.codeinstitute-ide.net/",
-    "https://*herokuapp.com",
+    'https://*8000-rafaelawetz-schlosskulm-zntakbokh2k.ws.codeinstitute-ide.net/',
+    'https://*herokuapp.com',
 ]
 
 CSRF_ALLOWED_HOSTS = [
-    "https://*8000-rafaelawetz-schlosskulm-zntakbokh2k.ws.codeinstitute-ide.net/",
+    'https://*8000-rafaelawetz-schlosskulm-zntakbokh2k.ws.codeinstitute-ide.net/',
 ]
 
 # Password validation
@@ -111,16 +111,20 @@ CSRF_ALLOWED_HOSTS = [
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': '''django.contrib.auth.password_validation
+        .UserAttributeSimilarityValidator''',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': '''django.contrib.auth.password_validation
+        .MinimumLengthValidator''',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': '''django.contrib.auth.password_validation
+        .CommonPasswordValidator''',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': '''django.contrib.auth.password_validation
+        .NumericPasswordValidator''',
     },
 ]
 
@@ -147,7 +151,7 @@ MESSAGE_TAGS = {
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type

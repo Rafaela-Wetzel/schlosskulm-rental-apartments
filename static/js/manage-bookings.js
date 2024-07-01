@@ -3,14 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const confirmButtons = document.getElementsByClassName('confirm-button');
   const cancelButtons = document.getElementsByClassName('cancel-button');
   const deleteButtons = document.getElementsByClassName('delete-button');
-  const bookingForm = document.getElementById('bookingForm');
 
   /**
    * Functionality to confirm a booking by clicking confirm button
    */
-  for (var i = 0; i < confirmButtons.length; i++) {
+  for (var a = 0; a < confirmButtons.length; a++) {
 
-    confirmButtons[i].addEventListener("click", (event) => {
+    confirmButtons[a].addEventListener("click", (event) => {
       console.log("Confirm button has been clicked!");
       // Prevent default behavior of the click event
       event.preventDefault();
@@ -27,15 +26,15 @@ document.addEventListener("DOMContentLoaded", function () {
       // Redirect to confirm booking URL with booking number as argument
       window.location.href = `${newUrl}/confirm_booking/${bookingId}`;
     });
-  };
+  }
 
 
 /**
  * Functionality to cancel a booking by clicking cancel button
  */
-for (var i = 0; i < cancelButtons.length; i++) {
+for (var b = 0; b < cancelButtons.length; b++) {
 
-  cancelButtons[i].addEventListener("click", (event) => {
+  cancelButtons[b].addEventListener("click", (event) => {
   console.log("Cancel button has been clicked!");
   event.preventDefault();
   const target = event.target;
@@ -50,15 +49,15 @@ for (var i = 0; i < cancelButtons.length; i++) {
   }
   window.location.href = `${newUrl}/cancel_booking/${bookingId}`;
 });
-};
+}
 
 
 /**
  * Functionality to delete a booking by clicking delete button
  */
-for (var i = 0; i < deleteButtons.length; i++) {
+for (var c = 0; c < deleteButtons.length; c++) {
 
-  deleteButtons[i].addEventListener("click", (event) => {
+  deleteButtons[c].addEventListener("click", (event) => {
   console.log("Delete button has been clicked!");
   event.preventDefault();
   const target = event.target;
@@ -73,6 +72,6 @@ for (var i = 0; i < deleteButtons.length; i++) {
   }
   window.location.href = `${newUrl}/delete_booking/${bookingId}`;
 });
-};
+}
 
 });
