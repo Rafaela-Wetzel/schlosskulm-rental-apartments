@@ -94,10 +94,11 @@ The target audience is...
 
 # Technologies
 
-- Python for 
-- Django for
-- Heroku for 
-- Lucidchart for 
+- Lucidchart for creating first visual drafts of the homepage structure and its ERD 
+- HTML, CSS and Bootstrap for creating and styling the homepage interface
+- JavaScript for creating the confirm, cancel and delete booking functionality
+- Python & Django for creating apps, the database, login functionality
+- Heroku for deploying the project to a live page
 - GitHub for storing the code externally
 
 # Libraries
