@@ -228,22 +228,40 @@ I used the following libraries:
 
 | Section Tested | Input To Validate | Expected Outcome | Actual Outcome | Pass/Fail |
 | -------------- | ----------------- | ---------------- | -------------- | --------- |
-| xx Section | Yes |  | As expected | Pass |
-| xx Section | No |  | As expected | Pass |
-| xx Section | Empty or invalid |  | As expected | Pass |
-| xx Section | 'Enter' key |  | As expected | Pass |
-| xx Section | xx |  | As expected | Pass |
-| xx Section | Empty or invalid |  | As expected | Pass |
-| xx Ceremony Section | Yes |  | As expected | Pass |
-| xx Ceremony Section | No |  | As expected | Pass |
-| xx Ceremony Section | 'Enter' key |  | As expected | Pass |
-| xx Ceremony Section | Empty or invalid |  | As expected | Pass |
+| Main Page | Yes |  | As expected | Pass |
+| Upper Apartment Section | No |  | As expected | Pass |
+| Lower Apartment Section | Empty or invalid |  | As expected | Pass |
+| Rent House Section | 'Enter' key |  | As expected | Pass |
+| House Rules Section | xx |  | As expected | Pass |
+| Day Trips Section | 'Enter' key |  | As expected | Pass |
+| Gallery Section | Empty or invalid |  | As expected | Pass |
+| Location Section | Empty or invalid |  | As expected | Pass |
+| Booking Form Section | Empty or invalid |  | As expected | Pass |
+| Your Bookings Section | Yes |  | As expected | Pass |
+| All Bookings Section | No |  | As expected | Pass |
+| About Us Section | Empty or invalid |  | As expected | Pass |
+| Contact Section | Empty or invalid |  | As expected | Pass |
+| Register Section | Empty or invalid |  | As expected | Pass |
+| Login Section | Empty or invalid |  | As expected | Pass |
+| Logout Section | Empty or invalid |  | As expected | Pass |
 
 ## Validator Testing
 
-- I confirm that no errors were returned when passing through the CI Python Linter [pep8ci](https://pep8ci.herokuapp.com/).
+- I confirm that no errors were returned when passing through the [CI Python Linter](https://pep8ci.herokuapp.com/).
 
 <img src="" style="height:40rem;width:65rem;" alt="A screenshot of the CI Python Linter result">
+
+- I confirm that no errors were returned when passing through [JSHint](https://jshint.com/).
+
+<img src="" style="height:40rem;width:65rem;" alt="A screenshot of the JSHint result">
+
+- I confirm that no errors were returned when passing through the [HTML validator](https://validator.w3.org/).
+
+<img src="" style="height:40rem;width:65rem;" alt="A screenshot of the HTML validator result">
+
+- I confirm that no errors were returned when passing through the [CSS validator](https://jigsaw.w3.org/css-validator/).
+
+<img src="" style="height:40rem;width:65rem;" alt="A screenshot of the CSS validator result">
 
 ## Bugs & Problems
 
