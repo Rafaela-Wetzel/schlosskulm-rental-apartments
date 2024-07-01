@@ -24,10 +24,26 @@ I chose to create this application because I know the apartment hosts personally
   - [Homepage Design](#homepage-design)
 - [Features](#features)
   - [Homepage Structure](#homepage-structure)
-  - [A Section](#start-section)
-  - [B Section](#welcome-section)
-  - [C Ceremony Section](#sorting-ceremony-section)
-  - [D Section](#question-section)
+  - [Main Page](#main-page)
+  - [House Section](#house-section)
+    - [Upper Apartment Section](#upper-apartment-section)
+    - [Lower Apartment Section](#lower-apartment-section)
+    - [Rent House Section](#rent-house-section)
+    - [House Rules Section](#house-rules-section)
+  - [Schloßkulm Section](#schloßkulm-section)
+    - [Day Trips Section](#day-trips-section)
+    - [Gallery Section](#gallery-section)
+    - [Location Section](#location-section)
+  - [Booking Section](#booking-section)
+    - [Booking Form Section](#booking-form-section)
+    - [Your Bookings Section](#your-bookings-section)
+    - [All Bookings Section](#all-bookings-section)
+  - [About Us Section](#about-us-section)
+  - [Contact Section](#contact-section)
+  - [Django Authentication](#django-authentication)
+    - [Register Section](#register-section)
+    - [Login Section](#login-section)
+    - [Logout Section](#logout-section)
 - [Database Models](#database-models)
   - [Entity Relationship Diagram](#entity-relationship-diagram)
   - [Booking Model](#booking-model)
@@ -105,7 +121,10 @@ The target audience is...
 
 I used the following libraries:
 
-- *import os* 
+- os module
+- django allauth
+- django summernote
+- django forms
 
 # Design
 
@@ -117,29 +136,85 @@ I used the following libraries:
 
 # Features 
 
-## Homepage Structure 
+# Homepage Structure 
+
+## Main Page
 
 <img src="" style="height:30rem;width:30rem;" alt="">
 
-## A Section  
+## House Section  
+
+### Upper Apartment Section
 
 <img src="" style="height:35rem;width:35rem;" alt="">
 
-## B Section
+### Lower Apartment Section
 
 <img src="" style="height:35rem;width:35rem;" alt="">
 
-## C Section
+### Rent House Section
+
+<img src="" style="height:35rem;width:35rem;" alt="">
+
+### House Rules Section
+
+<img src="" style="height:35rem;width:35rem;" alt="">
+
+## Schloßkulm Section
+
+### Day Trips Section
+
+<img src="" style="height:35rem;width:35rem;" alt="">
+
+### Gallery Section
+
+<img src="" style="height:35rem;width:35rem;" alt="">
+
+### Location Section
+
+<img src="" style="height:35rem;width:35rem;" alt="">
+
+## Booking Section
+
+### Booking Form Section
 
 <img src="" style="height:25rem;width:40rem;" alt="">
 
-## D Section
+### Your Bookings Section
+
+<img src="" style="height:25rem;width:40rem;" alt="">
+
+### All Bookings Section
+
+<img src="" style="height:25rem;width:40rem;" alt="">
+
+## About Us Section
+
+<img src="" style="height:60rem;width:35rem;" alt="">
+
+## Contact Section
+
+<img src="" style="height:60rem;width:35rem;" alt="">
+
+## Django Authentication
+
+### Sign Up Section
+
+<img src="" style="height:60rem;width:35rem;" alt="">
+
+### Login Section
+
+<img src="" style="height:60rem;width:35rem;" alt="">
+
+### Logout Section
 
 <img src="" style="height:60rem;width:35rem;" alt="">
 
 # Database Models
 
 ## Entity Relationship Diagram
+
+<img src="static/readme-assets/erd.jpeg" style="height:60rem;width:45rem;" alt="Entity Relationship Diagram">
 
 ## Booking Model
 
