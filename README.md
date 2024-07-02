@@ -271,8 +271,7 @@ I used the following libraries:
 | Booking Form Section | Entering the same date for arrival and departure | Validation error: "Your arrival date cannot be the same day as your departure date!" | | |
 | Booking Form Section | Entering letters within the date fields | Validation error: "Please enter a valid date." | | |
 | Booking Form Section | Entering arrival or departure dates that are in the past | Validation error: "Your booking date cannot be in the past!" | | |
-| Your Bookings Section | Logged in guest has sent a valid booking request | 'Your bookings' appears in navigation menu | As expected | Pass |
-| Your Bookings Section | Guest has sent a valid booking request | Booking appears on the 'your bookings' page & status is set to 'requested' | As expected | Pass |
+| Your Bookings Section | Logged in guest has sent a valid booking request | 'Your bookings' appears in navigation menu, booking appears on the 'your bookings' page & status is set to 'requested' | As expected | Pass |
 | Your Bookings Section | Guest clicks on 'cancel booking' button | Modal appears | As expected | Pass |
 | Your Bookings Section | Guest clicks on 'close' within modal | Modal closes, nothing else happens | As expected | Pass |
 | Your Bookings Section | Guest clicks on 'cancel booking' button | Booking status is set to 'cancelled' and 'cancel booking' button disappears | As expected | Pass |
