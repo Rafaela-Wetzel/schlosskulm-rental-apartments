@@ -18,6 +18,12 @@ I chose to create this application because I know the apartment hosts personally
 - [User Experience](#user-experience)
   - [Target Audience](#target-audience)
   - [User Stories](#user-stories)
+  - [Strategy](#strategy)
+  - [Scope](#scope)
+  - [Structure](#structure)
+  - [Skeleton](#skeleton)
+    - [Wireframe](#wireframe)
+  - [Surface](#surface)
 - [Technologies](#technologies)
 - [Libraries](#libraries)
 - [Design](#design)
@@ -112,17 +118,67 @@ The target audience is...
 - As a user I can see photo galleries on the homepage that give me a visual impression of the house and its surroundings.
 - As a user I can easily find a contact form so I can get answers to my specific questions.
 - As a user I am informed that I need to create an account to make a booking.
-- As a user I am getting feedback if I have left any field in the booking form blank.
 - As a user I can easily find a form to book the apartment(s) / house once I have created an account.
-- As a user I can see my booking(s), details I entered and the current booking status.
+- As a user I am getting feedback if I have left any field in the forms blank.
+- As a user I can see my booking details and the current booking status.
 - As a user I can easily cancel my booking.
+
+## Strategy  
+
+The objective of the project is to design an apartment booking homepage to fulfill my customers needs and to attract potential guests. The homepage is simple in structure and design, and supposed to be appealing to townspeople.  
+
+It should be easy to...  
+- navigate
+- find necessary information about the apartments and area
+- make a booking 
+
+## Scope
+
+<img src="static/readme-assets/homepage-structure.jpeg" style="height:30rem;width:55rem;" alt="Homepage structure outline">  
+
+Above is the first structural homepage draft. A while into the work on the project I realized the initial scope would be too comprehensive for my PP4 project, so I scaled it down to the most important features. 
+
+Those are:
+
+- a start page with a welcome greeting and a Schloßkulm video from birds eye perspective
+- informational pages about the lower and upper apartments and their facilities / prices / visual impression
+- information about renting the whole house for various intended purposes
+- information about the house rules
+- suggestions for local activities and links to places of interest
+- a gallery with pictures of the house and village / surroundings
+- information about the village and surrounding area including a Google Map
+- login functionality to make a booking via a booking form and to see the booking details
+- possibility to confirm, cancel or delete bookings (for hosts)
+- possibility to cancel bookings (for guests)
+- an 'about us' page introducing the apartment hosts
+- a contact page with a form to get in touch
+- signup, login and logout features (django allauth)
+
+The left-out features to be implemented in future are:
+
+- legal info (imprint, terms and conditions, data privacy)
+- links to friends' pages / initiatives
+- directions to and from location
+- project archive
+
+## Structure
+
+
+## Skeleton
+
+
+### Wireframe
+
+
+## Surface
+
 
 # Technologies
 
 - Lucidchart for creating first visual drafts of the homepage structure and its ERD 
 - HTML, CSS and Bootstrap for creating and styling the homepage interface
 - JavaScript for creating the confirm, cancel and delete booking functionality
-- Python & Django for creating apps, the database, login functionality
+- Python & Django for creating apps, the database, login functionality etc.
 - Heroku for deploying the project to a live page
 - GitHub for storing the code externally
 
