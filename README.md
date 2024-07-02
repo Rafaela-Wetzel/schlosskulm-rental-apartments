@@ -220,7 +220,11 @@ I used the following libraries:
 
 ## Contact Model
 
-# Features Left to Implement
+# Features Left to Implement  
+
+- Automatically send confirmation e-mail to host and guest when a booking has been made, confirmed, cancelled or deleted
+- Include a booking availability calendar
+- 
 
 # Testing 
 
@@ -272,8 +276,7 @@ I used the following libraries:
 | Your Bookings Section | Guest clicks on 'cancel booking' button | Modal appears | As expected | Pass |
 | Your Bookings Section | Guest clicks on 'close' within modal | Modal closes, nothing else happens | As expected | Pass |
 | Your Bookings Section | Guest clicks on 'cancel booking' button | Booking status is set to 'cancelled' and 'cancel booking' button disappears | As expected | Pass |
-| All Bookings Section | Host logs in | 'All bookings' appears in navigation menu | As expected | Pass |
-| All Bookings Section | Host logs in | Host can see all bookings made so far | As expected | Pass |
+| All Bookings Section | Host logs in | 'All bookings' appears in navigation menu & host can see all bookings made so far | As expected | Pass |
 | All Bookings Section | Host clicks on 'confirm booking' button | Modal appears | As expected | Pass |
 | All Bookings Section | Host clicks on 'close' within modal | Modal closes, nothing else happens | As expected | Pass |
 | All Bookings Section | Host clicks on 'confirm booking' button within modal | Booking status is set to 'confirmed', 'confirm booking' button disappears and message is displayed: "The booking has been confirmed!" | As expected | Pass |
@@ -286,6 +289,7 @@ I used the following libraries:
 | Contact Section | Leaving any of the mandatory form fields blank | Message is not sent yet and user is prompted to fill in the empty field(s) | As expected | Pass |
 | Contact Section | Entering a non-email address in e-mail field | Message is not sent yet and user is prompted to enter an email address | As expected | Pass |
 | Contact Section | User sends valid contact request | Redirects to main page & displays confirmation message: "Thank you for your message. We will be in touch with you soon." | As expected | Pass |
+| Login Section | Logging in | Login status is reflected in footer: "Logged in as: User x" | As expected | Pass |
 
 ## Validator Testing
 
