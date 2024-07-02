@@ -140,18 +140,18 @@ Above is the first structural homepage draft. A while into the work on the proje
 
 Those are:
 
-- a start page with a welcome greeting and a Schloßkulm video from birds eye perspective
-- informational pages about the lower and upper apartments and their facilities / prices / visual impression
-- information about renting the whole house for various intended purposes
-- information about the house rules
-- suggestions for local activities and links to places of interest
-- a gallery with pictures of the house and village / surroundings
-- information about the village and surrounding area including a Google Map
-- login functionality to make a booking via a booking form and to see the booking details
-- possibility to confirm, cancel or delete bookings (for hosts)
-- possibility to cancel bookings (for guests)
-- an 'about us' page introducing the apartment hosts
-- a contact page with a form to get in touch
+- a start page
+- upper and lower apartment pages
+- renting the whole house page
+- house rules page
+- day trips page
+- gallery page
+- location page
+- booking form page
+- your bookings page
+- all bookings page
+- about us page
+- contact page 
 - signup, login and logout features (django allauth)
 
 The left-out features to be implemented in future are:
@@ -163,6 +163,27 @@ The left-out features to be implemented in future are:
 
 ## Structure
 
+The homepage is split up into five main navigation elements: House, Schloßkulm, Booking, About Us and Contact. The House section includes Lower Apartment, Upper Apartment, Rent House and House Rules. Schloßkulm includes Day Trips, Gallery and Location. Booking includes - once a user is logged in - Booking Form, All Bookings (hosts) or Your Bookings (guests). There are three separate pages / functionalities for registration, login and logout with their respective action confirmation pages.
+
+### Homepage overview
+
+1. **Main Page**: start page with a welcome greeting and a Schloßkulm video from birds eye perspective
+2. **House**:
+    - **Upper Apartment**: informational page including general remarks, information about apartment facilities, important information about fire protection rules, check-in and check-out times, gallery and pricing
+    - **Lower Apartment**: informational page including general remarks, information about apartment facilities, important information about fire protection rules, check-in and check-out times, gallery and pricing
+    - **Rent House**: information about renting the whole house for various intended purposes and house infrastructure
+    - **House Rules**: information about the house rules and its distinctive features
+3. **Schloßkulm**:
+    - **Day Trips**: suggestions for local activities and links to places of interest
+    - **Gallery**: gallery with pictures of the house and village / surroundings
+    - **Location**: information about the village and surrounding area including a Google Map
+4. **Booking**:
+    - **Booking Form**: login functionality to make a booking via a booking form
+    - **Your Bookings (guests)**: guests can see their booking details - possibility to cancel bookings
+    - **All Bookings (hosts)**: hosts can see all booking details - possibility to confirm, cancel or delete bookings
+5. **About Us**: about us page introducing the apartment hosts, including pictures
+6. **Contact**: contact page with a form to get in touch (no login needed)
+7. **Register / Login / Logout**
 
 ## Skeleton
 
