@@ -226,24 +226,66 @@ I used the following libraries:
 
 ## Manual Testing  
 
-| Section Tested | Input To Validate | Expected Outcome | Actual Outcome | Pass/Fail |
+| Section Tested | Input To Validate / Functionality To Test | Expected Outcome | Actual Outcome | Pass/Fail |
 | -------------- | ----------------- | ---------------- | -------------- | --------- |
-| Main Page | Yes |  | As expected | Pass |
-| Upper Apartment Section | No |  | As expected | Pass |
-| Lower Apartment Section | Empty or invalid |  | As expected | Pass |
-| Rent House Section | 'Enter' key |  | As expected | Pass |
-| House Rules Section | xx |  | As expected | Pass |
-| Day Trips Section | 'Enter' key |  | As expected | Pass |
-| Gallery Section | Empty or invalid |  | As expected | Pass |
-| Location Section | Empty or invalid |  | As expected | Pass |
-| Booking Form Section | Empty or invalid |  | As expected | Pass |
-| Your Bookings Section | Yes |  | As expected | Pass |
-| All Bookings Section | No |  | As expected | Pass |
-| About Us Section | Empty or invalid |  | As expected | Pass |
-| Contact Section | Empty or invalid |  | As expected | Pass |
-| Register Section | Empty or invalid |  | As expected | Pass |
-| Login Section | Empty or invalid |  | As expected | Pass |
-| Logout Section | Empty or invalid |  | As expected | Pass |
+| Main Page | Clicking 'play' button on video | Starts muted YouTube video | As expected | Pass |
+| Main Page | Clicking 'Schloßkulm Rental Apartments' in the top left | Redirects to start page | As expected | Pass |
+| Main Page | Clicking navigation menu elements | Direct to respective pages | As expected | Pass |
+| Upper Apartment Section | Clicking on accordion sections | Respective section opens up | As expected | Pass |
+| Upper Apartment Section | Clicking on another accordion section whilst one section is already open | Respective new section opens up and the previous one closes | As expected | Pass |
+| Upper Apartment Section - Gallery | Clicking on single pictures | Bigger sized picture opens in a new window | As expected | Pass |
+| Upper Apartment Section - Prices | A non-logged in user clicks the 'booking' button | A modal opens up that tells them that it is necessary to be logged in to make a booking | As expected | Pass |
+| Upper Apartment Section - Prices | Clicking 'close' in modal window | Closes modal | As expected | Pass |
+| Upper Apartment Section - Prices | Clicking 'ok' in modal window | Redirects to login page | As expected | Pass |
+| Upper Apartment Section - Prices | Logging in after being redirected from prices section | Redirects to booking page | As expected | Pass |
+| Upper Apartment Section - Prices | A logged in user clicks the 'booking' button | Redirects to booking page | As expected | Pass |
+| Lower Apartment Section | Clicking accordion sections | Respective sections open up | As expected | Pass |
+| Lower Apartment Section | Clicking on another accordion section whilst one section is already open | Respective new section opens up and the previous one closes | As expected | Pass |
+| Lower Apartment Section - Gallery | Clicking on single pictures | Bigger sized picture opens in a new window | As expected | Pass |
+| Lower Apartment Section - Prices | A non-logged in user clicks the 'booking' button | A modal opens up that tells them that it is necessary to be logged in to make a booking | As expected | Pass |
+| Lower Apartment Section - Prices | Clicking 'close' in modal window | Closes modal | As expected | Pass |
+| Lower Apartment Section - Prices | Clicking 'ok' in modal window | Redirects to login page | As expected | Pass |
+| Lower Apartment Section - Prices | Logging in after being redirected from prices section | Redirects to booking page | As expected | Pass |
+| Lower Apartment Section - Prices | A logged in user clicks the 'booking' button | Redirects to booking page | As expected | Pass |
+| Rent House Section | A non-logged in user clicks the 'booking' button | A modal opens up that tells them that it is necessary to be logged in to make a booking | As expected | Pass |
+| Rent House Section | Clicking 'close' in modal window | Closes modal | As expected | Pass |
+| Rent House Section | Clicking 'ok' in modal window | Redirects to login page | As expected | Pass |
+| Rent House Section | Logging in after being redirected from prices section | Redirects to booking page | As expected | Pass |
+| Rent House Section | A logged in user clicks the 'booking' button | Redirects to booking page | As expected | Pass |
+| Day Trips Section | Clicking individual links | Opens respective page in a new window | As expected | Pass |
+| Gallery Section | Clicking on single pictures | Bigger sized picture opens in a new window | As expected | Pass |
+| Location Section | Clicking +/- within Google Map | Zooms in and out | As expected | Pass |
+| Location Section | Clicking 'view bigger map' | Opens new Google Maps window showing bigger map | As expected | Pass |
+| Booking Form Section | Clicking 'Booking' in navigation menu as non-logged in user | Redirects to login page | As expected | Pass |
+| Booking Form Section | Signing in after being redirected from 'Booking' | Redirects to booking form page | As expected | Pass |
+| Booking Form Section | Clicking 'Booking' in navigation menu as logged in user | Opens booking form page | As expected | Pass |
+| Booking Form Section | Leaving any of the mandatory form fields blank | Booking is not processed yet and user is prompted to fill in the empty field(s) | As expected | Pass |
+| Booking Form Section | Entering a non-email address in e-mail field | Message is not sent yet and user is prompted to enter an email address | As expected | Pass |
+| Booking Form Section | Sending valid booking request | Redirects to main page and confirmation message is displayed: "Thank you for your booking request. We will be in touch with you soon." | As expected | Pass |
+| Booking Form Section | Entering a birth date that lies in the future | Validation error: "Your birth date cannot be in the future!" | | |
+| Booking Form Section | Entering an arrival date that lies after the departure date | Validation error: "Your arrival date must be before your departure date!" | | |
+| Booking Form Section | Entering the same date for arrival and departure | Validation error: "Your arrival date cannot be the same day as your departure date!" | | |
+| Booking Form Section | Entering letters within the date fields | Validation error: "Please enter a valid date." | | |
+| Booking Form Section | Entering arrival or departure dates that are in the past | Validation error: "Your booking date cannot be in the past!" | | |
+| Your Bookings Section | Logged in guest has sent a valid booking request | 'Your bookings' appears in navigation menu | As expected | Pass |
+| Your Bookings Section | Guest has sent a valid booking request | Booking appears on the 'your bookings' page & status is set to 'requested' | As expected | Pass |
+| Your Bookings Section | Guest clicks on 'cancel booking' button | Modal appears | As expected | Pass |
+| Your Bookings Section | Guest clicks on 'close' within modal | Modal closes, nothing else happens | As expected | Pass |
+| Your Bookings Section | Guest clicks on 'cancel booking' button | Booking status is set to 'cancelled' and 'cancel booking' button disappears | As expected | Pass |
+| All Bookings Section | Host logs in | 'All bookings' appears in navigation menu | As expected | Pass |
+| All Bookings Section | Host logs in | Host can see all bookings made so far | As expected | Pass |
+| All Bookings Section | Host clicks on 'confirm booking' button | Modal appears | As expected | Pass |
+| All Bookings Section | Host clicks on 'close' within modal | Modal closes, nothing else happens | As expected | Pass |
+| All Bookings Section | Host clicks on 'confirm booking' button within modal | Booking status is set to 'confirmed', 'confirm booking' button disappears and message is displayed: "The booking has been confirmed!" | As expected | Pass |
+| All Bookings Section | Host clicks on 'cancel booking' button | Modal appears | As expected | Pass |
+| All Bookings Section | Host clicks on 'close' within modal | Modal closes, nothing else happens | As expected | Pass |
+| All Bookings Section | Host clicks on 'cancel booking' button within modal | Booking status is set to 'cancelled', 'cancel booking' button disappears and message is displayed: "The booking has been cancelled!" | As expected | Pass |
+| All Bookings Section | Host clicks on 'delete booking' button | Modal appears | As expected | Pass |
+| All Bookings Section | Host clicks on 'close' within modal | Modal closes, nothing else happens | As expected | Pass |
+| All Bookings Section | Host clicks on 'delete booking' button within modal | Booking is removed from database and confirmation message is displayed: "The booking has been deleted!" | As expected | Pass |
+| Contact Section | Leaving any of the mandatory form fields blank | Message is not sent yet and user is prompted to fill in the empty field(s) | As expected | Pass |
+| Contact Section | Entering a non-email address in e-mail field | Message is not sent yet and user is prompted to enter an email address | As expected | Pass |
+| Contact Section | User sends valid contact request | Redirects to main page & displays confirmation message: "Thank you for your message. We will be in touch with you soon." | As expected | Pass |
 
 ## Validator Testing
 

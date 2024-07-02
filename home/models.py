@@ -1,4 +1,5 @@
 import datetime
+import re
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import User
@@ -82,31 +83,7 @@ class Booking(models.Model):
     def __str__(self):
         return f"""Booking no. {self.id}: {self.last_name}, {self.first_name}
         (booked {self.booking_date})"""
-
-    def clean(self):
-        """
-        Date Validation
-        """
-        arrival_date = self.arrival_date
-        departure_date = self.departure_date
-        birth_date = self.birth_date
-        if departure_date < arrival_date:
-            raise forms.ValidationError(
-                "Your arrival date must be before your departure date!")
-        elif departure_date == arrival_date:
-            raise forms.ValidationError(
-                """Your arrival date cannot be the same day as your departure
-                date!""")
-        elif arrival_date < datetime.date.today():
-            raise forms.ValidationError(
-                "Your booking dates cannot be in the past!")
-        elif departure_date < datetime.date.today():
-            raise forms.ValidationError(
-                "Your booking dates cannot be in the past!")
-        elif birth_date > datetime.date.today():
-            raise forms.ValidationError(
-                "Your birth date cannot be in the future!")
-
+        
 
 class Contact(models.Model):
     """
