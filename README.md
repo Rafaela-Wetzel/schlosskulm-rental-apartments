@@ -62,21 +62,30 @@ I chose to create this application because I know the apartment hosts personally
 
 # Live Demo 
 
-<img src="" style="height:35rem;width:45rem;" alt="">  
-  
 **You can see a deployed version of my app [here](https://schlosskulm-762627e86384.herokuapp.com/)**
+
+<img src="static/readme-assets/am-i-responsive.png" style="height:35rem;width:55rem;" alt="Picture of homepage in different screen sizes">  
 
 # Project Goals
 
 ## User Goals
 
+- Read accomodation information to see if it fits guests' individual needs
+- See accomodation and village / surrounding area pictures to get a visual impression
+- Find information about activities and sights
+- Find check-in and check-out times
+- Find contact information to get in touch
+- Find information about pricing
+- Make a booking
+- See booking details
+
 ## Site Owner Goals
 
-- As a site owner I can present my accomodation facilities in a nice and appealing way.
-- As a site owner I can log in to see an overview of all bookings on the homepage interface as well as in the admin panel.
-- As a site owner I can see each bookings' specific details on the homepage interface as well as in the admin panel.
-- As a site owner I can confirm, cancel or delete the individual bookings on the homepage interface as well as in the admin panel.
-- As a site owner I can receive guest messages if specific questions come up that are not answered on the homepage. 
+- Present accomodation facilities and area in & around Schloßkulm in a nice and appealing way to attract guests
+- Log in to see an overview of all bookings on the homepage interface as well as in the admin panel
+- See each bookings' specific details on the homepage interface as well as in the admin panel
+- Confirm, cancel or delete the individual bookings on the homepage interface as well as in the admin panel
+- Receive guest messages if specific questions come up that are not answered on the homepage
 
 # User Experience
 
@@ -224,7 +233,7 @@ I used the following libraries:
 
 - Automatically send confirmation e-mail to host and guest when a booking has been made, confirmed, cancelled or deleted
 - Include a booking availability calendar
-- 
+- Interface between database and LexOffice to create invoices
 
 # Testing 
 
