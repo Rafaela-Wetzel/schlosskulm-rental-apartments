@@ -154,7 +154,7 @@ Those are:
 - contact page 
 - signup, login and logout features (django allauth)
 
-The left-out features to be implemented in future are:
+The left-out features to be implemented for my client in future are:
 
 - legal info (imprint, terms and conditions, data privacy)
 - links to friends' pages / initiatives
@@ -177,13 +177,13 @@ The homepage is split up into five main navigation elements: House, Schloßkulm,
     - **Day Trips**: suggestions for local activities and links to places of interest
     - **Gallery**: gallery with pictures of the house and village / surroundings
     - **Location**: information about the village and surrounding area including a Google Map
-4. **Booking**:
+4. **Booking** (login necessary):
     - **Booking Form**: login functionality to make a booking via a booking form
     - **Your Bookings (guests)**: guests can see their booking details - possibility to cancel bookings
     - **All Bookings (hosts)**: hosts can see all booking details - possibility to confirm, cancel or delete bookings
 5. **About Us**: about us page introducing the apartment hosts, including pictures
-6. **Contact**: contact page with a form to get in touch (no login needed)
-7. **Register / Login / Logout**
+6. **Contact**: contact page with a form to get in touch (no login necessary)
+7. **Register / Login / Logout**: User needs to register & login to make a booking and to see own bookings, if available. Login and logout navigation leads to a confirmation page.
 
 ## Skeleton
 
@@ -195,12 +195,17 @@ The homepage is split up into five main navigation elements: House, Schloßkulm,
 
 <img src="static/readme-assets/wireframe-mobile-view.png" style="height:30rem;width:28rem;" alt="Wireframe showing the start page draft in mobile view.">  
 
-Differences to final outcome:  
+There are some minor differences to the final outcome:  
 - Scope within navigation menu has been scaled down as explained above
 - No date pickers have been included in the booking form for simplicity reasons
 
 ## Surface
 
+Discussing design visions with my client the request was to create a simple design involving pastel colors and a non-intrusive font. I chose a background image in the colors light rose, dark rose, light purple and nude. There are some unobtrusive patterns on the sides that resemble a dotted structure as well as the reflection of water. Personally I perceive the colors and patterns as modern and refreshing which suits well the urban area target audience. The header and footer are held in light greyish colors making the background image the focus of attention in terms of design. 
+
+### Color Palette
+
+<img src="static/readme-assets/color-palette.png" alt="Homepage color palette."> 
 
 # Technologies
 
