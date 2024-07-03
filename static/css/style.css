@@ -176,6 +176,7 @@ footer {
   border-top: 1px solid #000;
   color: black;
   height: 2.5rem;
+  height: auto;
 }
 
 /* Main Page */
@@ -285,7 +286,7 @@ div.desc {
   /* Footer */
 
   .footer-font-size {
-    
+    font-size: 1rem;
   }  
 
 }
