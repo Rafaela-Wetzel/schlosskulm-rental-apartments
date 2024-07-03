@@ -235,10 +235,19 @@ The average across all pages is:
 
 I used the following libraries:
 
-- os module
-- django allauth
-- django summernote
-- django forms
+https://github.com/ObiWanBonobi/PP4/tree/main?tab=readme-ov-file#libraries
+
+
+- bleach was used as a Python module that takes any HTML input, and returns valid, sanitised HTML.
+- crispy-bootstrap4 was used as a template pack for the comment form.
+- dj-database-url was used to utilize the DATABASE_URL environment variable.
+- django-allauth was used for authentication, registration and account management.
+- gunicorn was used for the Python WSGI HTTP Server for UNIX.
+- psycopg2 was used as a PostgreSQL database adapter.
+- Requests was used as HTTP library for Python.
+- sqlparse was used as a non-validating SQL parser for Python.
+- summernote was used as a WYSIWYG editor with Bootstrap.
+- whitenoise was used as a simplified static file serving for Python web apps.
 
 # Features 
 
