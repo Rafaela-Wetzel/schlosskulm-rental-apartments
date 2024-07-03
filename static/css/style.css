@@ -285,18 +285,13 @@ div.desc {
   /* Footer */
 
   .footer-font-size {
-    font-size: 0.3rem !important;
-    color: red !important;
+    
   }  
 
 }
 
 /* Media query: tablets and larger (768px and up) */
 @media (min-width: 768px) {
-
-body {
-    color: red;
-}
 
 }
 
