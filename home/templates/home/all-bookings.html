@@ -27,10 +27,10 @@
 {% endfor %}
 {% endif %}
 
-<h1>All Bookings</h1>
-
-{% if user.is_superuser %}
+{% if user.is_authenticated and user.is_superuser %}
 {% for booking in object_list %}
+
+<h1>All Bookings</h1>
 
 <div class="card mx-auto" style="width:25rem;background-color:#e4dee8;">
     <div class="card-body">
@@ -82,6 +82,23 @@
 <br>
 
 {% endfor %}
+
+{% else %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+      <ul class="list-group list-group-flush rounded-corners">
+        <li class="list-group-item">You are not authorized to view this page.</li>
+      </ul>
+    </div>
+    <div class="col-sm">
+    </div>
+  </div>
+</div>
+
 {% endif %}
 
 {% endblock %}

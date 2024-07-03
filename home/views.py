@@ -1,7 +1,10 @@
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpRequest, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.utils.decorators import method_decorator
 from django.views import generic
+import requests
 
 from .models import Booking, Contact
 from .forms import BookingForm, ContactForm
@@ -40,7 +43,7 @@ def check_if_booking_exists(request):
     Checks if a logged in guest has made a booking
     """
     current_user = request.user
-    if current_user.is_authenticated and not current_user.is_superuser:
+    if current_user.is_authenticated:
         booking_exists = Booking.objects.filter(user=current_user).exists()
     else:
         booking_exists = False
@@ -63,11 +66,11 @@ class BookingList(generic.ListView):
     template_name = "home/your-bookings.html"
 
     def get_queryset(self):
-        return Booking.objects.filter(user=self.request.user)
+        if self.request.user.is_authenticated:
+            return Booking.objects.filter(user=self.request.user)
 
 
 # All Bookings View
-
 class AllBookingsList(generic.ListView):
     """
     View for hosts that displays all bookings guests have made
