@@ -328,14 +328,25 @@ The visible fields are:
 
 **mandatory field* 
 
-Next to the fields in the visible booking form there is also other information collected and stored in the database that is either visible in the admin panel and/or on the your bookings and all bookings pages:
+Next to the visible fields on the booking form page there is also other information collected and stored in the database that is either visible in the admin panel and/or on the your bookings and all bookings pages:
 
-- user name (visible in admin panel)
+- user id (foreign key that is connected to the user model - visible in admin panel)
 - booking number (visible in admin panel and your/all bookings page)
 - booking date and time (visible in admin panel and your/all bookings page)
 - booking status *(requested (per default), confirmed or cancelled* - visible in admin panel and your/all bookings page)
 
+The user id serves as foreign key in the booking model to the user models primary key and represents a many-to-one relationship (one user can make many bookings).
+
 ## Contact Model
+
+The contact model is for guests to get in touch with the hosts should they have any remaining questions that are not answered on the homepage. The contact form is accessible to both logged-in and non-logged-in users. 
+
+The fields are:
+- name*
+- email*
+- message*
+
+**mandatory field* 
 
 # Features Left to Implement  
 
