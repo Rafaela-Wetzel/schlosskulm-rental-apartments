@@ -275,3 +275,32 @@ div.desc {
 .resize-none {
   resize: none;
 }
+
+
+/* Media Queries */
+
+/* Media query: large or landscape phones (576px and up) */
+@media (min-width: 576px) {
+
+  /* Footer */
+
+  .footer-font-size {
+    font-size: 0.3rem !important;
+    color: red !important;
+  }  
+
+}
+
+/* Media query: tablets and larger (768px and up) */
+@media (min-width: 768px) {
+
+body {
+    color: red;
+}
+
+}
+
+/* Large devices (laptops and desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
