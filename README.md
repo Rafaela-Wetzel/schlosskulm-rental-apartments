@@ -235,19 +235,16 @@ The average across all pages is:
 
 I used the following libraries:
 
-https://github.com/ObiWanBonobi/PP4/tree/main?tab=readme-ov-file#libraries
-
-
-- bleach was used as a Python module that takes any HTML input, and returns valid, sanitised HTML.
-- crispy-bootstrap4 was used as a template pack for the comment form.
-- dj-database-url was used to utilize the DATABASE_URL environment variable.
-- django-allauth was used for authentication, registration and account management.
-- gunicorn was used for the Python WSGI HTTP Server for UNIX.
-- psycopg2 was used as a PostgreSQL database adapter.
-- Requests was used as HTTP library for Python.
-- sqlparse was used as a non-validating SQL parser for Python.
-- summernote was used as a WYSIWYG editor with Bootstrap.
-- whitenoise was used as a simplified static file serving for Python web apps.
+- Python os module was used to set environment variables in settings.py
+- Crispy-bootstrap5 was used for the booking and contact form
+- Dj-database-url was used to utilize the DATABASE_URL environment variable
+- Django-allauth was used for authentication, registration and account management
+- Gunicorn was used for the Python WSGI HTTP Server
+- Psycopg2 was used as a PostgreSQL database adapter
+- Requests was used as HTTP library for Python
+- Sqlparse was used as a non-validating SQL parser for Python
+- Summernote was used as a WYSIWYG editor with Bootstrap
+- Whitenoise was used as a simplified static file serving for Python web apps
 
 # Features 
 
@@ -533,3 +530,4 @@ https://stackoverflow.com/a/27679566/22894967
 
 - Help and feedback from my mentor Oluwafemi Medale
 - Readme structure inspired by [hughes84](https://github.com/hughes84/hangman-pp3/blob/main/README.md)
+- Library description taken from [ObiWanBonobi](https://github.com/ObiWanBonobi/PP4/tree/main?tab=readme-ov-file#libraries)

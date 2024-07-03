@@ -20,6 +20,7 @@ main {
   padding-top: 5rem;
   padding-bottom: 3rem;
   margin: 0 2rem;
+  font-size: 1.2rem;
 }
 
 h1 {
@@ -46,12 +47,16 @@ h1 {
 }
 
 .styling-messages {
-  border: 0.3rem dashed white;
+  border: 0.3rem dashed #ff00b4;
   font-weight: bold;
 }
 
 .helptext {
   visibility: hidden;
+}
+
+.border-pink {
+  border: 0.3rem dashed #ff00b4;
 }
 
 /* Hover CSS for nav bar */

@@ -8,8 +8,18 @@
 {% block content %}
 <h1>{% trans "Sign Up" %}</h1>
 
-<p>{% blocktrans %}Already have an account?<br>
-  Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-4">
+      <p class="border-pink rounded-corners bg-white">{% blocktrans %}Already have an account?<br>
+        Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+    </div>
+    <div class="col-sm-4">
+    </div>
+  </div>
+</div>
 
 <div class="container">
   <div class="row">
@@ -27,14 +37,6 @@
             maxlength="150" required="" id="id_username" class="form-control">
         </p>
 
-        <ul class="list-group list-group-flush rounded-corners">
-          <li class="list-group-item">Your password can’t be too similar to your other personal information.</li>
-          <li class="list-group-item">Your password must contain at least 8 characters.</li>
-          <li class="list-group-item">Your password can’t be a commonly used password.</li>
-          <li class="list-group-item">Your password can’t be entirely numeric.</li>
-        </ul>
-        <br>
-
         <p>
           <label for="id_password1">Password:</label>
           <input type="password" name="password1" placeholder="Password" autocomplete="new-password" required=""
@@ -47,6 +49,15 @@
           <input type="password" name="password2" placeholder="Password (again)" autocomplete="new-password" required=""
             id="id_password2" class="form-control">
         </p>
+        <br>
+
+        <ul class="list-group list-group-flush rounded-corners border-pink">
+          <li class="list-group-item">Your password can’t be too similar to your other personal information.</li>
+          <li class="list-group-item">Your password must contain at least 8 characters.</li>
+          <li class="list-group-item">Your password can’t be a commonly used password.</li>
+          <li class="list-group-item">Your password can’t be entirely numeric.</li>
+        </ul>
+        <br>
 
         <button type="submit" form="signup_form" class="btn btn-purple border-dark">{% trans "Sign Up" %} &raquo;</button>
 
