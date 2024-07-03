@@ -1,6 +1,6 @@
 # Code Institute: Full Stack Project by Rafaela Wetzel
 
-The fourth milestone project is about creating a full-stack application and showcasing the HTML, CSS, JS and Python skills I have attained over the past 10 months at Code Institute. It is deployed on Heroku and the fourth out of five projects.  
+The fourth milestone project is about creating a full-stack application with Django and showcasing the HTML, CSS, JavaScript and Python skills I have attained over the past 10 months at Code Institute. It is deployed on Heroku and the fourth out of five projects.  
 
 # Schlosskulm Rental Apartments
 
@@ -24,10 +24,10 @@ I chose to create this application because I know the apartment hosts personally
   - [Skeleton](#skeleton)
     - [Wireframe](#wireframe)
   - [Surface](#surface)
+    - [Color Palette](#color-palette)
+  - [Accessibility](#accessibility)
 - [Technologies](#technologies)
 - [Libraries](#libraries)
-- [Design](#design)
-  - [Homepage Design](#homepage-design)
 - [Features](#features)
   - [Homepage Structure](#homepage-structure)
   - [Main Page](#main-page)
@@ -46,10 +46,6 @@ I chose to create this application because I know the apartment hosts personally
     - [All Bookings Section](#all-bookings-section)
   - [About Us Section](#about-us-section)
   - [Contact Section](#contact-section)
-  - [Django Authentication](#django-authentication)
-    - [Register Section](#register-section)
-    - [Login Section](#login-section)
-    - [Logout Section](#logout-section)
 - [Database Models](#database-models)
   - [Entity Relationship Diagram](#entity-relationship-diagram)
   - [Booking Model](#booking-model)
@@ -207,6 +203,10 @@ Discussing design visions with my client the request was to create a simple desi
 
 <img src="static/readme-assets/color-palette.png" alt="Homepage color palette."> 
 
+## Accessibility
+
+
+
 # Technologies
 
 - Lucidchart for creating first visual drafts of the homepage structure and its ERD 
@@ -225,89 +225,77 @@ I used the following libraries:
 - django summernote
 - django forms
 
-# Design
-
-## Homepage Design
-
-- 
-- 
-- 
-
 # Features 
 
 # Homepage Structure 
 
 ## Main Page
 
-<img src="" style="height:30rem;width:30rem;" alt="">
+### Navigation Bar
+
+<img src="static/readme-assets/screenshots/nav-bar.png" alt="Screenshot of navigation bar.">
+
+### Welcome Text
+
+<img src="static/readme-assets/screenshots/start-page.png" alt="Screenshot of main page with welcome text.">
+
+### Footer
+
+<img src="static/readme-assets/screenshots/footer.png" alt="Screenshot of footer bar.">
 
 ## House Section  
 
 ### Upper Apartment Section
 
-<img src="" style="height:35rem;width:35rem;" alt="">
+<img src="static/readme-assets/screenshots/upper-apartment.png" alt="Screenshot of upper apartment section.">
 
 ### Lower Apartment Section
 
-<img src="" style="height:35rem;width:35rem;" alt="">
+<img src="static/readme-assets/screenshots/lower-apartment.png" alt="Screenshot of lower apartment section.">
 
 ### Rent House Section
 
-<img src="" style="height:35rem;width:35rem;" alt="">
+<img src="static/readme-assets/screenshots/rent-house.png" alt="Screenshot of rent house section.">
 
 ### House Rules Section
 
-<img src="" style="height:35rem;width:35rem;" alt="">
+<img src="static/readme-assets/screenshots/house-rules.png" alt="Screenshot of house rules section.">
 
 ## Schloßkulm Section
 
 ### Day Trips Section
 
-<img src="" style="height:35rem;width:35rem;" alt="">
+<img src="static/readme-assets/screenshots/day-trips.png" alt="Screenshot of day trips section.">
 
 ### Gallery Section
 
-<img src="" style="height:35rem;width:35rem;" alt="">
+<img src="static/readme-assets/screenshots/gallery.png" alt="Screenshot of gallery section.">
 
 ### Location Section
 
-<img src="" style="height:35rem;width:35rem;" alt="">
+<img src="static/readme-assets/screenshots/location.png" alt="Screenshot of location section.">
 
 ## Booking Section
 
 ### Booking Form Section
 
-<img src="" style="height:25rem;width:40rem;" alt="">
+<img src="static/readme-assets/screenshots/booking.png" alt="Screenshot of booking section.">
 
 ### Your Bookings Section
 
-<img src="" style="height:25rem;width:40rem;" alt="">
+<img src="static/readme-assets/screenshots/your-bookings.png" alt="Screenshot of your bookings section.">
 
 ### All Bookings Section
 
-<img src="" style="height:25rem;width:40rem;" alt="">
+<img src="static/readme-assets/screenshots/all-bookings.png" alt="Screenshot of all bookings section.">
 
 ## About Us Section
 
-<img src="" style="height:60rem;width:35rem;" alt="">
+<img src="static/readme-assets/screenshots/about-us.png" alt="Screenshot of about us section.">
 
 ## Contact Section
 
-<img src="" style="height:60rem;width:35rem;" alt="">
-
-## Django Authentication
-
-### Sign Up Section
-
-<img src="" style="height:60rem;width:35rem;" alt="">
-
-### Login Section
-
-<img src="" style="height:60rem;width:35rem;" alt="">
-
-### Logout Section
-
-<img src="" style="height:60rem;width:35rem;" alt="">
+<img src="static/readme-assets/screenshots/contact.png" alt="Screenshot of contact section.">
 
 # Database Models
 
@@ -315,7 +303,37 @@ I used the following libraries:
 
 <img src="static/readme-assets/erd.jpeg" style="height:60rem;width:45rem;" alt="Entity Relationship Diagram">
 
-## Booking Model
+## Booking Model  
+
+The booking model is for the guests to make an apartment booking. The data is collected to check the respective apartment availability, contact the guest, have all the information to create an invoice and gather data in line with the German tourist registration form [(Federal Act on Registration)](https://www.gesetze-im-internet.de/englisch_bmg/englisch_bmg.html) that, amongst other details, asks for the guests passport number if the residency is any other than German. 
+
+The visible fields are:
+- first name*
+- last name*
+- birth date*
+- email*
+- phone number*
+- address*
+- zip code*
+- city*
+- country*
+- booking item* *(Lower Apartment, Upper Apartment, Whole House)*
+- arrival date*
+- departure date*
+- amount guests* *(1-15)*
+- nationality* *(German or other)*
+- passport number *(relevant if guest has a nationality other than German)*
+- animals
+- message*
+
+**mandatory field* 
+
+Next to the fields in the visible booking form there is also other information collected and stored in the database that is either visible in the admin panel and/or on the your bookings and all bookings pages:
+
+- user name (visible in admin panel)
+- booking number (visible in admin panel and your/all bookings page)
+- booking date and time (visible in admin panel and your/all bookings page)
+- booking status *(requested (per default), confirmed or cancelled* - visible in admin panel and your/all bookings page)
 
 ## Contact Model
 
