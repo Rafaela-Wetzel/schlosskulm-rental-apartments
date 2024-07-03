@@ -51,6 +51,10 @@ h1 {
   font-weight: bold;
 }
 
+.background-grey {
+  background-color: #E5E4E2;
+}
+
 .helptext {
   visibility: hidden;
 }
