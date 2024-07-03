@@ -205,7 +205,11 @@ Discussing design visions with my client the request was to create a simple desi
 
 ## Accessibility
 
+To make the homepage more accessible to a wider audience of users I have taken into account the following:
 
+- Ensuring there is enough contrast between the font colors and background colors
+- Including individual page titles for every page
+- Including alt text for every image
 
 # Technologies
 
@@ -446,6 +450,8 @@ and after I placed it before the input field everything worked fine again.
 
 ## Unfixed Bugs
 
+No unfixed bugs.
+
 # Deployment
 
 1. Add requirements for deployment in requirements.txt file
@@ -472,8 +478,8 @@ https://stackoverflow.com/a/64242550/22894967
 [4] Adding date validators to model DateField
 https://stackoverflow.com/a/49240469/22894967  
 
-[5] Slack support for creating confirm / cancel / delete button functionality  
-https://app.slack.com/client/T0L30B202/C026PTF46F5  
+[5] Slack (and mentor) support for creating confirm / cancel / delete button functionality  
+https://code-institute-room.slack.com/archives/C026PTF46F5/p1717615605849249?thread_ts=1717609357.373989&cid=C026PTF46F5 
 
 
 ## Tutorials 
