@@ -207,9 +207,20 @@ Discussing design visions with my client the request was to create a simple desi
 
 To make the homepage more accessible to a wider audience of users I have taken into account the following:
 
-- Ensuring there is enough contrast between the font colors and background colors
-- Including individual page titles for every page
-- Including alt text for every image
+- Ensure there is enough contrast between the font colors and background colors
+- Include individual page titles for every page
+- Include alt text for every image
+- Include iframe titles
+
+The below shown Lighthouse Report refers to the main page.
+
+<img src="static/readme-assets/lighthouse-report.png" alt="Lighthouse report screenshot.">
+
+The average across all pages is:
+- **Performance**: 92,38
+- **Accessibility**: 99,69
+- **Best Practices**: 96,46
+- **SEO**: 100
 
 # Technologies
 
