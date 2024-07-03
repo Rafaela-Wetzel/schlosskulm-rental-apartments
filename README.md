@@ -371,6 +371,8 @@ The fields are:
 
 # Testing 
 
+I have tested the responsiveness of my homepage with Firefox, Google Chrome and Microsoft Edge Dev Tools and checked the following screen sizes: 360px (Galaxy S5 Android 5 on DevTools and my own mobile phone Moto G50), 576px, 768px, 992px and 1200px (DevTools and my own laptop Lenovo ThinkPad X260). I confirm that the actions below work on all screen sizes.
+
 ## Manual Testing  
 
 | Section Tested | Input To Validate / Functionality To Test | Expected Outcome | Actual Outcome | Pass/Fail |
@@ -517,7 +519,6 @@ https://stackoverflow.com/a/27679566/22894967
 - Favicon: Schlosskulm coat of arms from [municipality homepage](https://www.uhlstaedt-kirchhasel.de/ortsteile/ ) 
 - All house and surrounding area photos provided by apartment hosts Anna & Friedel Barth
 - German homepage text provided by apartment hosts Anna & Friedel Barth, English translation by me
-
 
 ## Acknowledgements
 
