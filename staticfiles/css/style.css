@@ -63,8 +63,8 @@ h1 {
   border: 0.3rem dashed #ff00b4;
 }
 
-.margin-bottom {
-  margin-bottom: 3rem;
+.padding-bottom {
+  padding-bottom: 6rem;
 }
 
 /* Hover CSS for nav bar */
@@ -243,6 +243,15 @@ div.desc {
   text-align: center;
 }
 
+.gallery-flex {
+  display: flex;
+}
+
+.gallery-center > div {
+  justify-content: center;
+  align-items: center;
+}
+
 /* All Bookings & Your Bookings Page */
 
 .card-style {
@@ -275,13 +284,6 @@ div.desc {
   background-color: red;
   color: white;
   font-weight: bold;
-}
-
-/* About Us Section */
-
-.about-me-size {
-  height: 20rem;
-  width: 18rem;
 }
 
 /* Contact Section */
@@ -329,6 +331,14 @@ div.desc {
 
 }
 
-@media (min-width: 1115px) {}
+@media (min-width: 1115px) {
+
+  /* Location Page */
+
+  .width-50 {
+    width: 75%;
+  }
+
+}
 
 @media (min-width: 1200px) {}
