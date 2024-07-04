@@ -23,6 +23,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
 </head>
 
 <body class="padding-bottom">
@@ -79,14 +82,13 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
               <a class="dropdown-item" href="{% url 'booking' %}" aria-current="page">Booking Form</a>
               <a class="dropdown-item" href="{% url 'your-bookings' %}" aria-current="page">Your Bookings</a>
-              <a class="dropdown-item" href="{% url 'all-bookings' %}" aria-current="page">All Bookings</a>    
+              <a class="dropdown-item" href="{% url 'all-bookings' %}" aria-current="page">All Bookings</a>
             </div>
           </li>
           {% else %}
           <li class="nav-item">
             <a class="nav-link hvr-bounce-in margin-left-right"
-              href="{% url 'account_login' %}?next={% url 'booking' %}"
-              aria-current="page">Booking</a>
+              href="{% url 'account_login' %}?next={% url 'booking' %}" aria-current="page">Booking</a>
           </li>
           {% endif %}
           <li class="nav-item">
@@ -102,7 +104,7 @@
             <a class="nav-link hvr-bounce-in margin-left-right {% if request.path == logout.url %}active{% endif %}"
               aria-current="page" href="{% url 'account_logout' %}">Logout</a>
           </li>
-            {% else %}
+          {% else %}
           <li class="nav-item">
             <a class="nav-link hvr-bounce-in margin-left-right {% if request.path == signup_url %}active{% endif %}"
               aria-current="page" href="{% url 'account_signup' %}">Register</a>

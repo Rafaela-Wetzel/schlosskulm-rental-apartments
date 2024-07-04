@@ -27,9 +27,7 @@ class Booking(models.Model):
                                       max_length=100, default='Requested')
     first_name = models.CharField(max_length=100, default="Henna")
     last_name = models.CharField(max_length=100, default="Hamma")
-    birth_date = models.DateField(
-        help_text="Please enter data in the format '2006-10-25'",
-        default="2006-10-25")
+    birth_date = models.DateField()
     email = models.EmailField(max_length=100, default="hello@gmx.de")
     phone_number = models.BigIntegerField(default="123")
     address = models.CharField(max_length=100, default="Hello street 6")
@@ -43,10 +41,8 @@ class Booking(models.Model):
     )
     booking_item = models.CharField(choices=booking_object, max_length=100,
                                     default="Upper Apartment")
-    arrival_date = models.DateField(help_text="""Please enter data in the
-                                    format '2006-10-25'""")
-    departure_date = models.DateField(help_text="""Please enter data in the
-                                    format '2006-10-25'""")
+    arrival_date = models.DateField()
+    departure_date = models.DateField()
     guest_number = (
         ('1', '1'),
         ('2', '2'),

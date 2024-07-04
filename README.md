@@ -12,7 +12,7 @@ I chose to create this application because I know the apartment hosts personally
 - [Schlosskulm Rental Apartments](#schlosskulm-rental-apartments)
 - [Table of Contents](#table-of-contents)
 - [Live Demo](#live-demo)
-- [Project Goals](#goals)
+- [Project Goals](#project-goals)
   - [User Goals](#project-goals)
   - [Site-Owner Goals](#site-owner-goals)
 - [User Experience](#user-experience)
@@ -28,8 +28,7 @@ I chose to create this application because I know the apartment hosts personally
   - [Accessibility](#accessibility)
 - [Technologies](#technologies)
 - [Libraries](#libraries)
-- [Features](#features)
-  - [Homepage Structure](#homepage-structure)
+- [Features: Homepage Structure](#features-homepage-structure)
   - [Main Page](#main-page)
   - [House Section](#house-section)
     - [Upper And Lower Apartment Sections](#upper-and-lower-apartment-sections)
@@ -176,8 +175,6 @@ The left-out features to be implemented for my client in future are:
 
 The homepage is split up into five main navigation elements: House, Schloßkulm, Booking, About Us and Contact. The House section includes Lower Apartment, Upper Apartment, Rent House and House Rules. Schloßkulm includes Day Trips, Gallery and Location. Booking includes - once a user is logged in - Booking Form, All Bookings (hosts) or Your Bookings (guests). There are three separate pages / functionalities for registration, login and logout with their respective action confirmation pages.  
 
-[[Back to top]](#table-of-contents)
-
 ### Homepage overview
 
 1. **Main Page**: start page with a welcome greeting and a Schloßkulm video from birds eye perspective
@@ -277,9 +274,7 @@ I used the following libraries:
 
 [[Back to top]](#table-of-contents)
 
-# Features 
-
-# Homepage Structure 
+# Features: Homepage Structure 
 
 ## Main Page
 

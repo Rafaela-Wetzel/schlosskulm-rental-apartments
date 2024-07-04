@@ -1,10 +1,12 @@
+from bootstrap_datepicker_plus.widgets import DatePickerInput
 from django.forms import forms, ModelForm
+from django import forms
 from .models import Booking, Contact
 from django.db import models
 import datetime
 
 
-class BookingForm(ModelForm):
+class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
         fields = ['first_name', 'last_name', 'birth_date', 'email',
@@ -13,6 +15,12 @@ class BookingForm(ModelForm):
                   'amount_guests', 'nationality', 'passport_number', 'animals',
                   'message']
         exclude = ['booking_date', 'booking_status']
+        widgets = {
+            "birth_date": DatePickerInput(options={"format": "DD/MM/YYYY"}),
+            "arrival_date": DatePickerInput(),
+            "departure_date": DatePickerInput(range_from="arrival_date"),
+        }
+
 
     def clean(self):
         """
@@ -28,22 +36,18 @@ class BookingForm(ModelForm):
                 raise forms.ValidationError(
                     "Your birth date cannot be in the future!")
             elif departure_date is not None and arrival_date is not None:
-                if departure_date < arrival_date:
+                if departure_date == arrival_date:
                     raise forms.ValidationError(
-                        "Your arrival date must be before your departure date!")
-                elif departure_date is not None and arrival_date is not None:
-                    if departure_date == arrival_date:
+                        """Your arrival date cannot be the same day as your departure
+                        date!""")
+                elif arrival_date is not None:
+                    if arrival_date < datetime.date.today():
                         raise forms.ValidationError(
-                            """Your arrival date cannot be the same day as your departure
-                            date!""")
-                    elif arrival_date is not None:
-                        if arrival_date < datetime.date.today():
+                            "Your booking date cannot be in the past!")
+                    elif departure_date is not None:
+                        if departure_date < datetime.date.today():
                             raise forms.ValidationError(
                                 "Your booking date cannot be in the past!")
-                        elif departure_date is not None:
-                            if departure_date < datetime.date.today():
-                                raise forms.ValidationError(
-                                    "Your booking date cannot be in the past!")
     
 
 class ContactForm(ModelForm):
