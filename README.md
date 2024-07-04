@@ -220,14 +220,14 @@ Discussing design visions with my client the request was to create a simple desi
 [[Back to top]](#table-of-contents)
 
 ### Color Palette
-f
+
 <img src="static/readme-assets/color-palette.png" alt="Homepage color palette.">  
 
 [[Back to top]](#table-of-contents)
 
 ## Accessibility
 
-To make the homepage more accessible to a wider audience of users I have taken into account the following:
+To make the homepage more accessible to a wider audience of users I have, amongst other things, taken into account the following:
 
 - Ensure there is enough contrast between the font colors and background colors
 - Include individual page titles for every page
@@ -382,14 +382,14 @@ The **Booking Form** page is accessible to logged-in users only. Clicking on the
 
 ### Your Bookings Section
 
-<img src="static/readme-assets/screenshots/your-bookings.png" alt="Screenshot of your bookings section."> 
+<img src="static/readme-assets/screenshots/your-bookings.png" alt="Screenshot of your bookings section.">
 <img src="static/readme-assets/screenshots/cancelled-booking.png" alt="Screenshot of cancelled booking confirmation."> 
 
 Once a guest user has placed a booking the **Your Bookings** sub-page will become visible in the navigation menu under **Booking**. Each booking is displayed in a Bootstrap card with a light grey background so the bookings can more easily visually be distinguished from each other. The booking card includes the unique booking number, booking date and booking status at the top; below the information the user entered in the booking form is displayed. For each new booking the booking status is set to 'requested' per default. For guests there is a cancel functionality in form of a **Cancel Booking** button at the very bottom. Hovering over the button changes its background color from light purple to bright signal orange and its font color from black to white. Clicking the cancel button opens up a defensive programming modal that asks for a confirmation: *"Are you sure you want to cancel your booking? This action cannot be undone."* Clicking 'close' closes the modal and clicking 'cancel booking' refreshes the page, setting the booking status from 'requested' to 'cancelled' in the booking card. A confirmation message is shown as well at the very top: *"Booking no. x has been cancelled!"*. After this action no action buttons are visible any longer at the bottom of the card. I have chosen not to include a 'delete' button for guests because I want the hosts to have full control over the entered data if they should need it for bookkeeping later on.
 
 The **Your Bookings** page is visible for guests and also for hosts should they receive a booking verbally so they can manually enter the booking data for the guest. 
 
-If a non-logged-in user tries to access the page via direct link input they will read the information *"You are not authorized to view this page."*  
+If a non-logged-in user tries to access the page via direct link input they will read the information *"You are not authorized to view this page" in a pop-up modal and being redirected to the main page.*  
 
 [[Back to top]](#table-of-contents)
 
@@ -399,7 +399,7 @@ If a non-logged-in user tries to access the page via direct link input they will
 
 The **All Bookings** section is quite similar to the **Your Bookings** section. This sub-page is only visible to superusers / hosts so they can see and manage all bookings by all guests from one place. The difference to the **Your Bookings** page is that **All Bookings** features extended functionality to manage the bookings. Next to the 'cancel booking' button there is also a 'confirm booking' button (changes to green background color when hovering over and grows slightly bigger) and 'delete booking' button (changes to red and gets bigger). The modal confirmation procedure and confirmation message at the top is the same as described above for the 'cancel booking' functionality in **Your Bookings** for the confirm and delete buttons. Once a booking has been confirmed or cancelled the respective button disappears from the card. The delete functionality removes the booking from the database entirely.   
 
-If a non-logged-in or guest user tries to access the page via direct link input they will read the information *"You are not authorized to view this page."*  
+If a non-logged-in user tries to access the page via direct link input they will read the information *"You are not authorized to view this page" in a pop-up modal and being redirected to the main page.* 
 
 [[Back to top]](#table-of-contents)
 
@@ -481,6 +481,7 @@ The fields are:
 - Automatically send confirmation e-mail to host and guest when a booking has been made, confirmed, cancelled or deleted
 - Include a booking availability calendar
 - Interface between database and LexOffice to create invoices  
+- Add cancellation policy
 
 [[Back to top]](#table-of-contents)
 
@@ -641,6 +642,9 @@ https://stackoverflow.com/a/27679566/22894967
 
 [6] How to resize total size of an image  
 https://stackoverflow.com/a/10752040/22894967  
+
+[7] How to pop up modal automatically upon window load  
+https://www.tutorialrepublic.com/faq/how-to-launch-bootstrap-modal-on-page-load.php  
 
 [[Back to top]](#table-of-contents)
 
