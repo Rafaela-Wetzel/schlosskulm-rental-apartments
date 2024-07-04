@@ -148,7 +148,7 @@ nav a {
 }
 
 .margin-left-right {
-  margin: 0 0.5rem;
+  margin: 0 1.5rem;
 }
 
 .nav-margin {
@@ -302,6 +302,12 @@ div.desc {
 
 /* Media query: tablets and larger (768px and up) */
 @media (min-width: 768px) {
+  
+  /* Nav Bar and Header */
+
+  .margin-left-right {
+    margin: 0 1.5rem;
+  }
 
 }
 

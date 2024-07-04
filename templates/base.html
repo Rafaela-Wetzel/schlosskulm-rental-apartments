@@ -34,7 +34,7 @@
         aria-label="Toggle navigation">
         <i class="fa-solid fa-ellipsis"></i>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle hvr-bounce-in margin-left-right" href="#" id="navbarDropdownMenuLink1"
@@ -125,18 +125,18 @@
     </div>
   </main>
 
-  <footer class="fixed-bottom shadow-lg">
+  <footer class="fixed-bottom p-2 shadow-lg">
     <div class="container">
       <div class="row">
         {% if user.is_authenticated %}
-        <div class="col-sm-3 pt-1 footer-font-size">
+        <div class="col-sm-3 footer-font-size">
           Logged in as: {{ user.username }}
         </div>
         {% endif %}
-        <div class="col-sm-6 pt-1 text-center footer-font-size">
+        <div class="col-sm-6 text-center footer-font-size">
           This project is for purposes of education only.
         </div>
-        <div class="col-sm-3 d-flex justify-content-end pt-1 footer-font-size">
+        <div class="col-sm-3 d-flex justify-content-end footer-font-size">
           © 2024 Rafaela Wetzel
         </div>
       </div>
