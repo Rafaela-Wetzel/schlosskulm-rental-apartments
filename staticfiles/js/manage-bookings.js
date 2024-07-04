@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
   for (var a = 0; a < confirmButtons.length; a++) {
 
     confirmButtons[a].addEventListener("click", (event) => {
-      console.log("Confirm button has been clicked!");
       // Prevent default behavior of the click event
       event.preventDefault();
       // Access the event target
@@ -35,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
 for (var b = 0; b < cancelButtons.length; b++) {
 
   cancelButtons[b].addEventListener("click", (event) => {
-  console.log("Cancel button has been clicked!");
   event.preventDefault();
   const target = event.target;
   let bookingId = target.dataset.booking_id;
@@ -58,7 +56,6 @@ for (var b = 0; b < cancelButtons.length; b++) {
 for (var c = 0; c < deleteButtons.length; c++) {
 
   deleteButtons[c].addEventListener("click", (event) => {
-  console.log("Delete button has been clicked!");
   event.preventDefault();
   const target = event.target;
   let bookingId = target.dataset.booking_id;

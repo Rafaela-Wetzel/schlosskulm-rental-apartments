@@ -79,7 +79,7 @@ class Booking(models.Model):
     def __str__(self):
         return f"""Booking no. {self.id}: {self.last_name}, {self.first_name}
         (booked {self.booking_date})"""
-        
+
 
 class Contact(models.Model):
     """

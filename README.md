@@ -26,6 +26,7 @@ I chose to create this application because I know the apartment hosts personally
   - [Surface](#surface)
     - [Color Palette](#color-palette)
   - [Accessibility](#accessibility)
+    - [Lighthouse Report](#lighthouse-report)
 - [Technologies](#technologies)
 - [Libraries](#libraries)
 - [Features: Homepage Structure](#features-homepage-structure)
@@ -219,7 +220,7 @@ Discussing design visions with my client the request was to create a simple desi
 [[Back to top]](#table-of-contents)
 
 ### Color Palette
-
+f
 <img src="static/readme-assets/color-palette.png" alt="Homepage color palette.">  
 
 [[Back to top]](#table-of-contents)
@@ -233,7 +234,7 @@ To make the homepage more accessible to a wider audience of users I have taken i
 - Include alt text for every image
 - Include iframe titles
 
-The below shown Lighthouse Report refers to the main page.  
+### Lighthouse Report 
 
 <img src="static/readme-assets/lighthouse-report.png" alt="Lighthouse report screenshot.">
 
@@ -269,7 +270,8 @@ I used the following libraries:
 - Requests was used as HTTP library for Python
 - Sqlparse was used as a non-validating SQL parser for Python
 - Summernote was used as a WYSIWYG editor with Bootstrap
-- Whitenoise was used as a simplified static file serving for Python web apps  
+- Whitenoise was used as a simplified static file serving for Python web apps
+- Django-bootstrap-datepicker-plus for displaying date pickers in the booking form   
 
 [[Back to top]](#table-of-contents)
 
@@ -383,7 +385,7 @@ The **Booking Form** page is accessible to logged-in users only. Clicking on the
 <img src="static/readme-assets/screenshots/your-bookings.png" alt="Screenshot of your bookings section."> 
 <img src="static/readme-assets/screenshots/cancelled-booking.png" alt="Screenshot of cancelled booking confirmation."> 
 
-Once a guest user has placed a booking the **Your Bookings** sub-page will become visible in the navigation menu under **Booking**. Each booking is displayed in a Bootstrap card with a light grey background so the bookings can more easily visually be distinguished from each other. The booking card includes the unique booking number, booking date and booking status at the top; below the information the user entered in the booking form is displayed. For each new booking the booking status is set to 'requested' per default. For guests there is a cancel functionality in form of a **Cancel Booking** button at the very bottom. Hovering over the button changes its background color from light purple to bright signal orange and its font color from black to white. Clicking the cancel button opens up a defensive programming modal that asks for a confirmation: *"Are you sure you want to cancel your booking? This action cannot be undone."* Clicking 'close' closes the modal and clicking 'cancel booking' refreshes the page, setting the booking status from 'requested' to 'cancelled' in the booking card. A confirmation message is shown as well at the very top: *"The booking has been cancelled!"*. After this action no action buttons are visible any longer at the bottom of the card. I have chosen not to include a 'delete' button for guests because I want the hosts to have full control over the entered data if they should need it for bookkeeping later on.
+Once a guest user has placed a booking the **Your Bookings** sub-page will become visible in the navigation menu under **Booking**. Each booking is displayed in a Bootstrap card with a light grey background so the bookings can more easily visually be distinguished from each other. The booking card includes the unique booking number, booking date and booking status at the top; below the information the user entered in the booking form is displayed. For each new booking the booking status is set to 'requested' per default. For guests there is a cancel functionality in form of a **Cancel Booking** button at the very bottom. Hovering over the button changes its background color from light purple to bright signal orange and its font color from black to white. Clicking the cancel button opens up a defensive programming modal that asks for a confirmation: *"Are you sure you want to cancel your booking? This action cannot be undone."* Clicking 'close' closes the modal and clicking 'cancel booking' refreshes the page, setting the booking status from 'requested' to 'cancelled' in the booking card. A confirmation message is shown as well at the very top: *"Booking no. x has been cancelled!"*. After this action no action buttons are visible any longer at the bottom of the card. I have chosen not to include a 'delete' button for guests because I want the hosts to have full control over the entered data if they should need it for bookkeeping later on.
 
 The **Your Bookings** page is visible for guests and also for hosts should they receive a booking verbally so they can manually enter the booking data for the guest. 
 
@@ -538,13 +540,13 @@ I have tested the responsiveness of my homepage with Firefox and Google Chrome D
 | All Bookings Section | Host logs in | 'All bookings' appears in navigation menu & host can see all bookings made so far | As expected | Pass |
 | All Bookings Section | Host clicks on 'confirm booking' button | Modal appears | As expected | Pass |
 | All Bookings Section | Host clicks on 'close' within modal | Modal closes, nothing else happens | As expected | Pass |
-| All Bookings Section | Host clicks on 'confirm booking' button within modal | Booking status is set to 'confirmed', 'confirm booking' button disappears and message is displayed: "The booking has been confirmed!" | As expected | Pass |
+| All Bookings Section | Host clicks on 'confirm booking' button within modal | Booking status is set to 'confirmed', 'confirm booking' button disappears and message is displayed: "Booking no. x has been confirmed!" | As expected | Pass |
 | All Bookings Section | Host clicks on 'cancel booking' button | Modal appears | As expected | Pass |
 | All Bookings Section | Host clicks on 'close' within modal | Modal closes, nothing else happens | As expected | Pass |
-| All Bookings Section | Host clicks on 'cancel booking' button within modal | Booking status is set to 'cancelled', 'cancel booking' button disappears and message is displayed: "The booking has been cancelled!" | As expected | Pass |
+| All Bookings Section | Host clicks on 'cancel booking' button within modal | Booking status is set to 'cancelled', 'cancel booking' button disappears and message is displayed: "Booking no. x has been cancelled!" | As expected | Pass |
 | All Bookings Section | Host clicks on 'delete booking' button | Modal appears | As expected | Pass |
 | All Bookings Section | Host clicks on 'close' within modal | Modal closes, nothing else happens | As expected | Pass |
-| All Bookings Section | Host clicks on 'delete booking' button within modal | Booking is removed from database and confirmation message is displayed: "The booking has been deleted!" | As expected | Pass |
+| All Bookings Section | Host clicks on 'delete booking' button within modal | Booking is removed from database and confirmation message is displayed: "Booking no. x has been deleted!" | As expected | Pass |
 | Contact Section | Leaving any of the mandatory form fields blank | Message is not sent yet and user is prompted to fill in the empty field(s) | As expected | Pass |
 | Contact Section | Entering a non-email address in e-mail field | Message is not sent yet and user is prompted to enter an email address | As expected | Pass |
 | Contact Section | User sends valid contact request | Redirects to main page & displays confirmation message: "Thank you for your message. We will be in touch with you soon." | As expected | Pass |

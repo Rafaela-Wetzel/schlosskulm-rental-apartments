@@ -92,8 +92,8 @@ def confirm_booking(request, booking_id):
     if not request.user.is_anonymous:
         booking.booking_status = "Confirmed"
         booking.save()
-        messages.add_message(request, messages.SUCCESS, """The booking has been
-        confirmed!""")
+        messages.add_message(request, messages.SUCCESS, f"""Booking no.
+        {booking_id} has been confirmed!""")
     else:
         messages.add_message(request, messages.ERROR, """There was an error
         confirming the booking.""")
@@ -112,8 +112,8 @@ def cancel_booking(request, booking_id):
     if not request.user.is_anonymous:
         booking.booking_status = "Cancelled"
         booking.save()
-        messages.add_message(request, messages.SUCCESS, """The booking has been
-        cancelled!""")
+        messages.add_message(request, messages.SUCCESS, f"""Booking no.
+        {booking_id} has been cancelled!""")
     else:
         messages.add_message(request, messages.ERROR, """There was an error
         cancelling the booking.""")
@@ -134,8 +134,8 @@ def delete_booking(request, booking_id):
 
     if not request.user.is_anonymous:
         booking.delete()
-        messages.add_message(request, messages.SUCCESS, """The booking has been
-        deleted!""")
+        messages.add_message(request, messages.SUCCESS, f"""Booking no.
+        {booking_id} has been deleted!""")
     else:
         messages.add_message(request, messages.ERROR, """There was an error
         deleting the booking.""")

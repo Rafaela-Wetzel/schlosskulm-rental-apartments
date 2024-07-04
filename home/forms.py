@@ -21,7 +21,6 @@ class BookingForm(forms.ModelForm):
             "departure_date": DatePickerInput(range_from="arrival_date"),
         }
 
-
     def clean(self):
         """
         Date Validation
@@ -38,8 +37,8 @@ class BookingForm(forms.ModelForm):
             elif departure_date is not None and arrival_date is not None:
                 if departure_date == arrival_date:
                     raise forms.ValidationError(
-                        """Your arrival date cannot be the same day as your departure
-                        date!""")
+                        """Your arrival date cannot be the same day as your
+                        departure date!""")
                 elif arrival_date is not None:
                     if arrival_date < datetime.date.today():
                         raise forms.ValidationError(
@@ -48,7 +47,7 @@ class BookingForm(forms.ModelForm):
                         if departure_date < datetime.date.today():
                             raise forms.ValidationError(
                                 "Your booking date cannot be in the past!")
-    
+
 
 class ContactForm(ModelForm):
     class Meta:
