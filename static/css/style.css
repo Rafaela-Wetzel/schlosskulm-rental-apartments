@@ -239,7 +239,11 @@ div.desc {
   text-align: center;
 }
 
-/* Your Bookings Page */
+/* All Bookings & Your Bookings Page */
+
+.card-style {
+  background-color: #e4dee8;
+}
 
 .btn-card-confirm,
 .btn-card-cancel,
@@ -292,18 +296,23 @@ div.desc {
 /* Media query: large or landscape phones (576px and up) */
 @media (min-width: 576px) {
 
+  /* All Bookings & Your Bookings Page */
+
+  .card-style {
+    background-color: #e4dee8;
+    width: 25rem;
+  }
+
   /* Footer */
 
   .footer-font-size {
     font-size: 1rem;
-  }  
+  }
 
 }
 
 /* Media query: tablets and larger (768px and up) */
-@media (min-width: 768px) {
-  
-}
+@media (min-width: 768px) {}
 
 /* Large devices (laptops and desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1115px) {
