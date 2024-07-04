@@ -32,8 +32,7 @@ I chose to create this application because I know the apartment hosts personally
   - [Homepage Structure](#homepage-structure)
   - [Main Page](#main-page)
   - [House Section](#house-section)
-    - [Upper Apartment Section](#upper-apartment-section)
-    - [Lower Apartment Section](#lower-apartment-section)
+    - [Upper And Lower Apartment Sections](#upper-and-lower-apartment-sections)
     - [Rent House Section](#rent-house-section)
     - [House Rules Section](#house-rules-section)
   - [Schloßkulm Section](#schloßkulm-section)
@@ -254,69 +253,115 @@ I used the following libraries:
 
 ### Navigation Bar
 
-<img src="static/readme-assets/screenshots/nav-bar.png" alt="Screenshot of navigation bar.">
+<img src="static/readme-assets/screenshots/nav-bar.png" alt="Screenshot of navigation bar.">  
+
+The navigation bar is showing the apartment title **"Schloßkulm Rental Apartments"** to the left which leads back to the main page when clicking on it. The other navigation menu elements **House, Schloßkulm, Booking, About Us, Contact, Register / Login / Logout** are placed horizontally next to each other. The navigation elements **House, Schloßkulm** and (for logged in users) **Booking** are collapsed elements that open up and show other related sub-pages when clicking on them. The nav elements' font size grows bigger when hovering over them as well as there is a mouse symbol change so the user knows where they currently are. Once a collapsed nav element opens up there is also a background color change from white to purple when hovering over the related sub-pages. If a guest user has logged in and placed a booking the **Booking** nav element turns into a collapsed element that shows **Booking Form** and **Your Bookings** pages. If a guest user has not made a booking yet the **Booking** nav element will not show a collapsible effect until they have placed a booking. If a superuser is logged in, **Booking Form, Your Bookings** and additionally **All Bookings** becomes visible under the collapsible **Booking** nav element.
 
 ### Welcome Text
 
-<img src="static/readme-assets/screenshots/start-page.png" alt="Screenshot of main page with welcome text.">
+<img src="static/readme-assets/screenshots/start-page.png" alt="Screenshot of main page with welcome text.">  
+
+On the main page the guest is greeted with a **"Welcome to Schloßkulm"** heading and a welcome text written by the hosts. Below the text there are some action buttons that lead to the most important pages - the **Apartment, Contact** and **Booking** pages. Hovering over the buttons leads to a background color change from purple to grey and font color from black to white. Clicking the **Book With Us** button as non-logged in user opens up a modal that informs them that they need to be logged in to make a booking. Clicking 'ok' leads them to the login page, clicking 'close' closes the modal. A logged-in user is directed to the **Booking Form** page immediately. Below the buttons there is a muted embedded YouTube video that shows a drone flight over the village of Schloßkulm to give the user an impression of how the area looks like.
 
 ### Footer
 
-<img src="static/readme-assets/screenshots/footer.png" alt="Screenshot of footer bar.">
+<img src="static/readme-assets/screenshots/footer.png" alt="Screenshot of footer bar.">  
+
+The footer shows two or three elements depending on the user login status. If the user is not logged in they will only see **This project is for purposes of education only.** and **© 2024 Rafaela Wetzel**. Once they have logged in their login status will be reflected to the left: **Logged in as: user xyz**. When the window is 575px or lower the three elements transversely stack on top of each other to fit the screen width.
 
 ## House Section  
 
-### Upper Apartment Section
+### Upper And Lower Apartment Sections
 
-<img src="static/readme-assets/screenshots/upper-apartment.png" alt="Screenshot of upper apartment section.">
+<img src="static/readme-assets/screenshots/upper-apartment.png" alt="Screenshot of upper apartment section.">  
 
-### Lower Apartment Section
+<img src="static/readme-assets/screenshots/lower-apartment.png" alt="Screenshot of lower apartment section.">  
 
-<img src="static/readme-assets/screenshots/lower-apartment.png" alt="Screenshot of lower apartment section.">
+The extensive information about the apartments is placed within collapsed accordions so the user can better navigate the different sections to find the information they are looking for. The accordion shows the following sections / titles: **Welcome, The Apartment, Important Information, Check-In / Check-Out, Facilities, Gallery** and **Prices.** Clicking on any of those sections opens up the corresponding text paragraph and displays the information. The user receives feedback to their action when clicking on a heading in the accordion which then changes color from white to purple adding a light blue border around it. Clicking on a second section closes the first one and opens the second one.  
+
+- The first two sections **Welcome** and **The Apartment** display a general welcome text and tell the user about the accomodations characteristics, directions to find the right apartment, what is included in the booking and the different apartments capacities.  
+
+- The section **Important Information** mainly is about informing the guest about preventive fire protection rules and guidance about smoking and lighting candles which is especially important for a house not made of bricks but adobe and wood. 
+
+- **Check-In / Check-Out** displays the times the guest can enter and must leave the apartment before and after their stay.  
+
+- **Facilities** lists the accomodation facilities such as specific kitchenware the guest can use and information about the internet connection.  
+
+- The **Gallery** section shows a range of photos from inside of the house that each contain a one-line description. Clicking on any of the photos opens them in a bigger size in a new window.  
+
+- The last section **Prices** displays the costs per person and night including a **Booking** button that leads to either a login page or the respective **Booking Form** (same modal functionality as described on the main page).
 
 ### Rent House Section
 
-<img src="static/readme-assets/screenshots/rent-house.png" alt="Screenshot of rent house section.">
+<img src="static/readme-assets/screenshots/rent-house.png" alt="Screenshot of rent house section."> 
+
+This section informs the guest what else the house can be rented for besides vacational purposes, such as e.g.seminars and festivities. It also features a **Booking** button as included on the main and apartment pages. 
 
 ### House Rules Section
 
-<img src="static/readme-assets/screenshots/house-rules.png" alt="Screenshot of house rules section.">
+<img src="static/readme-assets/screenshots/house-rules.png" alt="Screenshot of house rules section.">  
+
+The **House Rules** section is about mentioning the specific accomodation characteristics and things one should know / take into account before booking. The information is displayed within lists with a white background so they stick out from the light pink background. 
 
 ## Schloßkulm Section
 
 ### Day Trips Section
 
-<img src="static/readme-assets/screenshots/day-trips.png" alt="Screenshot of day trips section.">
+<img src="static/readme-assets/screenshots/day-trips.png" alt="Screenshot of day trips section.">  
+
+The **Day Trip** section includes recommendations for **Activities, Places of Interest, Miscellaneous** and **Eating Out**. Each of these sub-sections is displayed as list with white background. Hovering over the links changes the background color from white to light purple and clicking on any of them opens a page in a new window.
 
 ### Gallery Section
 
-<img src="static/readme-assets/screenshots/gallery.png" alt="Screenshot of gallery section.">
+<img src="static/readme-assets/screenshots/gallery.png" alt="Screenshot of gallery section.">  
+
+The **Gallery** features two image sections: **The House & Surrounding Area** show pictures from the outside of the house and garden. Each picture has a one-line description below. The **Schloßkulm - Village and Nature** section shows pictures of the village, landscape and nature. Each of the pictures is placed within a light-grey rectangle box that displays a thin black border when hovering over. Clicking on any of them opens a bigger picture in a new window.
 
 ### Location Section
 
-<img src="static/readme-assets/screenshots/location.png" alt="Screenshot of location section.">
+<img src="static/readme-assets/screenshots/location.png" alt="Screenshot of location section.">  
+
+The **Location** section shares information about the area, village history and includes a Google Map showing its location.
 
 ## Booking Section
 
 ### Booking Form Section
 
-<img src="static/readme-assets/screenshots/booking.png" alt="Screenshot of booking section.">
+<img src="static/readme-assets/screenshots/booking.png" alt="Screenshot of booking section."> 
+<img src="static/readme-assets/screenshots/booking-confirmation.png" alt="Screenshot of booking confirmation.">   
+
+The **Booking Form** page is accessible to logged-in users only. Clicking on the navigation element as non-logged in user redirects them to the login page. The **Booking** page includes a booking form for the guest to either book the lower/upper apartment or whole house. More information about the included form fields can be found in the [**Booking Model**](#booking-model) section. Out of the 17 form fields 15 are mandatory to fill in. If any of the 15 are left out the window will jump back to the left out field prompting the user to fill it out before they can place the booking via the 'submit' button at the very bottom. With the birth, arrival and departure date fields also comes date validation. There will be validation errors shown at the top if the user enters a birth date that lies in the future, if the arrival and departure dates are on the same day or in the past, or if the arrival date is after the departure date. The validation errors at the top are shown within a rectangle box with light red background so it catches the users eye. If the user successfully submits a booking they will be redirected to the main page showing a confirmation message at the top: *"Thank you for your booking request. We will be in touch with you soon."*
 
 ### Your Bookings Section
 
-<img src="static/readme-assets/screenshots/your-bookings.png" alt="Screenshot of your bookings section.">
+<img src="static/readme-assets/screenshots/your-bookings.png" alt="Screenshot of your bookings section."> 
+<img src="static/readme-assets/screenshots/cancelled-booking.png" alt="Screenshot of cancelled booking confirmation."> 
+
+Once a guest user has placed a booking the **Your Bookings** sub-page will become visible in the navigation menu under **Booking**. Each booking is displayed in a Bootstrap card with a light grey background so the bookings can more easily visually be distinguished from each other. The booking card includes the unique booking number, booking date and booking status at the top; below the information the user entered in the booking form is displayed. For each new booking the booking status is set to 'requested' per default. For guests there is a cancel functionality in form of a **Cancel Booking** button at the very bottom. Hovering over the button changes its background color from light purple to bright signal orange and its font color from black to white. Clicking the cancel button opens up a defensive programming modal that asks for a confirmation: *"Are you sure you want to cancel your booking? This action cannot be undone."* Clicking 'close' closes the modal and clicking 'cancel booking' refreshes the page, setting the booking status from 'requested' to 'cancelled' in the booking card. A confirmation message is shown as well at the very top: *"The booking has been cancelled!"*. After this action no action buttons are visible any longer at the bottom of the card. I have chosen not to include a 'delete' button for guests because I want the hosts to have full control over the entered data if they should need it for bookkeeping later on.
+
+The **Your Bookings** page is visible for guests and also for hosts should they receive a booking verbally so they can manually enter the booking data for the guest. 
+
+If a non-logged-in user tries to access the page via direct link input they will read the information *"You are not authorized to view this page."*
 
 ### All Bookings Section
 
-<img src="static/readme-assets/screenshots/all-bookings.png" alt="Screenshot of all bookings section.">
+<img src="static/readme-assets/screenshots/all-bookings.png" alt="Screenshot of all bookings section.">  
+
+The **All Bookings** section is quite similar to the **Your Bookings** section. This sub-page is only visible to superusers / hosts so they can see and manage all bookings by all guests from one place. The difference to the **Your Bookings** page is that **All Bookings** features extended functionality to manage the bookings. Next to the 'cancel booking' button there is also a 'confirm booking' button (changes to green background color when hovering over and grows slightly bigger) and 'delete booking' button (changes to red and gets bigger). The modal confirmation procedure and confirmation message at the top is the same as described above for the 'cancel booking' functionality in **Your Bookings** for the confirm and delete buttons. Once a booking has been confirmed or cancelled the respective button disappears from the card. The delete functionality removes the booking from the database entirely.   
+
+If a non-logged-in or guest user tries to access the page via direct link input they will read the information *"You are not authorized to view this page."*
 
 ## About Us Section
 
-<img src="static/readme-assets/screenshots/about-us.png" alt="Screenshot of about us section.">
+<img src="static/readme-assets/screenshots/about-us.png" alt="Screenshot of about us section.">  
+
+The **About Us** section shows the two apartment hosts Anna and Friedel. There is a black-white profile picture and short persona description for each of them so the guests have a better impression of who will be welcoming them in Schloßkulm.
 
 ## Contact Section
 
-<img src="static/readme-assets/screenshots/contact.png" alt="Screenshot of contact section.">
+<img src="static/readme-assets/screenshots/contact.png" alt="Screenshot of contact section.">  
+
+The **Contact Section** contains a contact form for logged-in and non-logged in guests to get in touch. More about the contact model can be read [here](#contact-model). Each of the three fields is mandatory and leaving any of them empty prompts the user to fill them in. There is user feedback in form of a blue border around each form field when clicked on and the submit button changing its color when hovering over. Successfully submitting a message redirects the user to the main page and shows a confirmation message: *"Thank you for your message. We will be in touch with you soon."*
 
 # Database Models
 
@@ -377,7 +422,7 @@ The fields are:
 
 # Testing 
 
-I have tested the responsiveness of my homepage with Firefox, Google Chrome and Microsoft Edge Dev Tools and checked the following screen sizes: 360px (Galaxy S5 Android 5 on DevTools and my own mobile phone Moto G50), 576px, 768px, 992px and 1200px (DevTools and my own laptop Lenovo ThinkPad X260). I confirm that the actions below work on all screen sizes.
+I have tested the responsiveness of my homepage with Firefox and Google Chrome Dev Tools and checked the following screen sizes: 360px (Galaxy S8 on DevTools and my own mobile phone Moto G50), 576px, 768px, 992px and 1200px (DevTools and my own laptop Lenovo ThinkPad X260). I confirm that the actions below work on all screen sizes.
 
 ## Manual Testing  
 
