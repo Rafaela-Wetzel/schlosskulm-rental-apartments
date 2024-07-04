@@ -243,6 +243,15 @@ div.desc {
   text-align: center;
 }
 
+.gallery-flex {
+  display: flex;
+}
+
+.gallery-center > div {
+  justify-content: center;
+  align-items: center;
+}
+
 /* All Bookings & Your Bookings Page */
 
 .card-style {
@@ -275,13 +284,6 @@ div.desc {
   background-color: red;
   color: white;
   font-weight: bold;
-}
-
-/* About Us Section */
-
-.about-me-size {
-  height: 20rem;
-  width: 18rem;
 }
 
 /* Contact Section */
