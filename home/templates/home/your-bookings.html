@@ -69,9 +69,8 @@
 <br>
 
 {% endfor %}
-{% endif %}
 
-{% if user.is_authenticated and user.is_superuser and not booking_exists %}
+{% elif user.is_authenticated and user.is_superuser and not booking_exists %}
 
 <div class="container">
   <div class="row">

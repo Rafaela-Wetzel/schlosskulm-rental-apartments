@@ -329,6 +329,14 @@ div.desc {
 
 }
 
-@media (min-width: 1115px) {}
+@media (min-width: 1115px) {
+
+  /* Location Page */
+
+  .width-50 {
+    width: 75%;
+  }
+
+}
 
 @media (min-width: 1200px) {}
