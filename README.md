@@ -207,9 +207,8 @@ The homepage is split up into five main navigation elements: House, Schloßkulm,
 
 <img src="static/readme-assets/wireframe-mobile-view.png" style="height:30rem;width:28rem;" alt="Wireframe showing the start page draft in mobile view.">  
 
-There are some minor differences to the final outcome:  
-- Scope within navigation menu has been scaled down as explained above
-- No date pickers have been included in the booking form for simplicity reasons  
+Differences to the final outcome:  
+- Scope within navigation menu has been scaled down as explained above  
 
 [[Back to top]](#table-of-contents)
 
