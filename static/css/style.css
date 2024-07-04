@@ -63,6 +63,10 @@ h1 {
   border: 0.3rem dashed #ff00b4;
 }
 
+.padding-bottom {
+  padding-bottom: 6rem;
+}
+
 /* Hover CSS for nav bar */
 
 /* Bounce In */

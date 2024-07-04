@@ -63,6 +63,10 @@ h1 {
   border: 0.3rem dashed #ff00b4;
 }
 
+.margin-bottom {
+  margin-bottom: 3rem;
+}
+
 /* Hover CSS for nav bar */
 
 /* Bounce In */
@@ -148,7 +152,7 @@ nav a {
 }
 
 .margin-left-right {
-  margin: 0 1.5rem;
+  margin: 0 1rem;
 }
 
 .nav-margin {
@@ -239,7 +243,11 @@ div.desc {
   text-align: center;
 }
 
-/* Your Bookings Page */
+/* All Bookings & Your Bookings Page */
+
+.card-style {
+  background-color: #e4dee8;
+}
 
 .btn-card-confirm,
 .btn-card-cancel,
@@ -292,26 +300,35 @@ div.desc {
 /* Media query: large or landscape phones (576px and up) */
 @media (min-width: 576px) {
 
+  /* All Bookings & Your Bookings Page */
+
+  .card-style {
+    background-color: #e4dee8;
+    width: 25rem;
+  }
+
   /* Footer */
 
   .footer-font-size {
     font-size: 1rem;
-  }  
-
-}
-
-/* Media query: tablets and larger (768px and up) */
-@media (min-width: 768px) {
-  
-  /* Nav Bar and Header */
-
-  .margin-left-right {
-    margin: 0 1.5rem;
   }
 
 }
 
+/* Media query: tablets and larger (768px and up) */
+@media (min-width: 768px) {}
+
 /* Large devices (laptops and desktops, 992px and up) */
-@media (min-width: 992px) {}
+@media (min-width: 992px) and (max-width: 1115px) {
+
+  /* Nav Bar and Header */
+
+  .margin-left-right {
+    margin: 0 0.6rem;
+  }
+
+}
+
+@media (min-width: 1115px) {}
 
 @media (min-width: 1200px) {}
