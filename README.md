@@ -518,6 +518,9 @@ https://stackoverflow.com/questions/63886066/redirect-back-to-previous-page-afte
 [5] How to make the booking date visible in the admin panel  
 https://stackoverflow.com/a/27679566/22894967 
 
+[6] How to resize total size of an image  
+https://stackoverflow.com/a/10752040/22894967 
+
 
 ## Media
 

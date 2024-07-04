@@ -59,28 +59,9 @@
             {{booking.message}}<br>
         </p>
         
-        {% if booking.booking_status == "Requested" and user.is_superuser %}
-        <!--Confirm Button-->
-        {% include "confirm-modal.html" %}
-        <!--Cancel Button-->
-        {% include "cancel-modal.html" %}
-        <!--Delete Button-->
-        {% include "delete-modal.html" %}
-
-        {% elif booking.booking_status == "Confirmed" and user.is_superuser %}
-        <!--Cancel Button-->
-        {% include "cancel-modal.html" %}
-        <!--Delete Button-->
-        {% include "delete-modal.html" %}
-
-        {% elif booking.booking_status == "Cancelled" and user.is_superuser %}
-        <!--Delete Button-->
-        {% include "delete-modal.html" %}
-        {% endif %}
-
-        {% if booking.booking_status == "Requested" or booking.booking_status == "Confirmed" and not user.is_superuser %}
-        <!--Cancel Button-->
-        {% include "cancel-modal.html" %}
+        {% if booking.booking_status == "Requested" or booking.booking_status == "Confirmed"%}
+        <!-- Cancel Button -->
+        {% include "cancel-modal.html" with css_one="cancel" trigger_modal="Cancel" modal_title="cancellation" modal_body="cancel" css_two="cancel cancel" button_text="Cancel" %}
         {% endif %}
 
     </div>

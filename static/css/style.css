@@ -318,7 +318,15 @@ div.desc {
 }
 
 /* Media query: tablets and larger (768px and up) */
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+
+  /* Location Page */
+
+  .width-50 {
+    width: 75%;
+  }
+
+}
 
 /* Large devices (laptops and desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1115px) {
@@ -331,12 +339,10 @@ div.desc {
 
 }
 
-@media (min-width: 1115px) {
-
-  /* Location Page */
-
-  .width-50 {
-    width: 75%;
+@media (min-width: 992px) {
+  
+  .profile-pictures {
+    transform: scale(0.75);
   }
 
 }
