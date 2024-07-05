@@ -219,7 +219,6 @@ footer {
 }
 
 /* CSS Image Gallery */
-/* https://www.w3schools.com/css/css_image_gallery.asp */
 
 div.gallery {
   margin: 5px;
@@ -346,5 +345,3 @@ div.desc {
   }
 
 }
-
-@media (min-width: 1200px) {}

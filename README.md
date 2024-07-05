@@ -619,6 +619,9 @@ https://stackoverflow.com/a/49240469/22894967
 [5] Slack (and mentor) support for creating confirm / cancel / delete button functionality  
 https://code-institute-room.slack.com/archives/C026PTF46F5/p1717615605849249?thread_ts=1717609357.373989&cid=C026PTF46F5  
 
+[6] CSS Image Gallery  
+https://www.w3schools.com/css/css_image_gallery.asp  
+
 [[Back to top]](#table-of-contents)
 
 ## Tutorials 
