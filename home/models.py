@@ -25,22 +25,21 @@ class Booking(models.Model):
     )
     booking_status = models.CharField(choices=status, blank=True, null=True,
                                       max_length=100, default='Requested')
-    first_name = models.CharField(max_length=100, default="Henna")
-    last_name = models.CharField(max_length=100, default="Hamma")
-    birth_date = models.DateField(default="18/07/20")
-    email = models.EmailField(max_length=100, default="hello@gmx.de")
-    phone_number = models.BigIntegerField(default="123")
-    address = models.CharField(max_length=100, default="Hello street 6")
-    zip_code = models.CharField(max_length=100, default="12345")
-    city = models.CharField(max_length=100, default="Monster City")
-    country = models.CharField(max_length=100, default="Monster Country")
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    birth_date = models.DateField()
+    email = models.EmailField(max_length=100)
+    phone_number = models.BigIntegerField()
+    address = models.CharField(max_length=100)
+    zip_code = models.CharField(max_length=100)
+    city = models.CharField(max_length=100)
+    country = models.CharField(max_length=100)
     booking_object = (
         ('Upper Apartment', 'Upper Apartment'),
         ('Lower Apartment', 'Lower Apartment'),
         ('Whole House', 'Whole House'),
     )
-    booking_item = models.CharField(choices=booking_object, max_length=100,
-                                    default="Upper Apartment")
+    booking_item = models.CharField(choices=booking_object, max_length=100)
     arrival_date = models.DateField()
     departure_date = models.DateField()
     guest_number = (
@@ -60,18 +59,15 @@ class Booking(models.Model):
         ('14', '14'),
         ('15', '15'),
     )
-    amount_guests = models.CharField(choices=guest_number, max_length=100,
-                                     default="1")
+    amount_guests = models.CharField(choices=guest_number, max_length=100)
     guest_nationality = (
         ('German', 'German'),
         ('Other', 'Other'),
     )
-    nationality = models.CharField(choices=guest_nationality, max_length=100,
-                                   default="German")
-    passport_number = models.CharField(max_length=100, blank=True, null=True,
-                                       default="234")
+    nationality = models.CharField(choices=guest_nationality, max_length=100)
+    passport_number = models.CharField(max_length=100, blank=True, null=True)
     animals = models.BooleanField(blank=True, null=True)
-    message = models.TextField(max_length=4000, default="Hi!")
+    message = models.TextField(max_length=4000)
 
     class Meta:
         ordering = ['-id']

@@ -555,21 +555,21 @@ I have tested the responsiveness of my homepage with Firefox and Google Chrome D
 
 ## Validator Testing
 
-- I confirm that no errors were returned when passing through the [CI Python Linter](https://pep8ci.herokuapp.com/).
+- I confirm that no errors were returned when passing through the [CI Python Linter](https://pep8ci.herokuapp.com/). The same result is valid for all Python files.
 
-<img src="" style="height:40rem;width:65rem;" alt="A screenshot of the CI Python Linter result">
+<img src="static/readme-assets/python-validation.png" style="height:30rem;width:60rem;" alt="A screenshot of the CI Python Linter result">
 
-- I confirm that no errors were returned when passing through [JSHint](https://jshint.com/).
+- I confirm that no errors were returned when passing through [JSHint](https://jshint.com/) for manage-bookings.js.
 
-<img src="" style="height:40rem;width:65rem;" alt="A screenshot of the JSHint result">
+<img src="static/readme-assets/js-validation.png" style="height:30rem;width:70rem;" alt="A screenshot of the JSHint result">
 
-- I confirm that no errors were returned when passing through the [HTML validator](https://validator.w3.org/).
+- I confirm that no errors were returned when passing through the [HTML validator](https://validator.w3.org/). The same result is valid for all pages.
 
-<img src="" style="height:40rem;width:65rem;" alt="A screenshot of the HTML validator result">
+<img src="static/readme-assets/html-validation.png" style="height:40rem;width:65rem;" alt="A screenshot of the HTML validator result">
 
 - I confirm that no errors were returned when passing through the [CSS validator](https://jigsaw.w3.org/css-validator/).
 
-<img src="" style="height:40rem;width:65rem;" alt="A screenshot of the CSS validator result">  
+<img src="static/readme-assets/css-validation.png" style="height:30rem;width:55rem;" alt="A screenshot of the CSS validator result">  
 
 [[Back to top]](#table-of-contents)
 
