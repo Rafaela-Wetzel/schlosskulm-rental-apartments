@@ -194,7 +194,7 @@ The homepage is split up into five main navigation elements: House, Schloßkulm,
     - **All Bookings (hosts)**: hosts can see all booking details - possibility to confirm, cancel or delete bookings
 5. **About Us**: about us page introducing the apartment hosts, including pictures
 6. **Contact**: contact page with a form to get in touch (no login necessary)
-7. **Register / Login / Logout**: User needs to register & login to make a booking and to see own bookings, if available. Login and logout navigation leads to a confirmation page.  
+7. **Register / Login / Logout**: User needs to register & login to make a booking and to see own bookings, if available. Login and logout action leads to a confirmation message on the main page.  
 
 [[Back to top]](#table-of-contents)
 
@@ -210,6 +210,7 @@ The homepage is split up into five main navigation elements: House, Schloßkulm,
 
 Differences to the final outcome:  
 - Scope within navigation menu has been scaled down as explained above  
+- Arrangement of form fields is different than shown on the draft due to django model form structure
 
 [[Back to top]](#table-of-contents)
 
@@ -536,6 +537,7 @@ I have tested the responsiveness of my homepage with Firefox and Google Chrome D
 | Your Bookings Section | Guest clicks on 'cancel booking' button | Modal appears | As expected | Pass |
 | Your Bookings Section | Guest clicks on 'close' within modal | Modal closes, nothing else happens | As expected | Pass |
 | Your Bookings Section | Guest clicks on 'cancel booking' button | Booking status is set to 'cancelled' and 'cancel booking' button disappears | As expected | Pass |
+| Your Bookings Section | Non-logged in user tries to access booking/your-bookings page | Modal automatically opens up telling the user the access is denied and that they are not authorized to view the content; redirect to main page | As expected | Pass |
 | All Bookings Section | Host logs in | 'All bookings' appears in navigation menu & host can see all bookings made so far | As expected | Pass |
 | All Bookings Section | Host clicks on 'confirm booking' button | Modal appears | As expected | Pass |
 | All Bookings Section | Host clicks on 'close' within modal | Modal closes, nothing else happens | As expected | Pass |
@@ -546,6 +548,7 @@ I have tested the responsiveness of my homepage with Firefox and Google Chrome D
 | All Bookings Section | Host clicks on 'delete booking' button | Modal appears | As expected | Pass |
 | All Bookings Section | Host clicks on 'close' within modal | Modal closes, nothing else happens | As expected | Pass |
 | All Bookings Section | Host clicks on 'delete booking' button within modal | Booking is removed from database and confirmation message is displayed: "Booking no. x has been deleted!" | As expected | Pass |
+| All Bookings Section | Non-logged in user tries to access booking/all-bookings page | Modal automatically opens up telling the user the access is denied and that they are not authorized to view the content; redirect to main page | As expected | Pass |
 | Contact Section | Leaving any of the mandatory form fields blank | Message is not sent yet and user is prompted to fill in the empty field(s) | As expected | Pass |
 | Contact Section | Entering a non-email address in e-mail field | Message is not sent yet and user is prompted to enter an email address | As expected | Pass |
 | Contact Section | User sends valid contact request | Redirects to main page & displays confirmation message: "Thank you for your message. We will be in touch with you soon." | As expected | Pass |
