@@ -56,10 +56,10 @@
       <a href="{% url 'contact' %}" class="btn btn-purple border-dark">Get In Touch</a>
       {% if user.is_authenticated %}
       <a href="{% url 'booking' %}" class="btn btn-purple border-dark">Book With Us</a>
+    </p>
       {% else %}
       {% include 'login-needed-modal.html' %}
       {% endif %}
-    </p>
     <br>
     <div>
       <iframe src="https://www.youtube.com/embed/7EsWSfLHmW4?si=kP4Np3F9A6ffv-S6&mute=1" title="YouTube video player"

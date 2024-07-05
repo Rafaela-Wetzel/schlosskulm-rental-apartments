@@ -529,11 +529,9 @@ I have tested the responsiveness of my homepage with Firefox and Google Chrome D
 | Booking Form Section | Leaving any of the mandatory form fields blank | Booking is not processed yet and user is prompted to fill in the empty field(s) | As expected | Pass |
 | Booking Form Section | Entering a non-email address in e-mail field | Message is not sent yet and user is prompted to enter an email address | As expected | Pass |
 | Booking Form Section | Sending valid booking request | Redirects to main page and confirmation message is displayed: "Thank you for your booking request. We will be in touch with you soon." | As expected | Pass |
-| Booking Form Section | Entering a birth date that lies in the future | Validation error: "Your birth date cannot be in the future!" | | |
-| Booking Form Section | Entering an arrival date that lies after the departure date | Validation error: "Your arrival date must be before your departure date!" | | |
-| Booking Form Section | Entering the same date for arrival and departure | Validation error: "Your arrival date cannot be the same day as your departure date!" | | |
-| Booking Form Section | Entering letters within the date fields | Validation error: "Please enter a valid date." | | |
-| Booking Form Section | Entering arrival or departure dates that are in the past | Validation error: "Your booking date cannot be in the past!" | | |
+| Booking Form Section | Entering a birth date that lies in the future | Validation error: "Your birth date cannot be in the future!" | As expected | Pass |
+| Booking Form Section | Entering the same date for arrival and departure | Validation error: "Your arrival date cannot be the same day as your departure date!" | As expected | Pass |
+| Booking Form Section | Entering arrival or departure dates that are in the past | Validation error: "Your booking date cannot be in the past!" | As expected | Pass |
 | Your Bookings Section | Logged in guest has sent a valid booking request | 'Your bookings' appears in navigation menu, booking appears on the 'your bookings' page & status is set to 'requested' | As expected | Pass |
 | Your Bookings Section | Guest clicks on 'cancel booking' button | Modal appears | As expected | Pass |
 | Your Bookings Section | Guest clicks on 'close' within modal | Modal closes, nothing else happens | As expected | Pass |

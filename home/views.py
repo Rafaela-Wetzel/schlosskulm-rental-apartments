@@ -112,6 +112,8 @@ def cancel_booking(request, booking_id):
     if not request.user.is_anonymous:
         booking.booking_status = "Cancelled"
         booking.save()
+        print("Cancel button has been clicked")
+        print(booking_id)
         messages.add_message(request, messages.SUCCESS, f"""Booking no.
         {booking_id} has been cancelled!""")
     else:

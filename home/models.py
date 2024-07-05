@@ -27,7 +27,7 @@ class Booking(models.Model):
                                       max_length=100, default='Requested')
     first_name = models.CharField(max_length=100, default="Henna")
     last_name = models.CharField(max_length=100, default="Hamma")
-    birth_date = models.DateField()
+    birth_date = models.DateField(default="18/07/20")
     email = models.EmailField(max_length=100, default="hello@gmx.de")
     phone_number = models.BigIntegerField(default="123")
     address = models.CharField(max_length=100, default="Hello street 6")
