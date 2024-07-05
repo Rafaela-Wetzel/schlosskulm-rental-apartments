@@ -1,12 +1,12 @@
 <!-- Modal template - triggers delete booking functionality -->
  
 <!-- Button that triggers modal -->
-<button type="button" class="btn btn-card-delete border-dark" data-bs-toggle="modal" data-bs-target="#deleteModal">
+<button type="button" class="btn btn-card-delete border-dark" data-bs-toggle="modal" data-bs-target="#{{ booking.id }}-deleteModal">
     Delete booking
   </button>
   
   <!-- Modal -->
-  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal fade" id="{{ booking.id }}-deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">

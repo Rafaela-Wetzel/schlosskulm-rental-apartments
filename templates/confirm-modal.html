@@ -1,12 +1,12 @@
 <!-- Confirm Modal template - triggers confirm booking functionality -->
  
 <!-- Button that triggers modal -->
-<button type="button" class="btn btn-card-confirm border-dark" data-bs-toggle="modal" data-bs-target="#confirmModal">
+<button type="button" class="btn btn-card-confirm border-dark" data-bs-toggle="modal" data-bs-target="#{{ booking.id }}-confirmModal">
   Confirm booking
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+<div class="modal fade" id="{{ booking.id }}-confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
